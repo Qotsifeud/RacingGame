@@ -7,13 +7,15 @@ public class customisationTest : MonoBehaviour
 {
     [SerializeField] GameObject car;
     [SerializeField] GameObject spoiler;
+    [SerializeField] GameObject weight;
     bool spoilerOn = true;
-    private carMovement _moveSript;
+    bool weightOn = true;
+    private carMovement _moveScript;
 
     //Start is called before the first frame update
     void Start()
     {
-       _moveSript = car.GetComponent<carMovement>();
+       _moveScript = car.GetComponent<carMovement>();
     }
 
     // Update is called once per frame
@@ -25,15 +27,34 @@ public class customisationTest : MonoBehaviour
             spoiler.SetActive(spoilerOn);
         }
 
+        if (Input.GetKeyDown("v"))
+        {
+            weightOn = !weightOn;
+            weight.SetActive(weightOn);
+
+        }
+
+
         if (spoiler.activeInHierarchy) 
         {
-            _moveSript.rotationRight = new Vector3(0, 60, 0);
-            _moveSript.rotationLeft = new Vector3(0, -60, 0);
+            _moveScript.rotationRight = new Vector3(0, 60, 0);
+            _moveScript.rotationLeft = new Vector3(0, -60, 0);
         }
         else 
         {
-            _moveSript.rotationRight = new Vector3(0, 30, 0);
-            _moveSript.rotationLeft = new Vector3(0, -30, 0);
+            _moveScript.rotationRight = new Vector3(0, 30, 0);
+            _moveScript.rotationLeft = new Vector3(0, -30, 0);
+        }
+
+        if (weight.activeInHierarchy) 
+        {
+             _moveScript.forward = new Vector3(0, 0, 1);
+             _moveScript.backward = new Vector3(0, 0, -1);
+        }
+        else 
+        {
+            _moveScript.forward = new Vector3(0, 0, 2);
+            _moveScript.backward = new Vector3(0, 0, -2);
         }
     }
 }

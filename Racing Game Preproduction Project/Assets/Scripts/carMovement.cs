@@ -31,6 +31,8 @@ public class carMovement : MonoBehaviour
         if(Input.GetKey("s")) 
         {
             transform.Translate(backward * speed * Time.deltaTime);
+            rotationLeft = -rotationLeft;
+            rotationRight = -rotationRight;
         }
         if(Input.GetKey("d"))
         {
