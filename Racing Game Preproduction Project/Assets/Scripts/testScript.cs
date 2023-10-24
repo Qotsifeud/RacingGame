@@ -9,6 +9,7 @@ public class testScript : MonoBehaviour
     {
 
         Debug.Log("Test Text for Git Hub Repo");
+        Debug.Log("ANOTHER TEXT FOR GIT HUB REPO :)");
         
     }
 }
