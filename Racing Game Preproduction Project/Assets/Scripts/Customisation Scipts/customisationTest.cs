@@ -37,8 +37,9 @@ public class customisationTest : MonoBehaviour
 
         if (spoiler.activeInHierarchy) 
         {
-            _moveScript.rotationRight = new Vector3(0, 60, 0);
-            _moveScript.rotationLeft = new Vector3(0, -60, 0);
+            spoiler _spoilerScript = spoiler.GetComponent<spoiler>();
+            _moveScript.rotationRight = _spoilerScript.rotationRight;
+            _moveScript.rotationLeft = _spoilerScript.rotationLeft;
         }
         else 
         {
@@ -48,8 +49,9 @@ public class customisationTest : MonoBehaviour
 
         if (weight.activeInHierarchy) 
         {
-             _moveScript.forward = new Vector3(0, 0, 1);
-             _moveScript.backward = new Vector3(0, 0, -1);
+            weight _weightScript = weight.GetComponent<weight>();
+             _moveScript.forward = _weightScript.forward;
+             _moveScript.backward = _weightScript.backward;
         }
         else 
         {
