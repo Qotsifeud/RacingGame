@@ -309,6 +309,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -135, z: 0}
+--- !u!1001 &1906671732
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 41b4dd47d6945bd43aafc903945fb5ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.21
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 41b4dd47d6945bd43aafc903945fb5ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 41b4dd47d6945bd43aafc903945fb5ce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.883827
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 41b4dd47d6945bd43aafc903945fb5ce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 41b4dd47d6945bd43aafc903945fb5ce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 41b4dd47d6945bd43aafc903945fb5ce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 41b4dd47d6945bd43aafc903945fb5ce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 41b4dd47d6945bd43aafc903945fb5ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 41b4dd47d6945bd43aafc903945fb5ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 41b4dd47d6945bd43aafc903945fb5ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41b4dd47d6945bd43aafc903945fb5ce, type: 3}
+      propertyPath: m_Name
+      value: Test Race Track
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 41b4dd47d6945bd43aafc903945fb5ce, type: 3}
 --- !u!1 &144750382470002966
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,7 +1001,7 @@ Transform:
   m_Children:
   - {fileID: 2046655525190763063}
   m_Father: {fileID: 4436805663151803437}
-  m_LocalEulerAnglesHint: {x: 360, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 37.70508, y: 0, z: 90}
 --- !u!4 &4436805663151803437
 Transform:
   m_ObjectHideFlags: 0
@@ -1490,3 +1547,4 @@ SceneRoots:
   - {fileID: 1471417822}
   - {fileID: 624362296}
   - {fileID: 543450653136537529}
+  - {fileID: 1906671732}
