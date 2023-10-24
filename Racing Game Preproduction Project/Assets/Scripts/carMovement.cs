@@ -9,11 +9,11 @@ public class carMovement : MonoBehaviour
     public Transform car;
     public float speed = 17;
 
-    Vector3 rotationRight = new Vector3(0, 30, 0);
-    Vector3 rotationLeft = new Vector3(0, -30, 0);
+    public Vector3 rotationRight = new Vector3(0, 30, 0);
+    public Vector3 rotationLeft = new Vector3(0, -30, 0);
 
-    Vector3 forward = new Vector3(0, 0, 1);
-    Vector3 backward = new Vector3(0, 0, -1);
+    public Vector3 forward = new Vector3(0, 0, 1);
+    public Vector3 backward = new Vector3(0, 0, -1);
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +31,8 @@ public class carMovement : MonoBehaviour
         if(Input.GetKey("s")) 
         {
             transform.Translate(backward * speed * Time.deltaTime);
+            rotationLeft = -rotationLeft;
+            rotationRight = -rotationRight;
         }
         if(Input.GetKey("d"))
         {
