@@ -387,6 +387,7 @@ GameObject:
   - component: {fileID: 464211179}
   - component: {fileID: 464211178}
   - component: {fileID: 464211177}
+  - component: {fileID: 464211180}
   m_Layer: 0
   m_Name: Weight
   m_TagString: Untagged
@@ -480,6 +481,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464211175}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &464211180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464211175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a9bbd8c8066f04f8352b4b2d7d747c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forward: {x: 0, y: 0, z: 1}
+  backward: {x: 0, y: 0, z: -1}
 --- !u!1 &496194897
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 540431901}
+  - component: {fileID: 540431902}
   m_Layer: 0
   m_Name: Spoiler
   m_TagString: Untagged
@@ -618,6 +634,20 @@ Transform:
   - {fileID: 1633906028}
   m_Father: {fileID: 366053190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &540431902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540431900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75045cdf36c209c48b7fa2909aead873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationRight: {x: 0, y: 60, z: 0}
+  rotationLeft: {x: 0, y: -60, z: 0}
 --- !u!1 &663847874
 GameObject:
   m_ObjectHideFlags: 0
