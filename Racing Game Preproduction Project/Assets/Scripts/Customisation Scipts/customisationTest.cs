@@ -6,28 +6,55 @@ using UnityEngine;
 public class customisationTest : MonoBehaviour
 {
     [SerializeField] GameObject car;
-    [SerializeField] GameObject wings;
     [SerializeField] GameObject spoiler;
+    [SerializeField] GameObject weight;
+    bool spoilerOn = true;
+    bool weightOn = true;
+    private carMovement _moveScript;
 
-    //private carMovement _moveSript;
-
-    // Start is called before the first frame update
+    //Start is called before the first frame update
     void Start()
     {
-       // _moveSript = car.GetComponent<carMovement>();
+       _moveScript = car.GetComponent<carMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(wings.activeInHierarchy) 
+        if (Input.GetKeyDown("c")) 
         {
-            
+            spoilerOn = !spoilerOn;
+            spoiler.SetActive(spoilerOn);
         }
+
+        if (Input.GetKeyDown("v"))
+        {
+            weightOn = !weightOn;
+            weight.SetActive(weightOn);
+
+        }
+
 
         if (spoiler.activeInHierarchy) 
         {
+            _moveScript.rotationRight = new Vector3(0, 60, 0);
+            _moveScript.rotationLeft = new Vector3(0, -60, 0);
+        }
+        else 
+        {
+            _moveScript.rotationRight = new Vector3(0, 30, 0);
+            _moveScript.rotationLeft = new Vector3(0, -30, 0);
+        }
 
+        if (weight.activeInHierarchy) 
+        {
+             _moveScript.forward = new Vector3(0, 0, 1);
+             _moveScript.backward = new Vector3(0, 0, -1);
+        }
+        else 
+        {
+            _moveScript.forward = new Vector3(0, 0, 2);
+            _moveScript.backward = new Vector3(0, 0, -2);
         }
     }
 }
