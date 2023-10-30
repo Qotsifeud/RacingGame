@@ -7,18 +7,15 @@ public class carMovement : MonoBehaviour
 {
     public Rigidbody rb;
     public Transform car;
+
+    public Vector3 rotationSpeed = new Vector3(0, 30, 0);
+    public Vector3 rotationSpeedReversed = new Vector3(0, -30, 0);
+    public float rotation;
+
+
     public float speed = 17;
-
-    public Vector3 ySpeed = new Vector3(0, 30, 0);
-    public Vector3 ySpeedReversed = new Vector3(0, -30, 0);
-    public float rotationAccelerationLeft;
-    public float rotationAccelerationRight;
-    public float yRotation;
-
-    public Vector3 zMovement = new Vector3(0, 0, 1);
-    public float forwardAcceleration;
-    public float backwardAcceleration;
-    public float zAcceleration;
+    public Vector3 movement = new Vector3(0, 0, 1);
+    public float acceleration;
 
     // Start is called before the first frame update
     void Start()
@@ -31,114 +28,114 @@ public class carMovement : MonoBehaviour
     {
         if (Input.GetKey("w"))
         {
-            zAcceleration += Time.deltaTime;
+            acceleration += Time.deltaTime;
 
-            if (zAcceleration > 1)
+            if (acceleration > 1)
             {
-                zAcceleration = 1;
+                acceleration = 1;
             }
 
-            transform.Translate(zMovement * speed * Time.deltaTime * zAcceleration);
+            transform.Translate(movement * speed * Time.deltaTime * acceleration);
 
         }
         else if (Input.GetKey("s"))
         {
-            zAcceleration -= Time.deltaTime;
+            acceleration -= Time.deltaTime;
 
-            if (zAcceleration < -1)
+            if (acceleration < -1)
             {
-                zAcceleration = -1;
+                acceleration = -1;
             }
-            transform.Translate(zMovement * speed * Time.deltaTime * zAcceleration);
+            transform.Translate(movement * speed * Time.deltaTime * acceleration);
 
 
         }
         else 
         {
-            if (zAcceleration <= 1 && zAcceleration > 0.25)
+            if (acceleration <= 1 && acceleration > 0.25)
             {
-                zAcceleration -= Time.deltaTime;
+                acceleration -= Time.deltaTime;
             }
-            else if (zAcceleration >= -1 && zAcceleration < -0.25)
+            else if (acceleration >= -1 && acceleration < -0.25)
             {
-                zAcceleration += Time.deltaTime;
+                acceleration += Time.deltaTime;
             }
-            else if (zAcceleration < 0.25 || zAcceleration > -0.25)
+            else if (acceleration < 0.25 || acceleration > -0.25)
             {
-                zAcceleration = 0;
+                acceleration = 0;
             }
-            transform.Translate(zMovement * speed * Time.deltaTime * zAcceleration);
+            transform.Translate(movement * speed * Time.deltaTime * acceleration);
 
         }
 
-        if (zAcceleration > 0 || zAcceleration < 0)
+        if (acceleration > 0 || acceleration < 0)
         {
             if (Input.GetKey("d"))
             {
-                yRotation += Time.deltaTime;
+                rotation += Time.deltaTime;
 
-                if (yRotation > 1)
+                if (rotation > 1)
                 {
-                    yRotation = 1;
+                    rotation = 1;
                 }
 
-                if (zAcceleration > 0)
+                if (acceleration > 0)
                 {
-                    Quaternion deltaRotation = Quaternion.Euler(ySpeed * Time.deltaTime * yRotation);
+                    Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
                     rb.MoveRotation(rb.rotation * deltaRotation);
                 }
-                else if (zAcceleration < 0)
+                else if (acceleration < 0)
                 {
-                    Quaternion deltaRotation = Quaternion.Euler(ySpeedReversed * Time.deltaTime * yRotation);
+                    Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
                     rb.MoveRotation(rb.rotation * deltaRotation);
                 }
 
             }
             else if (Input.GetKey("a"))
             {
-                yRotation -= Time.deltaTime;
+                rotation -= Time.deltaTime;
 
-                if (yRotation < -1)
+                if (rotation < -1)
                 {
-                    yRotation = -1;
+                    rotation = -1;
                 }
 
-                if (zAcceleration > 0)
+                if (acceleration > 0)
                 {
-                    Quaternion deltaRotation = Quaternion.Euler(ySpeed * Time.deltaTime * yRotation);
+                    Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
                     rb.MoveRotation(rb.rotation * deltaRotation);
                 }
-                else if (zAcceleration < 0)
+                else if (acceleration < 0)
                 {
-                    Quaternion deltaRotation = Quaternion.Euler(ySpeedReversed * Time.deltaTime * yRotation);
+                    Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
                     rb.MoveRotation(rb.rotation * deltaRotation);
                 }
 
             }
             else
             {
-                if (yRotation <= 1 && yRotation > 0.25)
+                if (rotation <= 1 && rotation > 0.25)
                 {
-                    yRotation -= Time.deltaTime;
+                    rotation -= Time.deltaTime;
                 }
-                else if (yRotation >= -1 && yRotation < -0.25)
+                else if (rotation >= -1 && rotation < -0.25)
                 {
-                    yRotation += Time.deltaTime;
+                    rotation += Time.deltaTime;
 
                 }
-                else if (yRotation < 0.25 || yRotation > -0.25)
+                else if (rotation < 0.25 || rotation > -0.25)
                 {
-                    yRotation = 0;
+                    rotation = 0;
                 }
 
-                if (zAcceleration > 0)
+                if (acceleration > 0)
                 {
-                    Quaternion deltaRotation = Quaternion.Euler(ySpeed * Time.deltaTime * yRotation);
+                    Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
                     rb.MoveRotation(rb.rotation * deltaRotation);
                 }
-                else if (zAcceleration < 0)
+                else if (acceleration < 0)
                 {
-                    Quaternion deltaRotation = Quaternion.Euler(ySpeedReversed * Time.deltaTime * yRotation);
+                    Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
                     rb.MoveRotation(rb.rotation * deltaRotation);
                 }
 
