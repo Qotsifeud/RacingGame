@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class spoiler : MonoBehaviour
 {
-    [SerializeField] public Vector3 rotationRight = new Vector3(0, 60, 0);
-    [SerializeField] public Vector3 rotationLeft = new Vector3(0, -60, 0);
+    public Vector3 rotationSpeed = new Vector3(0, 60, 0);
+    public Vector3 rotationSpeedReversed = new Vector3(0, -60, 0);
+    public float rotationMultiplier = 2f;
 }

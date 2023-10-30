@@ -17,6 +17,9 @@ public class carMovement : MonoBehaviour
     public Vector3 movement = new Vector3(0, 0, 1);
     public float acceleration;
 
+    public float accelerationMulitplier = 1;
+    public float rotataionMulitplier = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +31,7 @@ public class carMovement : MonoBehaviour
     {
         if (Input.GetKey("w"))
         {
-            acceleration += Time.deltaTime;
+            acceleration += Time.deltaTime * accelerationMulitplier;
 
             if (acceleration > 1)
             {
@@ -40,7 +43,7 @@ public class carMovement : MonoBehaviour
         }
         else if (Input.GetKey("s"))
         {
-            acceleration -= Time.deltaTime;
+            acceleration -= Time.deltaTime * accelerationMulitplier;
 
             if (acceleration < -1)
             {
@@ -54,11 +57,11 @@ public class carMovement : MonoBehaviour
         {
             if (acceleration <= 1 && acceleration > 0.25)
             {
-                acceleration -= Time.deltaTime;
+                acceleration -= Time.deltaTime * accelerationMulitplier;
             }
             else if (acceleration >= -1 && acceleration < -0.25)
             {
-                acceleration += Time.deltaTime;
+                acceleration += Time.deltaTime * accelerationMulitplier;
             }
             else if (acceleration < 0.25 || acceleration > -0.25)
             {
@@ -72,7 +75,7 @@ public class carMovement : MonoBehaviour
         {
             if (Input.GetKey("d"))
             {
-                rotation += Time.deltaTime;
+                rotation += Time.deltaTime * rotataionMulitplier;
 
                 if (rotation > 1)
                 {
@@ -93,7 +96,7 @@ public class carMovement : MonoBehaviour
             }
             else if (Input.GetKey("a"))
             {
-                rotation -= Time.deltaTime;
+                rotation -= Time.deltaTime * rotataionMulitplier;
 
                 if (rotation < -1)
                 {
@@ -116,11 +119,11 @@ public class carMovement : MonoBehaviour
             {
                 if (rotation <= 1 && rotation > 0.25)
                 {
-                    rotation -= Time.deltaTime;
+                    rotation -= Time.deltaTime * rotataionMulitplier;
                 }
                 else if (rotation >= -1 && rotation < -0.25)
                 {
-                    rotation += Time.deltaTime;
+                    rotation += Time.deltaTime * rotataionMulitplier;
 
                 }
                 else if (rotation < 0.25 || rotation > -0.25)

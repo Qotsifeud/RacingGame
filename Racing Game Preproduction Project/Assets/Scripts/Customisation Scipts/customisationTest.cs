@@ -38,25 +38,27 @@ public class customisationTest : MonoBehaviour
         if (spoiler.activeInHierarchy) 
         {
             spoiler _spoilerScript = spoiler.GetComponent<spoiler>();
-            //_moveScript.rotationRight = _spoilerScript.rotationRight;
-            //_moveScript.rotationLeft = _spoilerScript.rotationLeft;
+            _moveScript.rotationSpeed = _spoilerScript.rotationSpeed;
+            _moveScript.rotationSpeedReversed = _spoilerScript.rotationSpeedReversed;
+            _moveScript.rotataionMulitplier = _spoilerScript.rotationMultiplier;
         }
         else 
         {
-           // _moveScript.rotationRight = new Vector3(0, 30, 0);
-           //_moveScript.rotationLeft = new Vector3(0, -30, 0);
+           _moveScript.rotationSpeed = new Vector3(0, 30, 0);
+           _moveScript.rotationSpeedReversed = new Vector3(0, -30, 0);
+            _moveScript.rotataionMulitplier = 1;
         }
 
         if (weight.activeInHierarchy) 
         {
             weight _weightScript = weight.GetComponent<weight>();
-             //_moveScript.forward = _weightScript.forward;
-             //_moveScript.backward = _weightScript.backward;
+             _moveScript.movement = _weightScript.Movement;
+             _moveScript.accelerationMulitplier = _weightScript.accelerationMulitplier;
         }
         else 
         {
-            //_moveScript.forward = new Vector3(0, 0, 2);
-            //_moveScript.backward = new Vector3(0, 0, -2);
+            _moveScript.movement = new Vector3(0, 0, 1);
+            _moveScript.accelerationMulitplier = 1;
         }
     }
 }
