@@ -80,6 +80,7 @@ public class MonkeyMovement : MonoBehaviour
             RandomLocationChosen = false;//resetting  the random location so that if the player stays in the previous location chosem by the monkey it wont keep trying to return  to that same spot
         }
 
+
     }
 
 
