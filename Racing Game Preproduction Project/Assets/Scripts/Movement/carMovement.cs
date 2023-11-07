@@ -8,32 +8,32 @@ public class carMovement : MonoBehaviour
     public Rigidbody rb;
     public Transform car;
 
-    public float rotationSpeedSpoiler;
-    public float rotationSpeedWeight;
-    public float rotationSpeedBreaks;
+    [HideInInspector] public float rotationSpeedSpoiler;
+    [HideInInspector] public float rotationSpeedWeight;
+    [HideInInspector] public float rotationSpeedBreaks;
     public Vector3 rotationSpeedVector;
     public Vector3 rotationSpeedReversedVector;
     public float rotationAcceleration;
 
 
     public float speed = 17;
-    public float movementSpeedSpoiler;
-    public float movementSpeedWeight;
-    public float movementSpeedBreaks;
+    [HideInInspector] public float movementSpeedSpoiler;
+    [HideInInspector] public float movementSpeedWeight;
+    [HideInInspector] public float movementSpeedBreaks;
     public Vector3 movementSpeedVector;
     public float acceleration;
 
-    public float accelerationMulitplierSpoiler;
-    public float accelerationMulitplierWight;
-    public float accelerationMulitplierBreaks;
+    [HideInInspector] public float accelerationMulitplierSpoiler;
+    [HideInInspector] public float accelerationMulitplierWight;
+    [HideInInspector] public float accelerationMulitplierBreaks;
 
-    public float rotataionMulitplierSpoiler;
-    public float rotataionMulitplierWeight;
-    public float rotataionMulitplierBreaks;
+    [HideInInspector] public float rotataionMulitplierSpoiler;
+    [HideInInspector] public float rotataionMulitplierWeight;
+    [HideInInspector] public float rotataionMulitplierBreaks;
 
-    public float breakMulitplierSpoiler;
-    public float breakMulitplierWight;
-    public float breakMulitplierBreaks;
+    [HideInInspector] public float breakMulitplierSpoiler;
+    [HideInInspector] public float breakMulitplierWight;
+    [HideInInspector] public float breakMulitplierBreaks;
 
 
     public GameObject respawnPoint;
