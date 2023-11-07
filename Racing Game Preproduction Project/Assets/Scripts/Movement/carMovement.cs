@@ -22,6 +22,7 @@ public class carMovement : MonoBehaviour
     public float breakMulitplier = 1;
 
     public GameObject respawnPoint;
+    bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -29,15 +30,37 @@ public class carMovement : MonoBehaviour
         
     }
 
+    void OnTriggerEnter(Collider Col)
+    {
+
+        if (Col.gameObject.tag == "Check Point")
+        {
+            respawnPoint = Col.gameObject;
+        }
+    }
+
+    private void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.tag == "Ground")
+        {
+            transform.position = respawnPoint.transform.position;
+            transform.rotation = respawnPoint.transform.rotation;
+            RespawnWraper();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("r")) 
+        if(Input.GetKeyDown("r"))
         {
             transform.position = respawnPoint.transform.position;
-            transform.rotation = respawnPoint.transform.rotation;  
+            transform.rotation = respawnPoint.transform.rotation;
+            acceleration = 0;
+            RespawnWraper();
         }
-        if (Input.GetKey("w")) // forward Acceleration
+
+        if (Input.GetKey("w") && canMove) // forward Acceleration
         {
             acceleration += Time.deltaTime * accelerationMulitplier;
 
@@ -49,7 +72,7 @@ public class carMovement : MonoBehaviour
             transform.Translate(movement * speed * Time.deltaTime * acceleration);
 
         }
-        else if (Input.GetKey("s")) // backwards acceleration
+        else if (Input.GetKey("s") && canMove) // backwards acceleration
         {
             acceleration -= Time.deltaTime * accelerationMulitplier;
 
@@ -152,5 +175,19 @@ public class carMovement : MonoBehaviour
 
             }
         }
+    }
+
+    private void RespawnWraper()
+    {
+        StartCoroutine(Respawn());
+    }
+
+    private IEnumerator Respawn()
+    {
+        rb.isKinematic = true;
+        canMove = false;
+        yield return new WaitForSeconds (2);
+        canMove = true;
+        rb.isKinematic = false;
     }
 }
