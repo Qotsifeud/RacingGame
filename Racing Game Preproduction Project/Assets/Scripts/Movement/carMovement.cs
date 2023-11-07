@@ -101,79 +101,78 @@ public class carMovement : MonoBehaviour
 
         }
 
-        if (acceleration > 0 || acceleration < 0) // set so car wont trun without forward momentum
+        if (Input.GetKey("d") && acceleration != 0) // right turns
         {
-            if (Input.GetKey("d")) // right turns
+             rotation += Time.deltaTime * rotataionMulitplier;
+
+             if (rotation > 1)
+             {
+                    rotation = 1;
+             }
+
+             if (acceleration > 0)
+             {
+                 Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
+                 rb.MoveRotation(rb.rotation * deltaRotation);
+             }
+             else if (acceleration < 0) // reverse rotation for driving backwards 
+             {
+                 Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
+                 rb.MoveRotation(rb.rotation * deltaRotation);
+             }
+
+        }
+        else if (Input.GetKey("a") && acceleration != 0) // left turns
+        {
+            rotation -= Time.deltaTime * rotataionMulitplier;
+
+            if (rotation < -1)
+            {
+                rotation = -1;
+            }
+
+            if (acceleration > 0)
+            {
+                Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
+                rb.MoveRotation(rb.rotation * deltaRotation);
+            }
+            else if (acceleration < 0) // reverse rotation for driving backwards 
+            {
+                Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
+                rb.MoveRotation(rb.rotation * deltaRotation);
+            }
+
+        }
+
+        else // resets strearing position when not activley stearing
+        {
+            if (rotation <= 1 && rotation > 0.25)
+            {
+                rotation -= Time.deltaTime * rotataionMulitplier;
+            }
+            else if (rotation >= -1 && rotation < -0.25)
             {
                 rotation += Time.deltaTime * rotataionMulitplier;
 
-                if (rotation > 1)
-                {
-                    rotation = 1;
-                }
-
-                if (acceleration > 0)
-                {
-                    Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
-                    rb.MoveRotation(rb.rotation * deltaRotation);
-                }
-                else if (acceleration < 0) // reverse rotation for driving backwards 
-                {
-                    Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
-                    rb.MoveRotation(rb.rotation * deltaRotation);
-                }
-
             }
-            else if (Input.GetKey("a")) // left turns
+            else if (rotation < 0.25 || rotation > -0.25)
             {
-                rotation -= Time.deltaTime * rotataionMulitplier;
-
-                if (rotation < -1)
-                {
-                    rotation = -1;
-                }
-
-                if (acceleration > 0) 
-                {
-                    Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
-                    rb.MoveRotation(rb.rotation * deltaRotation);
-                }
-                else if (acceleration < 0) // reverse rotation for driving backwards 
-                {
-                    Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
-                    rb.MoveRotation(rb.rotation * deltaRotation);
-                }
-
+                rotation = 0;
             }
-            else // resets strearing position when not activley stearing
+
+            if (acceleration > 0)
             {
-                if (rotation <= 1 && rotation > 0.25)
-                {
-                    rotation -= Time.deltaTime * rotataionMulitplier;
-                }
-                else if (rotation >= -1 && rotation < -0.25)
-                {
-                    rotation += Time.deltaTime * rotataionMulitplier;
-
-                }
-                else if (rotation < 0.25 || rotation > -0.25)
-                {
-                    rotation = 0;
-                }
-
-                if (acceleration > 0)
-                {
-                    Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
-                    rb.MoveRotation(rb.rotation * deltaRotation);
-                }
-                else if (acceleration < 0) // reverse rotation for drifting backwards 
-                {
-                    Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
-                    rb.MoveRotation(rb.rotation * deltaRotation);
-                }
-
+                Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
+                rb.MoveRotation(rb.rotation * deltaRotation);
             }
+            else if (acceleration < 0) // reverse rotation for drifting backwards 
+            {
+                Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
+                rb.MoveRotation(rb.rotation * deltaRotation);
+            }
+
         }
+        
     }
 
     private void RespawnWraper()
