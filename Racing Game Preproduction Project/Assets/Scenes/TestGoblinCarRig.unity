@@ -871,7 +871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9e99d0260fa644eac4e9572f0237d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 2049482846}
+  target: {fileID: 1784689926435812182}
   distance: 15
   height: 3
   damping: 5
@@ -1037,7 +1037,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 724933357}
   m_LocalEulerAnglesHint: {x: 0, y: 509.73102, z: 0}
---- !u!1001 &1886263869
+--- !u!1001 &1581544944988306651
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1045,67 +1045,59 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1753575983146514643, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
-      propertyPath: respawnPoint
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677243236620290199, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741398515614059163, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
-      propertyPath: m_Name
-      value: Goblin Car Mk .2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
+    - target: {fileID: 137747240829036000, guid: 9437c7c923f4f8146bc2fc4701b3ce18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.0136079
       objectReference: {fileID: 0}
-    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
+    - target: {fileID: 137747240829036000, guid: 9437c7c923f4f8146bc2fc4701b3ce18, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.015421033
       objectReference: {fileID: 0}
-    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
+    - target: {fileID: 137747240829036000, guid: 9437c7c923f4f8146bc2fc4701b3ce18, type: 3}
       propertyPath: m_LocalPosition.z
       value: -4.7037983
       objectReference: {fileID: 0}
-    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
+    - target: {fileID: 137747240829036000, guid: 9437c7c923f4f8146bc2fc4701b3ce18, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
+    - target: {fileID: 137747240829036000, guid: 9437c7c923f4f8146bc2fc4701b3ce18, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.00000003774895
       objectReference: {fileID: 0}
-    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
+    - target: {fileID: 137747240829036000, guid: 9437c7c923f4f8146bc2fc4701b3ce18, type: 3}
       propertyPath: m_LocalRotation.y
       value: 1.1102229e-16
       objectReference: {fileID: 0}
-    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
+    - target: {fileID: 137747240829036000, guid: 9437c7c923f4f8146bc2fc4701b3ce18, type: 3}
       propertyPath: m_LocalRotation.z
       value: -1.11022296e-16
       objectReference: {fileID: 0}
-    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
+    - target: {fileID: 137747240829036000, guid: 9437c7c923f4f8146bc2fc4701b3ce18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
+    - target: {fileID: 137747240829036000, guid: 9437c7c923f4f8146bc2fc4701b3ce18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
+    - target: {fileID: 137747240829036000, guid: 9437c7c923f4f8146bc2fc4701b3ce18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2459741969626012086, guid: 9437c7c923f4f8146bc2fc4701b3ce18, type: 3}
+      propertyPath: m_Name
+      value: Goblin Car Mk .4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
---- !u!4 &2049482846 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 9437c7c923f4f8146bc2fc4701b3ce18, type: 3}
+--- !u!4 &1784689926435812182 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
-  m_PrefabInstance: {fileID: 1886263869}
+  m_CorrespondingSourceObject: {fileID: 137747240829036000, guid: 9437c7c923f4f8146bc2fc4701b3ce18, type: 3}
+  m_PrefabInstance: {fileID: 1581544944988306651}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -1117,5 +1109,5 @@ SceneRoots:
   - {fileID: 447865542}
   - {fileID: 285422223}
   - {fileID: 294453143}
-  - {fileID: 1886263869}
+  - {fileID: 1581544944988306651}
   - {fileID: 724933357}

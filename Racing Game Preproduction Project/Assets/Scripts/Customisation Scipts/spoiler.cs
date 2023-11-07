@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class spoiler : MonoBehaviour
 {
-    public Vector3 rotationSpeed = new Vector3(0, 60, 0);
-    public Vector3 rotationSpeedReversed = new Vector3(0, -60, 0);
+    public float rotationSpeed = 60;
     public float rotationMultiplier = 2f;
+    public float movementSpeed = 0;
+    public float accelerationMulitplier = 0f;
+    public float breakMulitplier = 0f;
     public GameObject car;
 
     private void Update()
@@ -15,4 +17,7 @@ public class spoiler : MonoBehaviour
 
         _customisationScript._spoilerScript = this;
     }
+
+    //scrip contain variable to apply to the movement script
+
 }

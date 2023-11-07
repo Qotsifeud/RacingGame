@@ -8,18 +8,33 @@ public class carMovement : MonoBehaviour
     public Rigidbody rb;
     public Transform car;
 
-    public Vector3 rotationSpeed = new Vector3(0, 30, 0);
-    public Vector3 rotationSpeedReversed = new Vector3(0, -30, 0);
-    public float rotation;
+    public float rotationSpeedSpoiler;
+    public float rotationSpeedWeight;
+    public float rotationSpeedBreaks;
+    public Vector3 rotationSpeedVector;
+    public Vector3 rotationSpeedReversedVector;
+    public float rotationAcceleration;
 
 
     public float speed = 17;
-    public Vector3 movement = new Vector3(0, 0, 1);
+    public float movementSpeedSpoiler;
+    public float movementSpeedWeight;
+    public float movementSpeedBreaks;
+    public Vector3 movementSpeedVector;
     public float acceleration;
 
-    public float accelerationMulitplier = 1;
-    public float rotataionMulitplier = 1;
-    public float breakMulitplier = 1;
+    public float accelerationMulitplierSpoiler;
+    public float accelerationMulitplierWight;
+    public float accelerationMulitplierBreaks;
+
+    public float rotataionMulitplierSpoiler;
+    public float rotataionMulitplierWeight;
+    public float rotataionMulitplierBreaks;
+
+    public float breakMulitplierSpoiler;
+    public float breakMulitplierWight;
+    public float breakMulitplierBreaks;
+
 
     public GameObject respawnPoint;
     bool canMove = true;
@@ -52,7 +67,22 @@ public class carMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("r"))
+        float rotationVector = rotationSpeedSpoiler + rotationSpeedWeight + rotationSpeedBreaks;
+
+        rotationSpeedVector = new Vector3(0, rotationVector, 0);
+        rotationSpeedReversedVector = new Vector3(0, -rotationVector, 0);
+
+        float movementVector = movementSpeedSpoiler + movementSpeedWeight + movementSpeedBreaks;
+
+        movementSpeedVector = new Vector3(0, 0, movementVector);
+
+        float accelerationMulitplier = accelerationMulitplierSpoiler + accelerationMulitplierWight + accelerationMulitplierBreaks;
+
+        float rotataionMulitplier = rotataionMulitplierSpoiler + rotationSpeedWeight + rotationSpeedBreaks;
+
+        float breakMulitplier = breakMulitplierSpoiler + breakMulitplierWight + breakMulitplierBreaks;
+
+        if (Input.GetKeyDown("r"))
         {
             transform.position = respawnPoint.transform.position;
             transform.rotation = respawnPoint.transform.rotation;
@@ -68,7 +98,7 @@ public class carMovement : MonoBehaviour
                 acceleration = 1;
             }
 
-            transform.Translate(movement * speed * Time.deltaTime * acceleration);
+            transform.Translate(movementSpeedVector * speed * Time.deltaTime * acceleration);
 
         }
         else if (Input.GetKey("s") && canMove) // backwards acceleration
@@ -79,7 +109,7 @@ public class carMovement : MonoBehaviour
             {
                 acceleration = -1;
             }
-            transform.Translate(movement * speed * Time.deltaTime * acceleration);
+            transform.Translate(movementSpeedVector * speed * Time.deltaTime * acceleration);
 
 
         }
@@ -97,48 +127,48 @@ public class carMovement : MonoBehaviour
             {
                 acceleration = 0;
             }
-            transform.Translate(movement * speed * Time.deltaTime * acceleration);
+            transform.Translate(movementSpeedVector * speed * Time.deltaTime * acceleration);
 
         }
 
         if (Input.GetKey("d") && acceleration != 0) // right turns
         {
-             rotation += Time.deltaTime * rotataionMulitplier;
+            rotationAcceleration += Time.deltaTime * rotataionMulitplier;
 
-             if (rotation > 1)
+             if (rotationAcceleration > 1)
              {
-                    rotation = 1;
+                rotationAcceleration = 1;
              }
 
              if (acceleration > 0)
              {
-                 Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
+                 Quaternion deltaRotation = Quaternion.Euler(rotationSpeedVector * Time.deltaTime * rotationAcceleration);
                  rb.MoveRotation(rb.rotation * deltaRotation);
              }
              else if (acceleration < 0) // reverse rotation for driving backwards 
              {
-                 Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
+                 Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversedVector * Time.deltaTime * rotationAcceleration);
                  rb.MoveRotation(rb.rotation * deltaRotation);
              }
 
         }
         else if (Input.GetKey("a") && acceleration != 0) // left turns
         {
-            rotation -= Time.deltaTime * rotataionMulitplier;
+            rotationAcceleration -= Time.deltaTime * rotataionMulitplier;
 
-            if (rotation < -1)
+            if (rotationAcceleration < -1)
             {
-                rotation = -1;
+                rotationAcceleration = -1;
             }
 
             if (acceleration > 0)
             {
-                Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
+                Quaternion deltaRotation = Quaternion.Euler(rotationSpeedVector * Time.deltaTime * rotationAcceleration);
                 rb.MoveRotation(rb.rotation * deltaRotation);
             }
             else if (acceleration < 0) // reverse rotation for driving backwards 
             {
-                Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
+                Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversedVector * Time.deltaTime * rotationAcceleration);
                 rb.MoveRotation(rb.rotation * deltaRotation);
             }
 
@@ -146,28 +176,28 @@ public class carMovement : MonoBehaviour
 
         else // resets strearing position when not activley stearing
         {
-            if (rotation <= 1 && rotation > 0.25)
+            if (rotationAcceleration <= 1 && rotationAcceleration > 0.25)
             {
-                rotation -= Time.deltaTime * rotataionMulitplier;
+                rotationAcceleration -= Time.deltaTime * rotataionMulitplier;
             }
-            else if (rotation >= -1 && rotation < -0.25)
+            else if (rotationAcceleration >= -1 && rotationAcceleration < -0.25)
             {
-                rotation += Time.deltaTime * rotataionMulitplier;
+                rotationAcceleration += Time.deltaTime * rotataionMulitplier;
 
             }
-            else if (rotation < 0.25 || rotation > -0.25)
+            else if (rotationAcceleration < 0.25 || rotationAcceleration > -0.25)
             {
-                rotation = 0;
+                rotationAcceleration = 0;
             }
 
             if (acceleration > 0)
             {
-                Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
+                Quaternion deltaRotation = Quaternion.Euler(rotationSpeedVector * Time.deltaTime * rotationAcceleration);
                 rb.MoveRotation(rb.rotation * deltaRotation);
             }
             else if (acceleration < 0) // reverse rotation for drifting backwards 
             {
-                Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
+                Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversedVector * Time.deltaTime * rotationAcceleration);
                 rb.MoveRotation(rb.rotation * deltaRotation);
             }
 

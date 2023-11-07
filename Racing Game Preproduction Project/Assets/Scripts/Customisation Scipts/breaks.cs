@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class breaks : MonoBehaviour
 {
-
+    public float rotationSpeed = 0;
+    public float rotationMultiplier = 0f;
+    public float movementSpeed = 0;
+    public float accelerationMulitplier = 0f;
     public float breakMulitplier = 1f;
     public GameObject car;
 
@@ -14,4 +17,7 @@ public class breaks : MonoBehaviour
 
         _customisationScript._breakScript = this;
     }
+
+    //scrip contain variable to apply to the movement script
+
 }

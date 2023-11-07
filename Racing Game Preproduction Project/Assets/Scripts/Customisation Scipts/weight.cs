@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class weight : MonoBehaviour
 {
-    public Vector3 Movement = new Vector3(0, 0, 0.5f);
+    public float rotationSpeed = 0;
+    public float rotationMultiplier = 0f;
+    public float movementSpeed = 1;
     public float accelerationMulitplier = 0.5f;
+    public float breakMulitplier = 0f;
     public GameObject car;
 
     private void Update()
@@ -15,11 +18,5 @@ public class weight : MonoBehaviour
         _customisationScript._weightScript = this;
     }
 
-
-    //float speed;
-    //float accelerationl;
-    //float handling;
-    //float breaks;
-    //float wait;
-    //float taraction;
+    //scrip contain variable to apply to the movement script
 }
