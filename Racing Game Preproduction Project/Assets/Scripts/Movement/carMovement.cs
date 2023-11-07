@@ -56,7 +56,6 @@ public class carMovement : MonoBehaviour
         {
             transform.position = respawnPoint.transform.position;
             transform.rotation = respawnPoint.transform.rotation;
-            acceleration = 0;
             RespawnWraper();
         }
 
@@ -184,6 +183,7 @@ public class carMovement : MonoBehaviour
 
     private IEnumerator Respawn()
     {
+        acceleration = 0;
         rb.isKinematic = true;
         canMove = false;
         yield return new WaitForSeconds (2);
