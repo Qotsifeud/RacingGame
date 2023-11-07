@@ -21,6 +21,8 @@ public class carMovement : MonoBehaviour
     public float rotataionMulitplier = 1;
     public float breakMulitplier = 1;
 
+    public GameObject respawnPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,11 @@ public class carMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown("r")) 
+        {
+            transform.position = respawnPoint.transform.position;
+            transform.rotation = respawnPoint.transform.rotation;  
+        }
         if (Input.GetKey("w")) // forward Acceleration
         {
             acceleration += Time.deltaTime * accelerationMulitplier;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -67,6 +67,9 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -446,11 +449,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!4 &714967861 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8419193083641698403, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
-  m_PrefabInstance: {fileID: 1837339803}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1097165224 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8153468022190502949, guid: 750f825996b7514438b8fced088db96f, type: 3}
@@ -673,37 +671,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9e99d0260fa644eac4e9572f0237d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 714967861}
+  target: {fileID: 2049482846}
   distance: 15
   height: 3
   damping: 5
   smoothRotation: 1
   followBehind: 1
   rotationDamping: 10
---- !u!1 &1590969172 stripped
+--- !u!1 &1713808880
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 9195553482932994777, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
-  m_PrefabInstance: {fileID: 1837339803}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1590969173
-MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590969172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f90caba337ac394aa2bbd28302e54b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &1590969177
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1713808881}
+  - component: {fileID: 1713808882}
+  m_Layer: 0
+  m_Name: Respawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1713808881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713808880}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.26, y: 2.4, z: -0.37}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1713808882
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590969172}
+  m_GameObject: {fileID: 1713808880}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -712,13 +725,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.5077346, z: 0.47150922}
-  m_Center: {x: -5.5084607e-24, y: 0.37779424, z: 0.8529991}
---- !u!1001 &1837339803
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &1886263869
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -726,61 +739,64 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8419193083641698403, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
+    - target: {fileID: 1753575983146514643, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 1713808880}
+    - target: {fileID: 3741398515614059163, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
+      propertyPath: m_Name
+      value: Goblin Car Mk .2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.37
+      value: -1.0136079
       objectReference: {fileID: 0}
-    - target: {fileID: 8419193083641698403, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
+    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.020792268
+      value: 0.015421033
       objectReference: {fileID: 0}
-    - target: {fileID: 8419193083641698403, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
+    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.62
+      value: -4.7037983
       objectReference: {fileID: 0}
-    - target: {fileID: 8419193083641698403, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
+    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8419193083641698403, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
+    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.00000003774895
       objectReference: {fileID: 0}
-    - target: {fileID: 8419193083641698403, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
+    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
       propertyPath: m_LocalRotation.y
       value: 1.1102229e-16
       objectReference: {fileID: 0}
-    - target: {fileID: 8419193083641698403, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
+    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
       propertyPath: m_LocalRotation.z
       value: -1.11022296e-16
       objectReference: {fileID: 0}
-    - target: {fileID: 8419193083641698403, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
+    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8419193083641698403, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
+    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8419193083641698403, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
+    - target: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9195553482932994777, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
-      propertyPath: m_Name
-      value: Goblin Car Mk .1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9195553482932994777, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1590969173}
-    - targetCorrespondingSourceObject: {fileID: 9195553482932994777, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1590969177}
-  m_SourcePrefab: {fileID: 100100000, guid: 7c43c7ca6d7df1947ab14bca8ff095d6, type: 3}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
+--- !u!4 &2049482846 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7435945757067963981, guid: b14e6363454b9f14480c9518cd2e5826, type: 3}
+  m_PrefabInstance: {fileID: 1886263869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -790,5 +806,6 @@ SceneRoots:
   - {fileID: 1318498901}
   - {fileID: 447865542}
   - {fileID: 285422223}
-  - {fileID: 1837339803}
   - {fileID: 294453143}
+  - {fileID: 1886263869}
+  - {fileID: 1713808881}

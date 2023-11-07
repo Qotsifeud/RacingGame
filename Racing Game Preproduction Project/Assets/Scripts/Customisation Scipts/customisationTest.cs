@@ -20,10 +20,6 @@ public class customisationTest : MonoBehaviour
     [SerializeField] GameObject breaks2;
     [SerializeField] GameObject breaks3;
 
-
-
-    bool spoilerOn = true;
-    bool weightOn = true;
     private carMovement _moveScript;
     public spoiler _spoilerScript;
     public weight _weightScript;
