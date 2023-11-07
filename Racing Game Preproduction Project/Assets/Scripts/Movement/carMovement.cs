@@ -19,6 +19,9 @@ public class carMovement : MonoBehaviour
 
     public float accelerationMulitplier = 1;
     public float rotataionMulitplier = 1;
+    public float breakMulitplier = 1;
+
+    public GameObject respawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +32,12 @@ public class carMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("w"))
+        if(Input.GetKeyDown("r")) 
+        {
+            transform.position = respawnPoint.transform.position;
+            transform.rotation = respawnPoint.transform.rotation;  
+        }
+        if (Input.GetKey("w")) // forward Acceleration
         {
             acceleration += Time.deltaTime * accelerationMulitplier;
 
@@ -41,7 +49,7 @@ public class carMovement : MonoBehaviour
             transform.Translate(movement * speed * Time.deltaTime * acceleration);
 
         }
-        else if (Input.GetKey("s"))
+        else if (Input.GetKey("s")) // backwards acceleration
         {
             acceleration -= Time.deltaTime * accelerationMulitplier;
 
@@ -53,15 +61,15 @@ public class carMovement : MonoBehaviour
 
 
         }
-        else 
+        else // breaking / neutral acceleration 
         {
-            if (acceleration <= 1 && acceleration > 0.25)
+            if (acceleration <= 1 && acceleration > 0.25) 
             {
-                acceleration -= Time.deltaTime * accelerationMulitplier;
+                acceleration -= Time.deltaTime * breakMulitplier;
             }
             else if (acceleration >= -1 && acceleration < -0.25)
             {
-                acceleration += Time.deltaTime * accelerationMulitplier;
+                acceleration += Time.deltaTime * breakMulitplier;
             }
             else if (acceleration < 0.25 || acceleration > -0.25)
             {
@@ -71,9 +79,9 @@ public class carMovement : MonoBehaviour
 
         }
 
-        if (acceleration > 0 || acceleration < 0)
+        if (acceleration > 0 || acceleration < 0) // set so car wont trun without forward momentum
         {
-            if (Input.GetKey("d"))
+            if (Input.GetKey("d")) // right turns
             {
                 rotation += Time.deltaTime * rotataionMulitplier;
 
@@ -87,14 +95,14 @@ public class carMovement : MonoBehaviour
                     Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
                     rb.MoveRotation(rb.rotation * deltaRotation);
                 }
-                else if (acceleration < 0)
+                else if (acceleration < 0) // reverse rotation for driving backwards 
                 {
                     Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
                     rb.MoveRotation(rb.rotation * deltaRotation);
                 }
 
             }
-            else if (Input.GetKey("a"))
+            else if (Input.GetKey("a")) // left turns
             {
                 rotation -= Time.deltaTime * rotataionMulitplier;
 
@@ -103,19 +111,19 @@ public class carMovement : MonoBehaviour
                     rotation = -1;
                 }
 
-                if (acceleration > 0)
+                if (acceleration > 0) 
                 {
                     Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
                     rb.MoveRotation(rb.rotation * deltaRotation);
                 }
-                else if (acceleration < 0)
+                else if (acceleration < 0) // reverse rotation for driving backwards 
                 {
                     Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
                     rb.MoveRotation(rb.rotation * deltaRotation);
                 }
 
             }
-            else
+            else // resets strearing position when not activley stearing
             {
                 if (rotation <= 1 && rotation > 0.25)
                 {
@@ -136,7 +144,7 @@ public class carMovement : MonoBehaviour
                     Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation);
                     rb.MoveRotation(rb.rotation * deltaRotation);
                 }
-                else if (acceleration < 0)
+                else if (acceleration < 0) // reverse rotation for drifting backwards 
                 {
                     Quaternion deltaRotation = Quaternion.Euler(rotationSpeedReversed * Time.deltaTime * rotation);
                     rb.MoveRotation(rb.rotation * deltaRotation);
