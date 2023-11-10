@@ -13,9 +13,12 @@ public class MonkeyMovement : MonoBehaviour
     public NavMeshAgent monkey;//this is reference to the navmesh agent attached to the monkey game object that this script is attached to
     public Transform Player;//reference to the player transform, this will be used when creating the fleeing code.
     public LayerMask IsPlayer, IsMap;
-    public Vector3 RandomLocation;//new vector 3 for the monkey to randomly go to
+    private Vector3 RandomLocation;//new vector 3 for the monkey to randomly go to
+    private Vector3 RandomBumpLocation;
     private bool RandomLocationChosen;
+    private bool RandomBumperLocationChosen;
     public float RangeOfRandomLocation;
+    public float RangeOfRandomBumperFleeing;
 
 
     public float WanderSpeed = 5;
@@ -23,7 +26,14 @@ public class MonkeyMovement : MonoBehaviour
 
     private bool playerIsClose;//this bool will be set aflse at the start of the game unless the player is within chasing distance of the monkey, triggering monkey to run away/ flee
     public float distanceFromPlayer = 5; // this float detects if the player is within chasing distance of the monkey [default to 5]
-    
+    private bool BumperCollided;
+    public GameObject MonkeyModel;
+    public GameObject AlienModel;
+    private float ModelSelector;
+
+
+
+
 
 
 
@@ -41,6 +51,25 @@ public class MonkeyMovement : MonoBehaviour
      void Start()
     {
         playerIsClose = false;//setting the bool to false as the first monkey wont be near the player at the start of the game
+        BumperCollided = false;
+        ModelSelector = Random.Range(0f, 11f);//randomly selects which model to display e.g monkey or alien
+
+
+        //this just randomly chooses which model to use at the start of the game
+        if (ModelSelector <= 5)
+        {
+            MonkeyModel.SetActive(true);
+            AlienModel.SetActive(false);
+        }
+
+        if(ModelSelector >= 6)
+        {
+            MonkeyModel.SetActive(false);
+            AlienModel.SetActive(true);
+        }
+
+
+
 
     }
 
@@ -64,7 +93,7 @@ public class MonkeyMovement : MonoBehaviour
         }
 
 
-        if (!playerIsClose)
+        if (!playerIsClose && !BumperCollided)
         {
             //if the player is not close to the monkey monkey wanders
             Wandering();//calling the wander function
@@ -73,20 +102,52 @@ public class MonkeyMovement : MonoBehaviour
 
 
 
-        if(playerIsClose)
+        if(playerIsClose && !BumperCollided)
         {
             //if the player is too close to the monkey then the monkey will flee from the player
             Fleeing();//calling the fleeing function
             RandomLocationChosen = false;//resetting  the random location so that if the player stays in the previous location chosem by the monkey it wont keep trying to return  to that same spot
+            RandomBumperLocationChosen = false;
         }
 
+
+      
+        else if (BumperCollided)//if bool triggered change movement to bumper movement
+        {
+            
+            BumperMovement();
+            RandomLocationChosen = false;//resetting  the random location so that if the player stays in the previous location chosem by the monkey it wont keep trying to return  to that same spot
+           
+        }
+
+      
+
+        else
+        {
+            BumperCollided = false;
+        }
+
+     
 
     }
 
 
+     public void OnCollisionEnter(Collision collision)//collision triggers bool
+    {
+        if (collision.gameObject.tag == "Bumper")
+        {
 
+            BumperCollided = true;
+            Debug.Log("Collision true");
+            
+        }
+        else
+        {
+            BumperCollided = false;
+        }
+    }
 
-
+  
 
 
 
@@ -119,7 +180,35 @@ public class MonkeyMovement : MonoBehaviour
     }
 
 
+    private void BumperMovement()
+    {
 
+        monkey.speed = WanderSpeed;//keeps the speed at fleeing
+
+
+        if (!RandomBumperLocationChosen) //if the location for the monkey to move to have not been set then generate a random location
+        {
+            RandomBumperGenerator();//calling the fucntion to generate a new random location for the monkey
+        }
+
+        if (RandomBumperLocationChosen)
+        {
+            monkey.SetDestination(RandomBumpLocation);//sets the agent to move towards the random location if the random locationchosen bool is set to true
+        }//if the raycast below doent detect ground on the map then itll look for another random location that is on  the ground before setting this bool to true and moving the monkey to the new location on the map.
+
+        Vector3 distanctToRandomLocation = transform.position - RandomBumpLocation;//this new variable calculated the distance between the monkey and the random location generated
+
+        if (distanctToRandomLocation.magnitude < 1f)//if the distance calculated is lessthan 1 that meand the monkey has reached that randomly generated location
+        {
+            RandomBumperLocationChosen = false;//as they have reached their destination the bool is set to false resetting and regenerating a new random location for the monkey to move towards
+            Debug.Log("Has moved to bumper location!!!");
+
+            BumperCollided = false;//setting this movement back to false
+        }
+
+       
+
+    }
 
 
 
@@ -162,7 +251,22 @@ public class MonkeyMovement : MonoBehaviour
 
 
 
+    void RandomBumperGenerator()//function for gatering the random destinations the monkey has to move to while wandering
+    {
+        float RanX = Random.Range(-RangeOfRandomBumperFleeing, RangeOfRandomBumperFleeing);//this calculated the random value for the x axis by using the float variable created previously
+        float RanZ = Random.Range(-RangeOfRandomBumperFleeing, RangeOfRandomBumperFleeing);//this calculates the random value for the z axis by using the float variable created previously
 
+        //Note not value for y as we dont want the monkey flying around all over the place
+        RandomBumpLocation = new Vector3(transform.position.x + RanX, transform.position.y, transform.position.z + RanZ);//this sets the new coordinated for the random location
+
+
+        //raycasting used to make sure the new random location confines the monkey to the map by checking if its on the ground
+        if (Physics.Raycast(RandomBumpLocation, -transform.up, 4f, IsMap))
+        {
+            RandomBumperLocationChosen = true;// we set this variable to true if the monkey is on the ground/ in the map boundaries
+        }
+
+    }
 
 
 
@@ -177,6 +281,9 @@ public class MonkeyMovement : MonoBehaviour
 
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(this.transform.position, RangeOfRandomLocation);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(this.transform.position, RangeOfRandomBumperFleeing);
     }
 
 }
