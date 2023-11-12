@@ -36,8 +36,8 @@ public class carMovement : MonoBehaviour
     [HideInInspector] public float breakMulitplierBreaks;
 
 
-    public GameObject respawnPoint;
-    bool canMove = true;
+    //public GameObject respawnPoint;
+    [HideInInspector] public bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -45,24 +45,24 @@ public class carMovement : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider Col)
-    {
+    //void OnTriggerEnter(Collider Col)
+    //{
 
-        if (Col.gameObject.tag == "Check Point")
-        {
-            respawnPoint = Col.gameObject;
-        }
-    }
+    //    if (Col.gameObject.tag == "Check Point")
+    //    {
+    //        respawnPoint = Col.gameObject;
+    //    }
+    //}
 
-    private void OnCollisionEnter(Collision col)
-    {
-        if(col.gameObject.tag == "Ground")
-        {
-            transform.position = respawnPoint.transform.position;
-            transform.rotation = respawnPoint.transform.rotation;
-            RespawnWraper();
-        }
-    }
+    //private void OnCollisionEnter(Collision col)
+    //{
+    //    if(col.gameObject.tag == "Ground")
+    //    {
+    //        transform.position = respawnPoint.transform.position;
+    //        transform.rotation = respawnPoint.transform.rotation;
+    //        RespawnWraper();
+    //    }
+    //}
 
     // Update is called once per frame
     void Update()
@@ -82,12 +82,12 @@ public class carMovement : MonoBehaviour
 
         float breakMulitplier = breakMulitplierSpoiler + breakMulitplierWight + breakMulitplierBreaks;
 
-        if (Input.GetKeyDown("r"))
-        {
-            transform.position = respawnPoint.transform.position;
-            transform.rotation = respawnPoint.transform.rotation;
-            RespawnWraper();
-        }
+        //if (Input.GetKeyDown("r"))
+        //{
+        //    transform.position = respawnPoint.transform.position;
+        //    transform.rotation = respawnPoint.transform.rotation;
+        //    RespawnWraper();
+        //}
 
         if (Input.GetKey("w") && canMove) // forward Acceleration
         {
@@ -205,18 +205,18 @@ public class carMovement : MonoBehaviour
         
     }
 
-    private void RespawnWraper()
-    {
-        StartCoroutine(Respawn());
-    }
+    //private void RespawnWraper()
+    //{
+    //    StartCoroutine(Respawn());
+    //}
 
-    private IEnumerator Respawn()
-    {
-        acceleration = 0;
-        rb.isKinematic = true;
-        canMove = false;
-        yield return new WaitForSeconds (2);
-        canMove = true;
-        rb.isKinematic = false;
-    }
+    //private IEnumerator Respawn()
+    //{
+    //    acceleration = 0;
+    //    rb.isKinematic = true;
+    //    canMove = false;
+    //    yield return new WaitForSeconds (2);
+    //    canMove = true;
+    //    rb.isKinematic = false;
+    //}
 }
