@@ -16,9 +16,6 @@ public class Target : MonoBehaviour
         {
             pointCollection.TargetCollected();
             gameObject.SetActive(false);
-            
-
-            
         }
     }
 }
