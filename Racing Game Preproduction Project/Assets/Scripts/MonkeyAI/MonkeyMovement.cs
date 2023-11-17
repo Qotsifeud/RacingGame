@@ -120,7 +120,7 @@ public class MonkeyMovement : MonoBehaviour
            
         }
 
-      
+     
 
         else
         {
@@ -183,7 +183,7 @@ public class MonkeyMovement : MonoBehaviour
     private void BumperMovement()
     {
 
-        monkey.speed = WanderSpeed;//keeps the speed at fleeing
+        monkey.speed = FleeingSpeed;//keeps the speed at fleeing
 
 
         if (!RandomBumperLocationChosen) //if the location for the monkey to move to have not been set then generate a random location
