@@ -4477,23 +4477,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7425604182283746552, guid: 8beef554077dcca47bf39ff3de5889c9, type: 3}
---- !u!1 &695087498 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8164764780317018718, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
-  m_PrefabInstance: {fileID: 2124328181}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &695087507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695087498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a759656cecaacab4ab0041bf3f0b6474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &706481721
 GameObject:
   m_ObjectHideFlags: 0
@@ -11732,21 +11715,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1936092494865582445, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
-      propertyPath: WanderSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1936092494865582445, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
-      propertyPath: FleeingSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1936092494865582445, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
-      propertyPath: distanceFromPlayer
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1936092494865582445, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
-      propertyPath: RangeOfRandomBumperFleeing
-      value: 40
+    - target: {fileID: 413508862753193756, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 192666848}
+    - target: {fileID: 1534642060371695701, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
+      propertyPath: m_Radius
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 2369121705748946792, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11788,10 +11763,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7360693274365747756, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8164764780317018718, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
       propertyPath: m_Name
       value: Monkey-Alien
@@ -11799,10 +11770,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8164764780317018718, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 695087507}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
 --- !u!1 &2124668738
 GameObject:
