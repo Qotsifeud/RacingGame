@@ -5378,6 +5378,26 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 192666848}
+    - target: {fileID: 413508862753193756, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
+      propertyPath: WanderSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 413508862753193756, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
+      propertyPath: FleeingSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 413508862753193756, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
+      propertyPath: distanceFromPlayer
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 413508862753193756, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
+      propertyPath: RangeOfRandomLocation
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 413508862753193756, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
+      propertyPath: RangeOfRandomBumperFleeing
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2369121705748946792, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
       propertyPath: m_LocalPosition.x
       value: -207.90146
@@ -5421,6 +5441,10 @@ PrefabInstance:
     - target: {fileID: 8164764780317018718, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
       propertyPath: m_Name
       value: Monkey-Alien
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164764780317018718, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

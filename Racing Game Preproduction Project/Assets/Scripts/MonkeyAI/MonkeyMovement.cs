@@ -112,7 +112,7 @@ public class MonkeyMovement : MonoBehaviour
 
 
       
-        else if (BumperCollided)//if bool triggered change movement to bumper movement
+        if (BumperCollided)//if bool triggered change movement to bumper movement
         {
             
             BumperMovement();
