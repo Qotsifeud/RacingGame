@@ -27,8 +27,10 @@ public class MonkeyMovement : MonoBehaviour
     private bool playerIsClose;//this bool will be set aflse at the start of the game unless the player is within chasing distance of the monkey, triggering monkey to run away/ flee
     public float distanceFromPlayer = 5; // this float detects if the player is within chasing distance of the monkey [default to 5]
     private bool BumperCollided;
+
     public GameObject MonkeyModel;
     public GameObject AlienModel;
+
     private float ModelSelector;
 
 
@@ -39,7 +41,7 @@ public class MonkeyMovement : MonoBehaviour
 
     private void Awake()
     {
-
+        ModelSelector = Random.Range(0f, 11f);//randomly selects which model to display e.g monkey or alien
         Player = GameObject.FindGameObjectWithTag("Player").transform;//assigns the player transform to the game object in the scene with the tage Player, which will be our players vehicle
         monkey = GetComponent<NavMeshAgent>();//this assigns the navmesh agent on our monkey game object to the monkey variable for the  nav mesh agent
 
@@ -52,7 +54,7 @@ public class MonkeyMovement : MonoBehaviour
     {
         playerIsClose = false;//setting the bool to false as the first monkey wont be near the player at the start of the game
         BumperCollided = false;
-        ModelSelector = Random.Range(0f, 11f);//randomly selects which model to display e.g monkey or alien
+        
 
 
         //this just randomly chooses which model to use at the start of the game
@@ -62,7 +64,7 @@ public class MonkeyMovement : MonoBehaviour
             AlienModel.SetActive(false);
         }
 
-        if(ModelSelector >= 6)
+        else if(ModelSelector >= 6)
         {
             MonkeyModel.SetActive(false);
             AlienModel.SetActive(true);
