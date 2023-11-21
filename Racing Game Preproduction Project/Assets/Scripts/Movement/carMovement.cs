@@ -35,6 +35,8 @@ public class carMovement : MonoBehaviour
     [HideInInspector] public float breakMulitplierWight;
     [HideInInspector] public float breakMulitplierBreaks;
 
+    [HideInInspector] public float movementVector;
+
 
     //public GameObject respawnPoint;
     [HideInInspector] public bool canMove = true;
@@ -45,25 +47,6 @@ public class carMovement : MonoBehaviour
         
     }
 
-    //void OnTriggerEnter(Collider Col)
-    //{
-
-    //    if (Col.gameObject.tag == "Check Point")
-    //    {
-    //        respawnPoint = Col.gameObject;
-    //    }
-    //}
-
-    //private void OnCollisionEnter(Collision col)
-    //{
-    //    if(col.gameObject.tag == "Ground")
-    //    {
-    //        transform.position = respawnPoint.transform.position;
-    //        transform.rotation = respawnPoint.transform.rotation;
-    //        RespawnWraper();
-    //    }
-    //}
-
     // Update is called once per frame
     void Update()
     {
@@ -72,7 +55,7 @@ public class carMovement : MonoBehaviour
         rotationSpeedVector = new Vector3(0, rotationVector, 0);
         rotationSpeedReversedVector = new Vector3(0, -rotationVector, 0);
 
-        float movementVector = movementSpeedSpoiler + movementSpeedWeight + movementSpeedBreaks;
+        movementVector = movementSpeedSpoiler + movementSpeedWeight + movementSpeedBreaks;
 
         movementSpeedVector = new Vector3(0, 0, movementVector);
 
@@ -81,13 +64,6 @@ public class carMovement : MonoBehaviour
         float rotataionMulitplier = rotataionMulitplierSpoiler + rotationSpeedWeight + rotationSpeedBreaks;
 
         float breakMulitplier = breakMulitplierSpoiler + breakMulitplierWight + breakMulitplierBreaks;
-
-        //if (Input.GetKeyDown("r"))
-        //{
-        //    transform.position = respawnPoint.transform.position;
-        //    transform.rotation = respawnPoint.transform.rotation;
-        //    RespawnWraper();
-        //}
 
         if (Input.GetKey("w") && canMove) // forward Acceleration
         {
@@ -204,19 +180,4 @@ public class carMovement : MonoBehaviour
         }
         
     }
-
-    //private void RespawnWraper()
-    //{
-    //    StartCoroutine(Respawn());
-    //}
-
-    //private IEnumerator Respawn()
-    //{
-    //    acceleration = 0;
-    //    rb.isKinematic = true;
-    //    canMove = false;
-    //    yield return new WaitForSeconds (2);
-    //    canMove = true;
-    //    rb.isKinematic = false;
-    //}
 }
