@@ -13,7 +13,7 @@ public class grounding : MonoBehaviour
     {
         if(!isGrounded) 
         {
-            rb.constraints = RigidbodyConstraints.FreezePosition;
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
         else if (isGrounded)
         {
