@@ -11,17 +11,17 @@ public class carMovement : MonoBehaviour
     [HideInInspector] public float rotationSpeedSpoiler;
     [HideInInspector] public float rotationSpeedWeight;
     [HideInInspector] public float rotationSpeedBreaks;
-    public Vector3 rotationSpeedVector;
-    public Vector3 rotationSpeedReversedVector;
-    public float rotationAcceleration;
+    [HideInInspector] public Vector3 rotationSpeedVector;
+    [HideInInspector] public Vector3 rotationSpeedReversedVector;
+    [HideInInspector] public float rotationAcceleration;
 
 
     public float speed = 17;
     [HideInInspector] public float movementSpeedSpoiler;
     [HideInInspector] public float movementSpeedWeight;
     [HideInInspector] public float movementSpeedBreaks;
-    public Vector3 movementSpeedVector;
-    public float acceleration;
+    [HideInInspector] public Vector3 movementSpeedVector;
+    [HideInInspector] public float acceleration;
 
     [HideInInspector] public float accelerationMulitplierSpoiler;
     [HideInInspector] public float accelerationMulitplierWight;
@@ -36,6 +36,16 @@ public class carMovement : MonoBehaviour
     [HideInInspector] public float breakMulitplierBreaks;
 
     [HideInInspector] public float movementVector;
+    [HideInInspector] public float rotationVector;
+    [HideInInspector] public float accelerationMulitplier;
+    [HideInInspector] public float rotataionMulitplier;
+    [HideInInspector] public float breakMulitplier;
+
+    public float speedBase = 1;
+    public float accelerationBase = 1;
+    public float rotationBase = 60;
+    public float rotationSpeedBase = 2;
+    public float breakBase = 1;
 
 
     //public GameObject respawnPoint;
@@ -50,20 +60,20 @@ public class carMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float rotationVector = rotationSpeedSpoiler + rotationSpeedWeight + rotationSpeedBreaks;
+        rotationVector = rotationBase + rotationSpeedSpoiler + rotationSpeedWeight + rotationSpeedBreaks;
 
         rotationSpeedVector = new Vector3(0, rotationVector, 0);
         rotationSpeedReversedVector = new Vector3(0, -rotationVector, 0);
 
-        movementVector = movementSpeedSpoiler + movementSpeedWeight + movementSpeedBreaks;
+        movementVector = speedBase + movementSpeedSpoiler + movementSpeedWeight + movementSpeedBreaks;
 
         movementSpeedVector = new Vector3(0, 0, movementVector);
 
-        float accelerationMulitplier = accelerationMulitplierSpoiler + accelerationMulitplierWight + accelerationMulitplierBreaks;
+        accelerationMulitplier = accelerationBase + accelerationMulitplierSpoiler + accelerationMulitplierWight + accelerationMulitplierBreaks;
 
-        float rotataionMulitplier = rotataionMulitplierSpoiler + rotationSpeedWeight + rotationSpeedBreaks;
+        rotataionMulitplier = rotationSpeedBase + rotataionMulitplierSpoiler + rotationSpeedWeight + rotationSpeedBreaks;
 
-        float breakMulitplier = breakMulitplierSpoiler + breakMulitplierWight + breakMulitplierBreaks;
+        breakMulitplier = breakBase + breakMulitplierSpoiler + breakMulitplierWight + breakMulitplierBreaks;
 
         if (Input.GetKey("w") && canMove) // forward Acceleration
         {
