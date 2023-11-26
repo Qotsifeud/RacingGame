@@ -8,6 +8,7 @@ TagManager:
   - Check Point
   - Ground
   - Bumper
+  - AI
   layers:
   - Default
   - TransparentFX

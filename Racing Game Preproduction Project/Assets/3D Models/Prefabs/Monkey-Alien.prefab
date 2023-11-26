@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7492676473426050398}
   m_Layer: 0
   m_Name: Monkey-Alien
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
