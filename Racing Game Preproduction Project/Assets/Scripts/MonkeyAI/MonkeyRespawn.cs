@@ -33,8 +33,11 @@ public class MonkeyRespawn : MonoBehaviour
             }
         }
 
+        // Assigns the Monkey's respawn point.
         respawnPoint = resPoints[Random.Range(0, resPoints.Length)];
 
+        // Checks if the player's respawn point is the same as the player's. If true, a do while loop is activated wherein the respawn
+        // point will be constantly checked and then re-set until it is differing from the player's.
         if(respawnPoint == playerRespawnPoint)
         {
             do
