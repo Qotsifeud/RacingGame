@@ -6176,9 +6176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b1addf94cb5e24b9093b1322d41784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 192666848}
-  targetObject: {fileID: 806773883}
-  compassRectTransform: {fileID: 1885401254}
+  PlayerCar: {fileID: 192666848}
+  MonkeyAI: {fileID: 806773883}
+  ArrowTransform: {fileID: 1885401254}
   mainCamera: {fileID: 1078201085}
 --- !u!4 &957835917
 Transform:
