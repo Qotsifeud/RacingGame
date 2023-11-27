@@ -22,7 +22,8 @@ public class PromptScript : MonoBehaviour
     public void Start()
     {
 
-        
+        Cursor.lockState = CursorLockMode.Locked;   
+        Cursor.visible = false;
         ImagePrompt.SetActive(false);
         Active = false;
         // MenuScreen.enabled = false;//the menus screen is defaulted to false
@@ -39,6 +40,8 @@ public class PromptScript : MonoBehaviour
             MenuScreen.SetActive(true);
             Debug.Log("YouPressedE");
             ImagePrompt.SetActive(false);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
     }
