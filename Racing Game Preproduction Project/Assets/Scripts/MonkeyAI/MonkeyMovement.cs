@@ -41,6 +41,10 @@ public class MonkeyMovement : MonoBehaviour
 
     private void Awake()
     {
+        MonkeyModel.SetActive(false);
+        AlienModel.SetActive(false);
+
+
         ModelSelector = Random.Range(0f, 11f);//randomly selects which model to display e.g monkey or alien
         Player = GameObject.FindGameObjectWithTag("Player").transform;//assigns the player transform to the game object in the scene with the tage Player, which will be our players vehicle
         monkey = GetComponent<NavMeshAgent>();//this assigns the navmesh agent on our monkey game object to the monkey variable for the  nav mesh agent
@@ -58,13 +62,13 @@ public class MonkeyMovement : MonoBehaviour
 
 
         //this just randomly chooses which model to use at the start of the game
-        if (ModelSelector <= 5)
+        if (ModelSelector <= 2)
         {
             MonkeyModel.SetActive(true);
             AlienModel.SetActive(false);
         }
 
-        else if(ModelSelector >= 6)
+        else if(ModelSelector >= 3)
         {
             MonkeyModel.SetActive(false);
             AlienModel.SetActive(true);
