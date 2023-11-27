@@ -1,55 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AITrackerScript : MonoBehaviour
+public class PointTowardsTarget : MonoBehaviour
 {
-    private Transform targetObject;
-    private RectTransform arrowRectTransform;
-
-    private void Awake()
-    {
-        // Make sure there's an object with the specified tag in your scene
-        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("AI");
-
-        if (objectsWithTag.Length > 0)
-        {
-            targetObject = objectsWithTag[0].transform; // Assuming you want the first object with the tag
-        }
-        else
-        {
-            Debug.LogError("No GameObject with the tag 'YourTag' found in the scene!");
-        }
-
-        arrowRectTransform = transform.Find("Arrow").GetComponent<RectTransform>();
-    }
+    [SerializeField] private Transform targetObject;
+    [SerializeField] private RectTransform arrowRectTransform;
+    [SerializeField] private Camera mainCamera;
 
     private void Update()
     {
-        if (targetObject != null)
+        if (targetObject != null && mainCamera != null)
         {
-            Vector3 toPoint = targetObject.position;
-            Vector3 fromPoint = Camera.main.transform.position;
-            fromPoint.x = 0f;
-
             // Get the direction vector
-            Vector3 pointDirection = (toPoint - fromPoint).normalized;
+            Vector3 toPoint = targetObject.position - mainCamera.transform.position;
 
-            // Get the angle in degrees
-            float directionAngle = Mathf.Atan2(pointDirection.y, pointDirection.x) * Mathf.Rad2Deg;
+            // Project the direction vector onto the camera's plane
+            Vector3 projectedDirection = Vector3.ProjectOnPlane(toPoint, mainCamera.transform.forward);
 
-            // Adjust the angle to be positive
-            directionAngle = (directionAngle + 360) % 360;
+            // Get the rotation to face the projected direction
+            Quaternion rotation = Quaternion.LookRotation(Vector3.forward, projectedDirection);
 
-            arrowRectTransform.localEulerAngles = new Vector3(0, 0, directionAngle);
+            // Apply the rotation to the arrow
+            arrowRectTransform.rotation = rotation;
         }
     }
 }
-
-
-
-
-
-//https://www.youtube.com/watch?v=dHzeHh-3bp4
-
-//as reference
