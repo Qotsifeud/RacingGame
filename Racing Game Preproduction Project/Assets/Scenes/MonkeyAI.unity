@@ -795,25 +795,17 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 192666848}
-    - target: {fileID: 413508862753193756, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
-      propertyPath: WanderSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 413508862753193756, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
-      propertyPath: FleeingSpeed
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 2369121705748946792, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 629.3
+      value: 629
       objectReference: {fileID: 0}
     - target: {fileID: 2369121705748946792, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.9
+      value: 26.8
       objectReference: {fileID: 0}
     - target: {fileID: 2369121705748946792, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 399
+      value: 499
       objectReference: {fileID: 0}
     - target: {fileID: 2369121705748946792, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
       propertyPath: m_LocalRotation.w
