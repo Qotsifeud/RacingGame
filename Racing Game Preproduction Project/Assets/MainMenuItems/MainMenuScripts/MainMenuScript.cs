@@ -10,8 +10,9 @@ public class MainMenuScript : MonoBehaviour
     {//opens the game scene//just for play testing
 
 
-        SceneManager.LoadScene("MonkeyAI");
-
+        SceneManager.LoadScene("GCU RaceTrack");
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
 
 

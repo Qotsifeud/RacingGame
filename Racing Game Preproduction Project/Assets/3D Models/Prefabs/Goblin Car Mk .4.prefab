@@ -1573,7 +1573,7 @@ MonoBehaviour:
   rotataionMulitplier: 0
   breakMulitplier: 0
   groundCheck: {fileID: 8515721879216983422}
-  groundDistance: 1.5
+  groundDistance: 2
   groundMask:
     serializedVersion: 2
     m_Bits: 64
