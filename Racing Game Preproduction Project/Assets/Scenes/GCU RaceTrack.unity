@@ -1301,6 +1301,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dc715af507517b8438ffa4fbda18304b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 05bbfc84be41a124aa1661f9b433f5f0, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dc715af507517b8438ffa4fbda18304b, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: e2d4fdcb596b414428b472a617a56c66, type: 2}
     - target: {fileID: 919132149155446097, guid: dc715af507517b8438ffa4fbda18304b, type: 3}
       propertyPath: m_Name
       value: GCU Track
@@ -2940,6 +2948,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 457537f9bb72611478cf8ca7b4343b8e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 53bb17b65cc42bb4ea64f615e90d2311, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 457537f9bb72611478cf8ca7b4343b8e, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c93dee88976bc54bb84f59a68637c64, type: 2}
     - target: {fileID: 919132149155446097, guid: 457537f9bb72611478cf8ca7b4343b8e, type: 3}
       propertyPath: m_Name
       value: GCU Bumpers & Walls
