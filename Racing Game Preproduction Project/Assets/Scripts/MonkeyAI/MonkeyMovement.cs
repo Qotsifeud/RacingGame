@@ -38,10 +38,15 @@ public class MonkeyMovement : MonoBehaviour
 
 
 
-
     private void Awake()
     {
+        MonkeyModel.SetActive(false);
+        AlienModel.SetActive(false);
+
+
         ModelSelector = Random.Range(0f, 11f);//randomly selects which model to display e.g monkey or alien
+      
+
         Player = GameObject.FindGameObjectWithTag("Player").transform;//assigns the player transform to the game object in the scene with the tage Player, which will be our players vehicle
         monkey = GetComponent<NavMeshAgent>();//this assigns the navmesh agent on our monkey game object to the monkey variable for the  nav mesh agent
 
@@ -54,17 +59,17 @@ public class MonkeyMovement : MonoBehaviour
     {
         playerIsClose = false;//setting the bool to false as the first monkey wont be near the player at the start of the game
         BumperCollided = false;
-        
 
+     
 
         //this just randomly chooses which model to use at the start of the game
-        if (ModelSelector <= 5)
+        if (ModelSelector <= 2)
         {
             MonkeyModel.SetActive(true);
             AlienModel.SetActive(false);
         }
 
-        else if(ModelSelector >= 6)
+        else if(ModelSelector >= 3)
         {
             MonkeyModel.SetActive(false);
             AlienModel.SetActive(true);
@@ -129,7 +134,9 @@ public class MonkeyMovement : MonoBehaviour
             BumperCollided = false;
         }
 
-     
+
+
+
 
     }
 
@@ -288,6 +295,9 @@ public class MonkeyMovement : MonoBehaviour
         Gizmos.DrawWireSphere(this.transform.position, RangeOfRandomBumperFleeing);
     }
 
+
+
+
 }
 
 
@@ -310,46 +320,5 @@ public class MonkeyMovement : MonoBehaviour
 
 
 
-
-
-
-
-    //old random movement code not including nav mesh
-    /*
-
-    //Once navmeshe is installed i can make the monkeys movements more advance as reight not its just moving around randomly.
-    public float MonkeySpeed = 2.0f;
-    private Rigidbody Mbody;//this game objects rigidbody
-    void Start()
-    {
-        Mbody = GetComponent<Rigidbody>();
-    }
-
-   
-    
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == ("Obstacle"))
-        {
-            Vector3 resetLocation = new Vector3(Random.Range(-2.0f, 2f), 0.0f, Random.Range(-2.0f, 2f));
-            Mbody.AddForce(-resetLocation * MonkeySpeed);
-        }
-    }
-
-  
-
-
-
-
-
-    void FixedUpdate()
-    {
-        float MoveX = Random.Range(-2.0f, 2f);
-        float MoveZ = Random.Range(-2.0f, 2f);
-        Vector3 newLocation = new Vector3(MoveX, 0.0f, MoveZ);
-        Mbody.AddForce(newLocation * MonkeySpeed);//moves the monkeys rigidbody towards the movement to the new location at monkey speed.
-    }
-}
-*/
 
 
