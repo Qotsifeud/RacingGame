@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Bumper
   - AI
+  - Track
   layers:
   - Default
   - TransparentFX

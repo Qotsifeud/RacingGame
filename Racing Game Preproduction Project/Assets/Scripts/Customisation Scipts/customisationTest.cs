@@ -39,7 +39,7 @@ public class customisationTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("c")) // key to switch active spoiler 
+        if (Input.GetKeyDown("x")) // key to switch active spoiler 
         {
             if(spoiler1.activeInHierarchy)
             {
@@ -63,7 +63,7 @@ public class customisationTest : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown("v")) // key to switch active custom weight
+        if (Input.GetKeyDown("c")) // key to switch active custom weight
         {
             if (weight1.activeInHierarchy)
             {
@@ -87,7 +87,7 @@ public class customisationTest : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown("x")) // key to switch active custom air breaks 
+        if (Input.GetKeyDown("v")) // key to switch active custom air breaks 
         { 
             if(breaks1.activeInHierarchy)
             {

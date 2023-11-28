@@ -41,15 +41,21 @@ public class carMovement : MonoBehaviour
     [HideInInspector] public float rotataionMulitplier;
     [HideInInspector] public float breakMulitplier;
 
-    public float speedBase = 1;
-    public float accelerationBase = 1;
-    public float rotationBase = 60;
-    public float rotationSpeedBase = 2;
-    public float breakBase = 1;
+    private float speedBase = 3;
+    private float accelerationBase = 1;
+    private float rotationBase = 60;
+    private float rotationSpeedBase = 2;
+    private float breakBase = 0.25f;
 
+    public Transform groundCheck;
+    public float groundDistance = 0.4f;
+    public LayerMask groundMask;
+    public bool isGrounded;
+
+    private bool contrained = false;
 
     //public GameObject respawnPoint;
-    [HideInInspector] public bool canMove = true;
+    public bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +66,8 @@ public class carMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
         rotationVector = rotationBase + rotationSpeedSpoiler + rotationSpeedWeight + rotationSpeedBreaks;
 
         rotationSpeedVector = new Vector3(0, rotationVector, 0);
@@ -75,7 +83,7 @@ public class carMovement : MonoBehaviour
 
         breakMulitplier = breakBase + breakMulitplierSpoiler + breakMulitplierWight + breakMulitplierBreaks;
 
-        if (Input.GetKey("w") && canMove) // forward Acceleration
+        if (Input.GetKey("w") && canMove && isGrounded) // forward Acceleration
         {
             acceleration += Time.deltaTime * accelerationMulitplier;
 
@@ -87,7 +95,7 @@ public class carMovement : MonoBehaviour
             transform.Translate(movementSpeedVector * speed * Time.deltaTime * acceleration);
 
         }
-        else if (Input.GetKey("s") && canMove) // backwards acceleration
+        else if (Input.GetKey("s") && canMove && isGrounded) // backwards acceleration
         {
             acceleration -= Time.deltaTime * accelerationMulitplier;
 
@@ -188,6 +196,17 @@ public class carMovement : MonoBehaviour
             }
 
         }
-        
+
+        if (!isGrounded && !contrained)
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+            contrained = true;
+        }
+        else if (isGrounded && contrained)
+        {
+            rb.constraints = RigidbodyConstraints.None;
+            contrained = false;
+        }
+
     }
 }
