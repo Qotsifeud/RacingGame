@@ -6,7 +6,7 @@ using UnityEngine;
 public class timer : MonoBehaviour
 {
     public TextMeshProUGUI Timer;
-    float time = 300f;
+    public float time = 300f;
 
     public GameObject gameOver;
     // Start is called before the first frame update
@@ -27,6 +27,8 @@ public class timer : MonoBehaviour
         if(time <= 0) 
         {
             gameOver.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }
