@@ -468,7 +468,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 779909713}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1039,6 +1039,7 @@ GameObject:
   - component: {fileID: 517416484}
   - component: {fileID: 517416486}
   - component: {fileID: 517416485}
+  - component: {fileID: 517416487}
   m_Layer: 5
   m_Name: MM-Logo
   m_TagString: Untagged
@@ -1103,6 +1104,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517416483}
   m_CullTransparentMesh: 1
+--- !u!114 &517416487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517416483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df0205e9813155a42b55867a4dad76bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &532350715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,7 +1825,7 @@ GameObject:
   - component: {fileID: 779909712}
   m_Layer: 0
   m_Name: MMapCam
-  m_TagString: Untagged
+  m_TagString: MMapCam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2411,6 +2424,7 @@ GameObject:
   - component: {fileID: 1344848720}
   - component: {fileID: 1344848723}
   - component: {fileID: 1344848722}
+  - component: {fileID: 1344848724}
   m_Layer: 5
   m_Name: MM-Logo
   m_TagString: Untagged
@@ -2475,6 +2489,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344848719}
   m_CullTransparentMesh: 1
+--- !u!114 &1344848724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344848719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df0205e9813155a42b55867a4dad76bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1364446335
 GameObject:
   m_ObjectHideFlags: 0
@@ -3000,7 +3026,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 779909713}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
