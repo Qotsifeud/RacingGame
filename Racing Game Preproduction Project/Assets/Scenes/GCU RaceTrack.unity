@@ -3537,6 +3537,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin Car Mk .4
       objectReference: {fileID: 0}
+    - target: {fileID: 8303164754780898152, guid: e424e0fe75c11ed45835debb8f27736a, type: 3}
+      propertyPath: OnPointCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303164754780898152, guid: e424e0fe75c11ed45835debb8f27736a, type: 3}
+      propertyPath: OnPointCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 94526450}
+    - target: {fileID: 8303164754780898152, guid: e424e0fe75c11ed45835debb8f27736a, type: 3}
+      propertyPath: OnPointCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdatePointsText
+      objectReference: {fileID: 0}
     - target: {fileID: 8452292557125501679, guid: e424e0fe75c11ed45835debb8f27736a, type: 3}
       propertyPath: respawnPoint
       value: 
