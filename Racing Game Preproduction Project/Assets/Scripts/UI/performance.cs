@@ -22,6 +22,6 @@ public class performance : MonoBehaviour
     {
         speed = Convert.ToInt32(_carMovementScript.speed *  _carMovementScript.acceleration * _carMovementScript.movementVector) ;
 
-        speedometer.text = speed.ToString();
+        speedometer.text = "Speed " + speed.ToString();
     }
 }

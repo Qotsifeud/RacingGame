@@ -7,6 +7,8 @@ public class timer : MonoBehaviour
 {
     public TextMeshProUGUI Timer;
     float time = 300f;
+
+    public GameObject gameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +24,9 @@ public class timer : MonoBehaviour
 
         Timer.text = string.Format("{0:00} : {1:00}", minutes, seconds);
 
+        if(time <= 0) 
+        {
+            gameOver.SetActive(true);
+        }
     }
 }
