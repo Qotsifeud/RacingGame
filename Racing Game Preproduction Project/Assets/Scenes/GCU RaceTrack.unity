@@ -1567,18 +1567,13 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 683204566}
   m_SourcePrefab: {fileID: 100100000, guid: dc715af507517b8438ffa4fbda18304b, type: 3}
---- !u!1 &683204561 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dc715af507517b8438ffa4fbda18304b, type: 3}
-  m_PrefabInstance: {fileID: 683204560}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &683204562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 683204561}
+  m_GameObject: {fileID: 919132148763845249}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
@@ -1609,7 +1604,7 @@ MeshCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 683204561}
+  m_GameObject: {fileID: 919132148763845249}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -3825,6 +3820,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &919132148763845249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dc715af507517b8438ffa4fbda18304b, type: 3}
+  m_PrefabInstance: {fileID: 683204560}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4417541968377405227
 PrefabInstance:
   m_ObjectHideFlags: 0
