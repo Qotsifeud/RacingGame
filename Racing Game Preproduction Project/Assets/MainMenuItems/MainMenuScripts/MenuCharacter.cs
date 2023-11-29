@@ -7,7 +7,7 @@ public class MenuCharacter : MonoBehaviour
 
     private CharacterController menuCharacter;
     public float CharacterWalkSpeed = 3;
-
+    public static bool InMenuScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -24,5 +24,19 @@ public class MenuCharacter : MonoBehaviour
 
 
         menuCharacter.Move(move * Time.deltaTime * CharacterWalkSpeed);//the movement itself is calculated by the runtime multiplied by our float speed and our horizontal/ vertical movement
+
+        if (InMenuScreen)
+        {
+            GetComponent<CharacterController>().enabled = false;
+        }
+
+        if (!InMenuScreen)
+        {
+            GetComponent<CharacterController>().enabled = true;
+        }
+
+
+
+
     }
 }

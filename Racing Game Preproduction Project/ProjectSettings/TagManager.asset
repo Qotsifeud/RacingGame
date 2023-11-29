@@ -10,6 +10,7 @@ TagManager:
   - Bumper
   - AI
   - Track
+  - MMapCam
   layers:
   - Default
   - TransparentFX

@@ -26,6 +26,23 @@ public class MainMenuScript : MonoBehaviour
     }
 
 
+    public void CloseMenuScreen() {
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        MenuCharacter.InMenuScreen = false;
+       
+
+
+
+    }
+
+
+
+
+
+
 
 
 

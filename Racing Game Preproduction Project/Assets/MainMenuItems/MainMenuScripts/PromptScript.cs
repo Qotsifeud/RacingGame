@@ -14,8 +14,9 @@ public class PromptScript : MonoBehaviour
     public float distanceFromTarget = 5f;
     public float movementSpeed = 3f;
   //  public Image MenuScreen;
-    public GameObject MenuScreen;
+    public  GameObject MenuScreen;
 
+    
 
 
 
@@ -28,6 +29,16 @@ public class PromptScript : MonoBehaviour
         Active = false;
         // MenuScreen.enabled = false;//the menus screen is defaulted to false
         MenuScreen.SetActive(false);
+
+        
+
+
+
+
+
+
+
+
     }
 
     public void Update()
@@ -42,7 +53,21 @@ public class PromptScript : MonoBehaviour
             ImagePrompt.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+
+            MenuCharacter.InMenuScreen = true;
+
+
+
+
         }
+
+      
+
+
+
+
+
+
 
     }
 
