@@ -19,7 +19,7 @@ public class TestCrash : MonoBehaviour
         {
             _carMovementScript.canMove = false;
             _carMovementScript.speed = 0;
-            
+            _carMovementScript.acceleration = 0;
             StartCoroutine(CrashTimer());
             Debug.Log("CrashBumperHasCollided");
         }
@@ -33,9 +33,10 @@ public class TestCrash : MonoBehaviour
 
     IEnumerator CrashTimer()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         _carMovementScript.canMove = true;
         _carMovementScript.speed = 17;
+       
     }
 
 }
