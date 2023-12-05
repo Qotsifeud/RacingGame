@@ -55,7 +55,6 @@ public class MonkeyRespawn : MonoBehaviour
     // Using this method as a way to call to this script outside of it and set the monkey to active again in a position based on the random checkpoints.
     public static void monkeyRespawn(GameObject gameObject)
     {
-        gameObject.SetActive(true);
         gameObject.transform.position = respawnPoint.transform.position;
         gameObject.transform.rotation = respawnPoint.transform.rotation;
     }

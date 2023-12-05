@@ -15,7 +15,7 @@ public class Target : MonoBehaviour
         if(pointCollection != null )
         {
             pointCollection.TargetCollected();
-            gameObject.SetActive(false);
+            Destroy(this.gameObject);
         }
     }
 }
