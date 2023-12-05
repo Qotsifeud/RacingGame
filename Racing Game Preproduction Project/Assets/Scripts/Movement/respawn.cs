@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class respawn : MonoBehaviour
 {
-
+    public GameObject SpawnLight;
     public GameObject respawnPoint;
     public GameObject car;
     Rigidbody rb;
@@ -13,6 +13,7 @@ public class respawn : MonoBehaviour
 
     private void Start()
     {
+        SpawnLight.SetActive(false);
         _carMovementScript = car.GetComponent<carMovement>();
         rb = GetComponent<Rigidbody>();
     }
@@ -48,16 +49,31 @@ public class respawn : MonoBehaviour
 
     private void RespawnWraper()
     {
+       
+
+
         StartCoroutine(Respawn());
+
     }
 
     private IEnumerator Respawn()
     {
+        SpawnLight.SetActive(true);
         _carMovementScript.acceleration = 0;
         rb.isKinematic = true;
         _carMovementScript.canMove = false;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
         _carMovementScript.canMove = true;
         rb.isKinematic = false;
+        StartCoroutine(RespawnLight());
+
+
+    }
+
+    IEnumerator RespawnLight()
+    {
+        yield return new WaitForSeconds(1f);
+        SpawnLight.SetActive(false);
+
     }
 }
