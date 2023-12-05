@@ -33,10 +33,27 @@ public class TestCrash : MonoBehaviour
 
     IEnumerator CrashTimer()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
+        _carMovementScript.canMove = false;
+        _carMovementScript.speed = 3;
+        _carMovementScript.acceleration = -1f;
+        StartCoroutine(CarReset());
+    }
+
+    IEnumerator CarReset()
+    {
+        yield return new WaitForSeconds(0.4f);
         _carMovementScript.canMove = true;
         _carMovementScript.speed = 17;
-       
+        _carMovementScript.acceleration = 0f;
     }
+
+
+
+
+
+
+
+
 
 }
