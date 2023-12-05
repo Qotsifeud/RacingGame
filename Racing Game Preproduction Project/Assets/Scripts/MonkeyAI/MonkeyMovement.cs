@@ -311,11 +311,32 @@ public class MonkeyMovement : MonoBehaviour
             yield return null;
         }
 
-        //need to reset the ai at this point
-        //this is when it should activate jays respawn/ai reset
+    
 
         TheBeam.SetActive(false);
+
+        DestroyGameObject();
+
+
+
+
+
+
     }
+
+    public void DestroyGameObject()
+    {
+        //  Destroy(this.gameObject);
+     
+        AIspawner.NumberOfPrefabs = -1;//takes away  anumber from the list when an alien is destroyed
+
+
+
+    }
+
+
+
+
 }
 
 

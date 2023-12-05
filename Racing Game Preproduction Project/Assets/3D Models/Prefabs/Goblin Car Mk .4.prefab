@@ -1877,7 +1877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefbd30c5e091b24cb158c382d760858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnLight: {fileID: 324371894049444675}
+  SpawnLight: {fileID: 6461316820923025861}
   respawnPoint: {fileID: 0}
   car: {fileID: 2927375515193702821}
 --- !u!65 &2414863097756773818
@@ -1899,8 +1899,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.99780196, y: 1.1836746, z: 1.71944}
-  m_Center: {x: 0.0042535365, y: 0.79253244, z: -0.011186063}
+  m_Size: {x: 0.99780196, y: 1.3317871, z: 1.71944}
+  m_Center: {x: 0.0042535365, y: 0.92925537, z: -0.011186063}
 --- !u!114 &8303164754780898152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2050,7 +2050,7 @@ Transform:
   m_GameObject: {fileID: 3180875292063497209}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.013, y: 0.018, z: 0.754}
+  m_LocalPosition: {x: -0.013, y: 0.252, z: 0.748}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2075,7 +2075,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0015869, y: 0.54134905, z: 0.5225377}
+  m_Size: {x: 0.5, y: 0.3, z: 0.3}
   m_Center: {x: 0.0005963743, y: 0.39733964, z: 0.14542393}
 --- !u!114 &1362965505495621811
 MonoBehaviour:
@@ -2541,7 +2541,7 @@ Transform:
   m_GameObject: {fileID: 4525852364510716982}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.019, y: 0.018, z: -1.078}
+  m_LocalPosition: {x: 0.02, y: 0.252, z: -1.146}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2566,7 +2566,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0015869, y: 0.54134905, z: 0.5225377}
+  m_Size: {x: 0.5, y: 0.3, z: 0.3}
   m_Center: {x: 0.0005963743, y: 0.39733964, z: 0.14542393}
 --- !u!114 &7826978131959133536
 MonoBehaviour:
