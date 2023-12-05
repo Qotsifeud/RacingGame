@@ -20,19 +20,23 @@ public class MonkeyMovement : MonoBehaviour
     public float RangeOfRandomLocation;
     public float RangeOfRandomBumperFleeing;
 
-
+    public Transform ThisAI;
+    public float BeamSpeed = 5;
+    public bool CanMove;
     public float WanderSpeed = 5;
     public float FleeingSpeed = 10;
 
     private bool playerIsClose;//this bool will be set aflse at the start of the game unless the player is within chasing distance of the monkey, triggering monkey to run away/ flee
     public float distanceFromPlayer = 5; // this float detects if the player is within chasing distance of the monkey [default to 5]
     private bool BumperCollided;
+    public GameObject TheBeam;
 
-    
 
     private void Awake()
     {
-     
+        
+        TheBeam.SetActive(false);
+        CanMove = true;
         Player = GameObject.FindGameObjectWithTag("Player").transform;//assigns the player transform to the game object in the scene with the tage Player, which will be our players vehicle
         monkey = GetComponent<NavMeshAgent>();//this assigns the navmesh agent on our monkey game object to the monkey variable for the  nav mesh agent
 
@@ -41,36 +45,36 @@ public class MonkeyMovement : MonoBehaviour
 
 
 
-     void Start()
+    void Start()
     {
         playerIsClose = false;//setting the bool to false as the first monkey wont be near the player at the start of the game
         BumperCollided = false;
-
-     
+        CanMove = true;
+        TheBeam.SetActive(false);
 
     }
 
 
 
 
-     void Update()
+    void Update()
     {
         playerIsClose = Physics.CheckSphere(transform.position, distanceFromPlayer, IsPlayer);
 
         float distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
 
-        if (distanceToPlayer < distanceFromPlayer)
+        if (distanceToPlayer < distanceFromPlayer && CanMove == true)
         {
             playerIsClose = true;
         }
 
-        if (distanceToPlayer > distanceFromPlayer)
+        if (distanceToPlayer > distanceFromPlayer && CanMove == true)
         {
             playerIsClose = false;
         }
 
 
-        if (!playerIsClose && !BumperCollided)
+        if (!playerIsClose && !BumperCollided && CanMove == true)
         {
             //if the player is not close to the monkey monkey wanders
             Wandering();//calling the wander function
@@ -79,7 +83,7 @@ public class MonkeyMovement : MonoBehaviour
 
 
 
-        if(playerIsClose && !BumperCollided)
+        if (playerIsClose && !BumperCollided && CanMove == true)
         {
             //if the player is too close to the monkey then the monkey will flee from the player
             Fleeing();//calling the fleeing function
@@ -88,16 +92,16 @@ public class MonkeyMovement : MonoBehaviour
         }
 
 
-      
-        if (BumperCollided)//if bool triggered change movement to bumper movement
+
+        if (BumperCollided && CanMove == true)//if bool triggered change movement to bumper movement
         {
-            
+
             BumperMovement();
             RandomLocationChosen = false;//resetting  the random location so that if the player stays in the previous location chosem by the monkey it wont keep trying to return  to that same spot
-           
+
         }
 
-     
+
 
         else
         {
@@ -111,14 +115,14 @@ public class MonkeyMovement : MonoBehaviour
     }
 
 
-     public void OnCollisionEnter(Collision collision)//collision triggers bool
+    public void OnCollisionEnter(Collision collision)//collision triggers bool
     {
-        if (collision.gameObject.tag == "Bumper")
+        if (collision.gameObject.tag == "Bumper" && CanMove == true)
         {
 
             BumperCollided = true;
             Debug.Log("Collision true");
-            
+
         }
         else
         {
@@ -126,7 +130,7 @@ public class MonkeyMovement : MonoBehaviour
         }
     }
 
-  
+
 
 
 
@@ -149,12 +153,12 @@ public class MonkeyMovement : MonoBehaviour
 
         Vector3 distanctToRandomLocation = transform.position - RandomLocation;//this new variable calculated the distance between the monkey and the random location generated
 
-        if(distanctToRandomLocation.magnitude < 1f)//if the distance calculated is lessthan 1 that meand the monkey has reached that randomly generated location
+        if (distanctToRandomLocation.magnitude < 1f)//if the distance calculated is lessthan 1 that meand the monkey has reached that randomly generated location
         {
             RandomLocationChosen = false;//as they have reached their destination the bool is set to false resetting and regenerating a new random location for the monkey to move towards
         }
 
-        
+
 
     }
 
@@ -185,7 +189,7 @@ public class MonkeyMovement : MonoBehaviour
             BumperCollided = false;//setting this movement back to false
         }
 
-       
+
 
     }
 
@@ -215,13 +219,13 @@ public class MonkeyMovement : MonoBehaviour
     {
         float RanX = Random.Range(-RangeOfRandomLocation, RangeOfRandomLocation);//this calculated the random value for the x axis by using the float variable created previously
         float RanZ = Random.Range(-RangeOfRandomLocation, RangeOfRandomLocation);//this calculates the random value for the z axis by using the float variable created previously
-      
+
         //Note not value for y as we dont want the monkey flying around all over the place
-        RandomLocation = new Vector3(transform.position.x + RanX, transform.position.y,transform.position.z + RanZ);//this sets the new coordinated for the random location
+        RandomLocation = new Vector3(transform.position.x + RanX, transform.position.y, transform.position.z + RanZ);//this sets the new coordinated for the random location
 
 
         //raycasting used to make sure the new random location confines the monkey to the map by checking if its on the ground
-        if(Physics.Raycast(RandomLocation, -transform.up, 4f, IsMap))
+        if (Physics.Raycast(RandomLocation, -transform.up, 4f, IsMap))
         {
             RandomLocationChosen = true;// we set this variable to true if the monkey is on the ground/ in the map boundaries
         }
@@ -254,7 +258,7 @@ public class MonkeyMovement : MonoBehaviour
     private void OnDrawGizmos()
     {
         //this will draw a yellow wire mesh arou dthe monkey to visualize the distancefromplayer variable. as this  is public we can adjust the distance in the inspector window
-        
+
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(this.transform.position, distanceFromPlayer);
 
@@ -266,9 +270,57 @@ public class MonkeyMovement : MonoBehaviour
     }
 
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == ("Beam"))
+        {
+            CanMove = false;
+
+            monkey.speed = 0;
+            Debug.Log("MonkeyCaught");
+            GetComponent<NavMeshAgent>().enabled = false;
+            StartCoroutine(BeamUpBoys());
+        }
+
+        else
+        {
+
+        }
 
 
+    }
+
+
+    IEnumerator BeamUpBoys()
+    {
+        TheBeam.SetActive(true);
+        yield return new WaitForSeconds(1f);
+
+        Debug.Log("Being Beamed Up!");
+
+        // You can use a loop to gradually move the monkey upwards
+        float elapsedTime = 0f;
+        float beamDuration = 2f;  // Adjust this based on your needs
+        Vector3 startPosition = transform.position;
+        Vector3 targetPosition = transform.position + Vector3.up * 10f;  // Adjust the upward distance as needed
+
+        while (elapsedTime < beamDuration)
+        {
+            transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / beamDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        //need to reset the ai at this point
+        //this is when it should activate jays respawn/ai reset
+
+        TheBeam.SetActive(false);
+    }
 }
+
+
+
+
 
 
 

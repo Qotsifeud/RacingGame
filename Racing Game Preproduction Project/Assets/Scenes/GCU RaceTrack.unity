@@ -2050,6 +2050,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 413508862753193756, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 7650123515117027632}
+    - target: {fileID: 413508862753193756, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
+      propertyPath: ThisAI
+      value: 
+      objectReference: {fileID: 806773883}
+    - target: {fileID: 413508862753193756, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
       propertyPath: WanderSpeed
       value: 25
       objectReference: {fileID: 0}
@@ -2075,11 +2083,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2369121705748946792, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.8
+      value: -11.38
       objectReference: {fileID: 0}
     - target: {fileID: 2369121705748946792, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 499
+      value: 320.11
       objectReference: {fileID: 0}
     - target: {fileID: 2369121705748946792, guid: 7b75571cf4251b2438f1b477e52fa256, type: 3}
       propertyPath: m_LocalRotation.w

@@ -11,6 +11,7 @@ TagManager:
   - AI
   - Track
   - MMapCam
+  - Beam
   layers:
   - Default
   - TransparentFX
