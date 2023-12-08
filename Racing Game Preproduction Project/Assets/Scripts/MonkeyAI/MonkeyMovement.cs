@@ -30,6 +30,8 @@ public class MonkeyMovement : MonoBehaviour
     public float distanceFromPlayer = 5; // this float detects if the player is within chasing distance of the monkey [default to 5]
     private bool BumperCollided;
     public GameObject TheBeam;
+    public GameObject spawnControl;
+    private AIspawner _AIspawner;
 
 
     private void Awake()
@@ -39,7 +41,7 @@ public class MonkeyMovement : MonoBehaviour
         CanMove = true;
         Player = GameObject.FindGameObjectWithTag("Player").transform;//assigns the player transform to the game object in the scene with the tage Player, which will be our players vehicle
         monkey = GetComponent<NavMeshAgent>();//this assigns the navmesh agent on our monkey game object to the monkey variable for the  nav mesh agent
-
+        
     }
 
 
@@ -51,7 +53,8 @@ public class MonkeyMovement : MonoBehaviour
         BumperCollided = false;
         CanMove = true;
         TheBeam.SetActive(false);
-
+        spawnControl = GameObject.FindGameObjectWithTag("Spawn Control");
+        _AIspawner = spawnControl.GetComponent<AIspawner>();
     }
 
 
@@ -325,9 +328,9 @@ public class MonkeyMovement : MonoBehaviour
 
     public void DestroyGameObject()
     {
-        //  Destroy(this.gameObject);
+        Destroy(this.gameObject);
      
-        AIspawner.NumberOfPrefabs = -1;//takes away  anumber from the list when an alien is destroyed
+        _AIspawner.NumberOfPrefabs -= 1;//takes away  anumber from the list when an alien is destroyed
 
 
 

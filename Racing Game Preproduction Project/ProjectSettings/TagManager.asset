@@ -12,6 +12,7 @@ TagManager:
   - Track
   - MMapCam
   - Beam
+  - Spawn Control
   layers:
   - Default
   - TransparentFX

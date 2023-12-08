@@ -2492,7 +2492,7 @@ GameObject:
   - component: {fileID: 1224792669}
   m_Layer: 0
   m_Name: SpawnControl
-  m_TagString: Untagged
+  m_TagString: Spawn Control
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2512,6 +2512,8 @@ MonoBehaviour:
   AIPrefabs:
   - {fileID: 190136777}
   - {fileID: 189652248}
+  NumberOfPrefabs: 10
+  endScreen: {fileID: 418447316}
 --- !u!4 &1224792670
 Transform:
   m_ObjectHideFlags: 0
@@ -4043,6 +4045,10 @@ PrefabInstance:
     - target: {fileID: 2927375515193702821, guid: e424e0fe75c11ed45835debb8f27736a, type: 3}
       propertyPath: m_Name
       value: Goblin Car Mk .4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303164754780898152, guid: e424e0fe75c11ed45835debb8f27736a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8303164754780898152, guid: e424e0fe75c11ed45835debb8f27736a, type: 3}
       propertyPath: OnPointCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target

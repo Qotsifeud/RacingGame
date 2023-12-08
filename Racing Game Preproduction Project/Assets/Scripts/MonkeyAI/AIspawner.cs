@@ -7,7 +7,9 @@ public class AIspawner : MonoBehaviour
 {
    
     public List<GameObject> AIPrefabs = new List<GameObject>();
-    public static int NumberOfPrefabs = 10;
+    public int NumberOfPrefabs = 10;
+    public GameObject endScreen;
+   
 
 
 
@@ -29,6 +31,7 @@ public class AIspawner : MonoBehaviour
 
     void GameOver()
     {
+        endScreen.SetActive(true);
         Debug.Log("The game is complete");
     }
 
