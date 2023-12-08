@@ -92,7 +92,6 @@ public class MonkeyMovement : MonoBehaviour
         }
 
 
-
         if (BumperCollided && CanMove == true)//if bool triggered change movement to bumper movement
         {
 
