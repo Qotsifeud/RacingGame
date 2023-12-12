@@ -1,103 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
-
 
 public class PromptScript : MonoBehaviour
 {
-    public GameObject ImagePrompt;//prompt game object
-    
-    
-    public bool Active = false;
-    public float distanceFromTarget = 5f;
-    public float movementSpeed = 3f;
-  //  public Image MenuScreen;
-    public  GameObject MenuScreen;
+    public GameObject imagePrompt; // Prompt game object
+    public Material defaultMaterial; // Material for default (black) color
+    public Material greenMaterial; // Material for green color
+    public GameObject menuScreen;
 
-    
+    private bool active = false;
 
-
-
-    public void Start()
+    void Start()
     {
-
-        Cursor.lockState = CursorLockMode.Locked;   
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        ImagePrompt.SetActive(false);
-        Active = false;
-        // MenuScreen.enabled = false;//the menus screen is defaulted to false
-        MenuScreen.SetActive(false);
-
-        
-
-
-
-
-
-
-
-
+        SetObjectColor(defaultMaterial); // Set the initial color to default (black)
+        active = false;
+        menuScreen.SetActive(false);
     }
 
-    public void Update()
+    void Update()
     {
-
-        if (Active == true && Input.GetKeyDown(KeyCode.E))//if promp active and player presses E key then...
+        if (active && Input.GetKeyDown(KeyCode.E))
         {
-
-            //  MenuScreen.enabled = true;//the menus screen is defaulted to false
-            MenuScreen.SetActive(true);
-            Debug.Log("YouPressedE");
-            ImagePrompt.SetActive(false);
+            menuScreen.SetActive(true);
+            Debug.Log("You pressed E");
+            SetObjectColor(greenMaterial); // Change the color to green
+            //imagePrompt.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-
             MenuCharacter.InMenuScreen = true;
-
-
-
-
         }
-
-      
-
-
-
-
-
-
-
     }
 
-    private void OnTriggerEnter(Collider other)//when the player enters the area this triggers the prompt to appear
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            ImagePrompt.SetActive(true);
-            Active = true;
-         
-
+            SetObjectColor(greenMaterial); // Change the color to green on trigger enter
+           // imagePrompt.SetActive(true);
+            active = true;
         }
-
     }
 
-    private void OnTriggerExit(Collider other)//when the [player exits the area the prompt disappears
+    void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Active = false;
-                ImagePrompt.SetActive(false);
-
-
-            //this is here for now until we figure out the designs and the actual way we want players to exit the menu screens 
-            //MenuScreen.enabled = false;//the menus screen is defaulted to false
-            MenuScreen.SetActive(false);
+            SetObjectColor(defaultMaterial); // Change the color back to default (black) on trigger exit
+            active = false;
+          //  imagePrompt.SetActive(false);
+            menuScreen.SetActive(false);
         }
-
-
     }
 
-
+    void SetObjectColor(Material newMaterial)
+    {
+        Renderer renderer = imagePrompt.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            renderer.material = newMaterial;
+        }
+    }
 }
