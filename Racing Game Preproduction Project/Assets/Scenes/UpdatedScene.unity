@@ -180,9 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cebf4be44676e144db1c396d1bba71ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetObject: {fileID: 115818385}
-  heightAboveTarget: 10
-  yOffset: 0
 --- !u!108 &64540584
 Light:
   m_ObjectHideFlags: 0
@@ -385,9 +382,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cebf4be44676e144db1c396d1bba71ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetObject: {fileID: 0}
-  heightAboveTarget: 10
-  yOffset: 0
 --- !u!108 &92817268
 Light:
   m_ObjectHideFlags: 0
@@ -1275,7 +1269,7 @@ Camera:
   far clip plane: 2000
   field of view: 34
   orthographic: 1
-  orthographic size: 165
+  orthographic size: 180
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1328,7 +1322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 684494816}
   adjustableHeight: 50
-  zOffset: 1
+  zOffset: -0.1
 --- !u!1001 &589589176
 PrefabInstance:
   m_ObjectHideFlags: 0
