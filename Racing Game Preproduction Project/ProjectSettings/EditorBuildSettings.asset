@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2c869c313575392489fb5c6b2a67a9fa
+  - enabled: 0
+    path: Assets/Scenes/MonkeyAI.unity
+    guid: 205c8fc4025038f4386b7b4a370fff3d
+  - enabled: 1
+    path: Assets/Scenes/GCU RaceTrack.unity
+    guid: 44427f0018c880c49b296713452d070d
   m_configObjects: {}
