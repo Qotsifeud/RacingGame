@@ -34,6 +34,6 @@ public class PointCollectionTest : MonoBehaviour
     public IEnumerator callMonkeyMethod()
     {
         yield return new WaitForSeconds(2);
-        MonkeyRespawn.monkeyRespawn(monkalien);
+     //   MonkeyRespawn.monkeyRespawn(monkalien);
     }
 }

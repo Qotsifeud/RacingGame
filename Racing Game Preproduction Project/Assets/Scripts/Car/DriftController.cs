@@ -170,7 +170,7 @@ public class DriftController : MonoBehaviour {
             if (slip == 0f) inSlip = false;
         }
 
-        DebugPlayer(slip);
+        //DebugPlayer(slip);
 
         //rotate *= (1f + 0.5f * slip);   // Overall rotation, (body + vector)
         rotate *= (1f - 0.3f * slip);   // Overall rotation, (body + vector)
