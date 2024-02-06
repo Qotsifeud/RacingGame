@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b80d5808061362b4296c8571e67f4937, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 665.9198
+      value: 724.4525
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b80d5808061362b4296c8571e67f4937, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 684.3923
+      value: 690.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b80d5808061362b4296c8571e67f4937, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 989.6801
+      value: 941.7673
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b80d5808061362b4296c8571e67f4937, type: 3}
       propertyPath: m_LocalRotation.w
@@ -97,4 +97,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d67505dcc6582a548a3bfc132e93914c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RingSpeed: {x: 1000, y: 0, z: 0}
+  RingSpeed: {x: 500, y: 0, z: 0}

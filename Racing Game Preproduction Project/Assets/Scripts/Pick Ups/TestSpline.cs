@@ -4,14 +4,14 @@ using System.Collections.Generic;
 public class TestSpline : MonoBehaviour
 {
     [SerializeField] private List<Transform> splinePoints = new List<Transform>();
-    [SerializeField] private Transform finalPath;
-    
+    [SerializeField] private Transform SpeedBoostPrefab;
+   
     private float interpolationValue;
 
     private void Update()
     {
         interpolationValue = (interpolationValue + Time.deltaTime) % 1f;
-        finalPath.position = CubicLerp(splinePoints, interpolationValue);
+        SpeedBoostPrefab.position = CubicLerp(splinePoints, interpolationValue);
     }
 
 
