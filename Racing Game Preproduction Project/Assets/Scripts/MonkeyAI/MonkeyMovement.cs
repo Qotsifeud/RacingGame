@@ -31,7 +31,7 @@ public class MonkeyMovement : MonoBehaviour
     private bool BumperCollided;
     public GameObject TheBeam;
     public GameObject spawnControl;
-    private AIspawner _AIspawner;
+   // private AIspawner _AIspawner;
 
 
     private void Awake()
@@ -54,7 +54,7 @@ public class MonkeyMovement : MonoBehaviour
         CanMove = true;
         TheBeam.SetActive(false);
         spawnControl = GameObject.FindGameObjectWithTag("Spawn Control");
-        _AIspawner = spawnControl.GetComponent<AIspawner>();
+     //   _AIspawner = spawnControl.GetComponent<AIspawner>();
     }
 
 
@@ -284,10 +284,7 @@ public class MonkeyMovement : MonoBehaviour
             StartCoroutine(BeamUpBoys());
         }
 
-        else
-        {
-
-        }
+       
 
 
     }
@@ -330,7 +327,7 @@ public class MonkeyMovement : MonoBehaviour
     {
         Destroy(this.gameObject);
      
-        _AIspawner.NumberOfPrefabs -= 1;//takes away  anumber from the list when an alien is destroyed
+        //_AIspawner.NumberOfPrefabs -= 1;//takes away  anumber from the list when an alien is destroyed
 
 
 
