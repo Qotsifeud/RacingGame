@@ -5,12 +5,13 @@ public class TestSpline : MonoBehaviour
 {
     [SerializeField] private List<Transform> splinePoints = new List<Transform>();
     [SerializeField] private Transform SpeedBoostPrefab;
-   
+
     private float interpolationValue;
 
     private void Update()
     {
         interpolationValue = (interpolationValue + Time.deltaTime) % 1f;
+
         SpeedBoostPrefab.position = CubicLerp(splinePoints, interpolationValue);
     }
 
@@ -32,7 +33,7 @@ public class TestSpline : MonoBehaviour
     private Vector3 CubicLerp(List<Transform> points, float t)
     {
         int numPoints = points.Count;
-        int numSegments = numPoints - 3; 
+        int numSegments = numPoints - 3;
 
         int segmentIndex = Mathf.FloorToInt(t * numSegments);
         int startIndex = Mathf.Clamp(segmentIndex, 0, numPoints - 4);
