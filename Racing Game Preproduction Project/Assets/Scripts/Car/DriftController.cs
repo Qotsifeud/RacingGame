@@ -18,7 +18,8 @@ public class DriftController : MonoBehaviour {
 
 
     public static bool thirdPersonCamera;//this bool checks to see what state the camera is in
-
+    public static bool DriveF;
+    public static bool DriveB;
 
 
     //public float Jump = 3.0f;           // In meters/second2
@@ -134,9 +135,21 @@ public class DriftController : MonoBehaviour {
             thirdPersonCamera = false;
         }
 
-
-
-
+        if (Input.GetKeyDown(KeyCode.W)){
+            DriveF = true;
+        }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            DriveF = false;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            DriveB = true;
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            DriveB = false;
+        }
 
 
 

@@ -505,6 +505,7 @@ Transform:
   m_Children:
   - {fileID: 803566347}
   - {fileID: 1795435354}
+  - {fileID: 1672360615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &158073882 stripped
@@ -823,6 +824,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2817965185185010023, guid: ec79d78bb43a8ee46add178df5a9347b, type: 3}
+--- !u!1 &238859955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2541150566880292114, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+  m_PrefabInstance: {fileID: 1477637101}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &269676163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,6 +2018,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 45.541, y: 81.667, z: -32.662}
+--- !u!1 &772725673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772725675}
+  - component: {fileID: 772725674}
+  m_Layer: 0
+  m_Name: RoofDriving
+  m_TagString: UpsideDown
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &772725674
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772725673}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 120, y: 20, z: 40}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &772725675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772725673}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.769653, y: 81, z: 116.08478}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1672360615}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &774896142
 GameObject:
   m_ObjectHideFlags: 0
@@ -2653,6 +2712,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4323798660555673811, guid: 8facdd80e24672d4396a4869e6ab84f2, type: 3}
   m_PrefabInstance: {fileID: 1017026405}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1109361907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1109361908}
+  - component: {fileID: 1109361909}
+  m_Layer: 0
+  m_Name: RoofDriving (1)
+  m_TagString: UpsideDown
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1109361908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109361907}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -266.5, y: 81, z: -91.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1672360615}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1109361909
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109361907}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 170, y: 20, z: 40}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1131231853 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7766281347717918933, guid: d56cb763ef88bf04f84cda845a5aaa69, type: 3}
@@ -3826,7 +3938,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2541150566880292114, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1984380454}
   m_SourcePrefab: {fileID: 100100000, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
 --- !u!4 &1482072891 stripped
 Transform:
@@ -4159,6 +4274,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2233735881319923703, guid: dfca1a0f177d67243934e66271cc0b73, type: 3}
+--- !u!1 &1672360614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1672360615}
+  m_Layer: 0
+  m_Name: RoofRidingColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1672360615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672360614}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 765.71075, y: 78.39923, z: -2985.3416}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 772725675}
+  - {fileID: 1109361908}
+  m_Father: {fileID: 132539021}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1678578914 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8321894068161711973, guid: dfca1a0f177d67243934e66271cc0b73, type: 3}
@@ -4938,6 +5086,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2884602112352647080, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
   m_PrefabInstance: {fileID: 1477637101}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1984380454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238859955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b44179b378a69b040b31edc99be80315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMass: 0
+  IsTriggering: 0
 --- !u!1 &2004210320 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4783673094166564794, guid: dfca1a0f177d67243934e66271cc0b73, type: 3}

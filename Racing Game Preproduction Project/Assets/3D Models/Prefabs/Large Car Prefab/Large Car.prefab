@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 4392219406469603643}
   - component: {fileID: 8105196783279106240}
   - component: {fileID: 7202827335050058608}
+  - component: {fileID: 8511698393445224410}
   m_Layer: 0
   m_Name: Large Car
   m_TagString: Untagged
@@ -287,6 +288,20 @@ MonoBehaviour:
   SlipMod: 10
   turnTh: 20
   inTurn: 0
+--- !u!114 &8511698393445224410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090060667146845268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b44179b378a69b040b31edc99be80315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMass: 0
+  IsTriggering: 0
 --- !u!1 &1124600920920560976
 GameObject:
   m_ObjectHideFlags: 0
