@@ -4,30 +4,81 @@ using UnityEngine;
 
 public class cameraFollow : MonoBehaviour
 {
-    public Transform target;
-    public float distance = 3.0f;
-    public float height = 3.0f;
-    public float damping = 5.0f;
+    public Transform firstPersonTarget;
+    public Transform thirdPersonTarget;
+
+
+    public float thirdPdistance = 10f;
+    public float thirdPheight = 0.65f;
+    public float thirdPdamping = 15f;
+    public float thirdProtationDamping = 15f;
+
+
+    //default variables for small car not medium or large
+    public float firstPdistance = 5.5f;
+    public float firstPheight = 0.10f;
+    public float firstPdamping = 300f;
+    public float firstProtationDamping = 300f;
+
     public bool smoothRotation = true;
     public bool followBehind = true;
-    public float rotationDamping = 10.0f;
+    
+
+
 
     void Update()
-    {
-        Vector3 wantedPosition;
-        if (followBehind)
-            wantedPosition = target.TransformPoint(0, height, -distance);
-        else
-            wantedPosition = target.TransformPoint(0, height, distance);
+    {//default third person camera
 
-        transform.position = Vector3.Lerp(transform.position, wantedPosition, Time.deltaTime * damping);
-
-        if (smoothRotation)
+        if(DriftController.thirdPersonCamera == true)
         {
-            Quaternion wantedRotation = Quaternion.LookRotation(target.position - transform.position, target.up);
-            //Quaternion ownRotation = Quaternion.RotateTowards;
-            transform.rotation = Quaternion.Slerp(transform.rotation, wantedRotation, Time.deltaTime * rotationDamping);
+            
+
+            Vector3 wantedPosition;
+            if (followBehind)
+                wantedPosition = thirdPersonTarget.TransformPoint(0, thirdPheight, -thirdPdistance);
+            else
+                wantedPosition = thirdPersonTarget.TransformPoint(0, thirdPheight, thirdPdistance);
+
+            transform.position = Vector3.Lerp(transform.position, wantedPosition, Time.deltaTime * thirdPdamping);
+
+            if (smoothRotation)
+            {
+                Quaternion wantedRotation = Quaternion.LookRotation(thirdPersonTarget.position - transform.position, thirdPersonTarget.up);
+                //Quaternion ownRotation = Quaternion.RotateTowards;
+                transform.rotation = Quaternion.Slerp(transform.rotation, wantedRotation, Time.deltaTime * thirdProtationDamping);
+            }
+            else transform.LookAt(thirdPersonTarget, thirdPersonTarget.up);
+
+
+
         }
-        else transform.LookAt(target, target.up);
+
+        else if(DriftController.thirdPersonCamera == false)
+        {
+
+    
+            Vector3 wantedPosition;
+            if (followBehind)
+                wantedPosition = firstPersonTarget.TransformPoint(0, firstPheight, -firstPdistance);
+            else
+                wantedPosition = firstPersonTarget.TransformPoint(0, firstPheight, firstPdistance);
+
+            transform.position = Vector3.Lerp(transform.position, wantedPosition, Time.deltaTime * firstPdamping);
+
+            if (smoothRotation)
+            {
+                Quaternion wantedRotation = Quaternion.LookRotation(firstPersonTarget.position - transform.position, firstPersonTarget.up);
+                //Quaternion ownRotation = Quaternion.RotateTowards;
+                transform.rotation = Quaternion.Slerp(transform.rotation, wantedRotation, Time.deltaTime * firstProtationDamping);
+            }
+            else transform.LookAt(firstPersonTarget, firstPersonTarget.up);
+
+
+
+        }
+
+
+
+
     }
 }

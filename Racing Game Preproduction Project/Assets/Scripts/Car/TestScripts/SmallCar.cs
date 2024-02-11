@@ -2,25 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Global enum
-public enum Faction {
-    Player,
-    Enemy,
-    Neutral
-};
 
-public class DriftController : MonoBehaviour {
+
+
+public class SmallCar : MonoBehaviour {
 
     #region Parameters
     public float Accel = 15.0f;         // In meters/second2
     public float Boost = 4f/3;          // In ratio
     public float TopSpeed = 30.0f;      // In meters/second
-
-
-    public static bool thirdPersonCamera;//this bool checks to see what state the camera is in
-
-
-
     //public float Jump = 3.0f;           // In meters/second2
     public float GripX = 12.0f;          // In meters/second2
     public float GripZ = 3.0f;          // In meters/second2
@@ -94,9 +84,6 @@ public class DriftController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
-        thirdPersonCamera = true;
-
 		rigidBody = GetComponent<Rigidbody>();
 
         // Store start location & rotation
@@ -122,27 +109,6 @@ public class DriftController : MonoBehaviour {
             transform.rotation = spawnR;
             inReset = true;
         }
-
-
-        if (Input.GetKeyDown(KeyCode.C) && !thirdPersonCamera)
-        {
-            thirdPersonCamera = true;
-
-        }
-        else if(Input.GetKeyDown(KeyCode.C) && thirdPersonCamera)
-        {
-            thirdPersonCamera = false;
-        }
-
-
-
-
-
-
-
-
-
-
     }
 
     // Called once multiple times per frame 
