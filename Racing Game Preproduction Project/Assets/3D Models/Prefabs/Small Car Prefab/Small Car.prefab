@@ -483,6 +483,7 @@ GameObject:
   - component: {fileID: 913427874191606286}
   - component: {fileID: 2254568775588342926}
   - component: {fileID: 8290203928727298720}
+  - component: {fileID: -3591953391835222135}
   m_Layer: 0
   m_Name: Small Car
   m_TagString: Small Car
@@ -558,6 +559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Accel: 25
+  Deccel: 40
   Boost: 10
   TopSpeed: 40
   GripX: 12
@@ -652,6 +654,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMass: 0
   IsTriggering: 0
+--- !u!114 &-3591953391835222135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2541150566880292114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b19142e6eeb72340bd60edaaef54af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallCarBoost: 35
+  mediumCarBoost: 25
+  largeCarBoost: 25
+  SmallCarDefault: 25
+  mediumCarDefault: 20
+  largeCarDefault: 20
 --- !u!1 &2567635542792005133
 GameObject:
   m_ObjectHideFlags: 0

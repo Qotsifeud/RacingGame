@@ -14,6 +14,10 @@ TagManager:
   - Beam
   - Spawn Control
   - UpsideDown
+  - Small Car
+  - Medium Car
+  - Large Car
+  - SpeedBooster
   layers:
   - Default
   - TransparentFX

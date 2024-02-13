@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b80d5808061362b4296c8571e67f4937, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 724.4525
+      value: 727.26245
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b80d5808061362b4296c8571e67f4937, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 690.5
+      value: 684.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b80d5808061362b4296c8571e67f4937, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 941.7673
+      value: 898.7003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b80d5808061362b4296c8571e67f4937, type: 3}
       propertyPath: m_LocalRotation.w
@@ -59,6 +59,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b80d5808061362b4296c8571e67f4937, type: 3}
       propertyPath: m_Name
       value: Speed PowerUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b80d5808061362b4296c8571e67f4937, type: 3}
+      propertyPath: m_TagString
+      value: SpeedBooster
       objectReference: {fileID: 0}
     - target: {fileID: 8559827376482004830, guid: b80d5808061362b4296c8571e67f4937, type: 3}
       propertyPath: m_LocalScale.x
@@ -125,5 +129,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
