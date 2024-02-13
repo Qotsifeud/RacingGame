@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 7803699891348351816}
   m_Layer: 0
   m_Name: Medium Car
-  m_TagString: Untagged
+  m_TagString: Medium Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,6 +202,8 @@ MonoBehaviour:
   CoM: {x: 0.3, y: 0.3, z: 0.3}
   carFaction: 0
   Target: {fileID: 4121334908758135150}
+  AngDragG: 5
+  AngDragA: 0.05
   SlipL:
     serializedVersion: 2
     m_Curve:
