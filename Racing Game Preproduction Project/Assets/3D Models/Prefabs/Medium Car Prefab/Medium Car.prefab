@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 3609799640588323548}
   - component: {fileID: 6917101967084387099}
   - component: {fileID: 7803699891348351816}
+  - component: {fileID: 4933481224665106546}
   m_Layer: 0
   m_Name: Medium Car
   m_TagString: Medium Car
@@ -288,6 +289,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMass: 0
   IsTriggering: 0
+--- !u!114 &4933481224665106546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557231653892310471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b19142e6eeb72340bd60edaaef54af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallCarBoost: 35
+  mediumCarBoost: 25
+  largeCarBoost: 25
+  SmallCarDefault: 25
+  mediumCarDefault: 20
+  largeCarDefault: 20
 --- !u!1 &606698375343190309
 GameObject:
   m_ObjectHideFlags: 0
