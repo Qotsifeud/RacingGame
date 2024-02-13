@@ -482,6 +482,7 @@ GameObject:
   - component: {fileID: 2884602112352647080}
   - component: {fileID: 913427874191606286}
   - component: {fileID: 2254568775588342926}
+  - component: {fileID: 8290203928727298720}
   m_Layer: 0
   m_Name: Small Car
   m_TagString: Untagged
@@ -525,9 +526,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2541150566880292114}
   serializedVersion: 4
-  m_Mass: 10
+  m_Mass: 100
   m_Drag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 20
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -556,14 +557,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b28d51eaa6c2b442ac58943a138f548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Accel: 15
-  Boost: 5
-  TopSpeed: 30
+  Accel: 25
+  Boost: 10
+  TopSpeed: 40
   GripX: 12
   GripZ: 3
   Rotate: 140
-  RotVel: 0.7
-  CoM: {x: 0, y: 0.3, z: 0}
+  RotVel: 0.8
+  CoM: {x: 0.3, y: 0.3, z: 0.3}
   carFaction: 0
   Target: {fileID: 4047405888688938927}
   SlipL:
@@ -635,6 +636,20 @@ MonoBehaviour:
   SlipMod: 10
   turnTh: 20
   inTurn: 0
+--- !u!114 &8290203928727298720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2541150566880292114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b44179b378a69b040b31edc99be80315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMass: 0
+  IsTriggering: 0
 --- !u!1 &2567635542792005133
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,6 +1101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf8431f992caf940ba3293bdf9cd6ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  modifier: 0.1
 --- !u!1 &6904830054508904306
 GameObject:
   m_ObjectHideFlags: 0
