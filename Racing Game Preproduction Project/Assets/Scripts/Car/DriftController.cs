@@ -38,8 +38,8 @@ public class DriftController : MonoBehaviour {
 
     // Ground & air angular drag
     // reduce stumbling time on ground but maintain on-air one
-    float AngDragG = 5.0f;
-    float AngDragA = 0.05f;
+    public float AngDragG = 5.0f;
+    public float AngDragA = 0.05f;
 
     // Rotational
     float MinRotSpd = 1f;           // Velocity to start rotating
@@ -151,7 +151,12 @@ public class DriftController : MonoBehaviour {
             DriveB = false;
         }
 
-
+        if(Input.GetKey(KeyCode.R))
+        {
+            transform.position = spawnP;
+            transform.rotation = spawnR;
+            rigidBody.velocity = new Vector3(0, 0, 0);
+        }
 
 
 
@@ -185,6 +190,11 @@ public class DriftController : MonoBehaviour {
             gripX = 0f;
             gripZ = 0f;
             rigidBody.angularDrag = AngDragA;
+        }
+        else
+        {
+            spawnP = transform.position;
+            spawnR = transform.rotation;
         }
 
         // Prevent the rotational input intervenes with physics angular velocity 
@@ -232,23 +242,8 @@ public class DriftController : MonoBehaviour {
         #endregion
 
         #region Logics
-        // Get command from keyboard or simple AI (conditional rulesets)
-        switch (carFaction) {
-            case Faction.Player:
-                InputKeyboard();
-                break;
-            case Faction.Enemy:
-                InputEnemy();    // Chase player
-                autoReset = true;
-                break;
-            case Faction.Neutral:
-                inThrottle = 1f; // Just straight
-                autoReset = true;
-                break;
-            default:
-                // Do nothing
-                break;
-        }
+        InputKeyboard();
+        
 
         // Execute the commands
         Controller();   // pvel assigment in here
@@ -295,22 +290,6 @@ public class DriftController : MonoBehaviour {
 
         // Reset will turn false after the respawn is successful
         inReset = inReset || Input.GetKeyDown(KeyCode.R);
-    }
-
-    void InputEnemy() {
-        inThrottle = 1f;
-
-        // Turn by facing player
-        // Get the angle between the points (absolute goal) = right (target) - left
-        float angle = AngleOffset(Angle2Points(transform.position, Target.position), 0f);
-
-        Vector3 rot = transform.eulerAngles;
-        float delta = Mathf.DeltaAngle(rot.y, angle);
-        //inTurn = delta > 0f ? 1f : -1f;
-
-        if (delta > 10f) inTurn = 1f;
-        else if (delta < -10f) inTurn = -1f;
-        else inTurn = 0f;
     }
 
     // Executing the queued inputs
@@ -434,9 +413,6 @@ public class DriftController : MonoBehaviour {
 
 
     #region Utilities
-    void DebugPlayer(object message) {
-        if (carFaction == Faction.Player) Debug.Log(message);
-    }
 
     float Angle2Points(Vector3 a, Vector3 b) {
         //return Mathf.Atan2(b.y - a.y, b.x - a.x) * Mathf.Rad2Deg;
