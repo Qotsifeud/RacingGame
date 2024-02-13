@@ -309,9 +309,14 @@ public class DriftController : MonoBehaviour {
         }
         if (breaking > 0.5) 
         {
-            if (vel.z != 0f)
+            if (vel.z != 0f && isGrounded)
             {
                 rigidBody.velocity -= transform.forward * isForward * deccel * Time.deltaTime;
+            }
+
+            if (vel.z != 0f && !isGrounded) 
+            {
+                rigidBody.velocity -= transform.forward * isForward * (deccel/2) * Time.deltaTime;
             }
         }
 
