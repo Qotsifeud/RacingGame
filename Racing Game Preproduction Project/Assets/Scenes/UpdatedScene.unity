@@ -5484,8 +5484,20 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: AngDragA
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: TopSpeed
-      value: 70
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: SlipU.m_Curve.Array.data[2].time
+      value: 0.21665192
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: SlipU.m_Curve.Array.data[2].value
+      value: 0.9976425
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
