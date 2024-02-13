@@ -13,6 +13,7 @@ public class DriftController : MonoBehaviour {
 
     #region Parameters
     public float Accel = 15.0f;         // In meters/second2
+    public float Deccel = 40.0f;
     public float Boost = 4f/3;          // In ratio
     public float TopSpeed = 30.0f;      // In meters/second
 
@@ -62,6 +63,7 @@ public class DriftController : MonoBehaviour {
     // The actual value to be used (modification of parameters)
     float rotate;
     float accel;
+    float deccel;
     float gripX;
     float gripZ;
     float rotVel;
@@ -77,6 +79,7 @@ public class DriftController : MonoBehaviour {
 
     // Control signals
     float inThrottle = 0f;
+    float breaking = 0f;
     [HideInInspector] public float inTurn = 0f;
     bool inReset = false;
     bool isStuck = false;
@@ -168,6 +171,7 @@ public class DriftController : MonoBehaviour {
     void FixedUpdate() {
         #region Situational Checks
         accel = Accel;
+        deccel = Deccel;
         rotate = Rotate;
         gripX = GripX;
         gripZ = GripZ;
@@ -242,6 +246,7 @@ public class DriftController : MonoBehaviour {
         #endregion
 
         #region Logics
+
         InputKeyboard();
         
 
@@ -287,9 +292,10 @@ public class DriftController : MonoBehaviour {
         inThrottle = Input.GetAxisRaw("Throttle");
         inBoost = Input.GetAxisRaw("Boost") > 0f;
         inTurn = Input.GetAxisRaw("Sideways");
+        breaking = Input.GetAxisRaw("Break");
 
         // Reset will turn false after the respawn is successful
-        inReset = inReset || Input.GetKeyDown(KeyCode.R);
+        //inReset = inReset || Input.GetKeyDown(KeyCode.R);
     }
 
     // Executing the queued inputs
@@ -300,6 +306,13 @@ public class DriftController : MonoBehaviour {
         if (inThrottle > 0.5f || inThrottle < -0.5f) {
             rigidBody.velocity += transform.forward * inThrottle * accel * Time.deltaTime;
             gripZ = 0f;     // Remove straight grip if wheel is rotating
+        }
+        if (breaking > 0.5) 
+        {
+            if (vel.z != 0f)
+            {
+                rigidBody.velocity -= transform.forward * isForward * deccel * Time.deltaTime;
+            }
         }
 
         if (autoReset) {
