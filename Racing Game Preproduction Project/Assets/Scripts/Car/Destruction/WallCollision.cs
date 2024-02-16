@@ -28,7 +28,7 @@ public class WallCollision : MonoBehaviour
     {
 
         //only issue with this is that if you just happens to get the speed boost before hitting a wall then top speed will increase and you wont be fast enough to go through
-        if (driftControllerScript.CurrentSpeed >= driftControllerScript.TopSpeed && wall.gameObject.tag == "Destructable" && this.gameObject.tag == ("Large Car")) //if the game objetc with the tag large car is at a velocity over 20 then it can destroy the wall...
+        if (driftControllerScript.CurrentSpeed >= driftControllerScript.TopSpeed && wall.gameObject.tag == ("Destructable") && this.gameObject.tag == ("Large Car")) //if the game objetc with the tag large car is at a velocity over 20 then it can destroy the wall...
         {
             Transform brickLocation = wall.transform.Find("InstantiateDestroyedWall");
             Destroy(wall.gameObject);

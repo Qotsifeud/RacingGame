@@ -19,6 +19,7 @@ TagManager:
   - Large Car
   - SpeedBooster
   - Destructable
+  - StartAndFinishLine
   layers:
   - Default
   - TransparentFX
