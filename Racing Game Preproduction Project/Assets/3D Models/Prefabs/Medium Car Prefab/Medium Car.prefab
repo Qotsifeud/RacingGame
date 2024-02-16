@@ -125,7 +125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5461290397395326422
 Transform:
   m_ObjectHideFlags: 0
@@ -193,13 +193,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b28d51eaa6c2b442ac58943a138f548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Accel: 15
-  Deccel: 25
+  Accel: 30
+  Deccel: 50
   Boost: 10
-  TopSpeed: 40
-  GripX: 12
+  TopSpeed: 90.69
+  CurrentSpeed: 0
+  GripX: 47.5
   GripZ: 3
-  Rotate: 140
+  Rotate: 95
   RotVel: 0.4
   CoM: {x: 0.3, y: 0.3, z: 0.3}
   carFaction: 0
@@ -272,7 +273,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  SlipMod: 10
+  SlipMod: 32
   turnTh: 20
   inTurn: 0
 --- !u!114 &7803699891348351816
@@ -301,12 +302,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b19142e6eeb72340bd60edaaef54af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallCarBoost: 35
-  mediumCarBoost: 25
-  largeCarBoost: 25
-  SmallCarDefault: 25
-  mediumCarDefault: 20
-  largeCarDefault: 20
+  smallCarBoost: 90
+  mediumCarBoost: 80
+  largeCarBoost: 70
+  BoostActive: 0
+  SmallCarDefault: 80
+  mediumCarDefault: 70
+  largeCarDefault: 60
 --- !u!1 &606698375343190309
 GameObject:
   m_ObjectHideFlags: 0

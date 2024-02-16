@@ -16,7 +16,7 @@ public class DriftController : MonoBehaviour {
     public float Deccel = 40.0f;
     public float Boost = 4f/3;          // In ratio
     public float TopSpeed = 30.0f;      // In meters/second
-
+    public float CurrentSpeed;
 
     public static bool thirdPersonCamera;//this bool checks to see what state the camera is in
     public static bool DriveF;
@@ -99,6 +99,9 @@ public class DriftController : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
+        
+
+
         thirdPersonCamera = true;
 
 		rigidBody = GetComponent<Rigidbody>();
@@ -118,6 +121,9 @@ public class DriftController : MonoBehaviour {
 
     // Called once per frame
     void Update() {
+
+        CurrentSpeed = vel.z;//just here because its easier to understand
+
         Debug.DrawRay(transform.position, rigidBody.velocity / 2, Color.green);
         
         // Reset to spawn if out of bounds
