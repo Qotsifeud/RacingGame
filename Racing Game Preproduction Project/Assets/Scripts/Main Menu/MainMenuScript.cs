@@ -22,7 +22,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void BackToMenu() 
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("UpdatedScene");
     }
 
 

@@ -1,95 +1,75 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class LapCounter : MonoBehaviour
 {
+    public TextMeshProUGUI lapCounter;
 
-    
-    public int currentNumberOfLaps = 0;
+    public GameObject gameOver;
+
+    public int currentNumberOfLaps = 1;
     public int maxLaps = 3;
 
-    public GameObject backBlocker;
-    public GameObject frontBlocker;
-    public bool frontChecker;
-    public bool backChecker;
+    public bool[] checkPopints = new bool[5];
     
 
-    public void Start()
-    {
+    //public void Start()
+    //{
 
-        backChecker = true;
-        frontChecker = false;
-
-    }
-
-
+    //}
 
     public void Update()
     {
+        lapCounter.text = "Lap " + currentNumberOfLaps.ToString() + "/3";
 
         if (currentNumberOfLaps > maxLaps)
         {
-
             //end game
-            Debug.Log("i finished the laps");
+            //Debug.Log("i finished the laps");
+
+            gameOver.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
 
         }
-
-        if (!frontChecker)
-        {
-            frontBlocker.SetActive(false);//so they cant continue the second/3rd lap
-        }
-
-
-        if (frontChecker)
-        {
-            frontBlocker.SetActive(true);//so they cant continue the second/3rd lap
-        }
-
-        if (!backChecker)
-        {
-            backBlocker.SetActive(false);
-        }
-        if (backChecker)
-        {
-            backBlocker.SetActive(true);
-        }
-      
-
     }
-
-
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == ("StartAndFinishLine"))
+        if (other.gameObject.tag == ("Check Point"))
         {
-           
-            frontChecker = false;
-            
-
-
+            int checkPointNumber = other.GetComponent<checkPoint>().checkPointNumber;
+            checkPopints[checkPointNumber] = true;
         }
-
 
     }
 
-
-
-
     private void OnTriggerExit(Collider other)
     {
-
-        if (other.gameObject.tag == ("StartAndFinishLine Car"))
+        if (other.gameObject.tag == ("Start Line") && AllCheckpoints(checkPopints))
         {
-            frontChecker = true;
-            backChecker = false;
             currentNumberOfLaps += 1;//incramented
+            
+            for (int i = 0; i < checkPopints.Length; i++)
+            {
+                checkPopints[i] = false;
+            }
+        }
+    }
 
+    private bool AllCheckpoints(bool[] checkPoints)
+    {
+        for(int i = 0; i < checkPoints.Length; i++)
+        {
+            if (checkPoints[i] == false)
+            {
+                return false;
+            }
         }
 
-
+        return true;
     }
 
 

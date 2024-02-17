@@ -125,13 +125,14 @@ public class DriftController : MonoBehaviour {
         CurrentSpeed = vel.z;//just here because its easier to understand
 
         Debug.DrawRay(transform.position, rigidBody.velocity / 2, Color.green);
-        
+
         // Reset to spawn if out of bounds
-        if (transform.position.y < -10) {
-            transform.position = spawnP;
-            transform.rotation = spawnR;
-            inReset = true;
-        }
+        //if (transform.position.y < -60)
+        //{
+        //    transform.position = spawnP;
+        //    transform.rotation = spawnR;
+        //    inReset = true;
+        //}
 
 
         if (Input.GetKeyDown(KeyCode.C) && !thirdPersonCamera)
@@ -165,6 +166,7 @@ public class DriftController : MonoBehaviour {
             transform.position = spawnP;
             transform.rotation = spawnR;
             rigidBody.velocity = new Vector3(0, 0, 0);
+            inReset = true;
         }
 
 
@@ -200,11 +202,6 @@ public class DriftController : MonoBehaviour {
             gripX = 0f;
             gripZ = 0f;
             rigidBody.angularDrag = AngDragA;
-        }
-        else
-        {
-            spawnP = transform.position;
-            spawnR = transform.rotation;
         }
 
         // Prevent the rotational input intervenes with physics angular velocity 
@@ -287,6 +284,22 @@ public class DriftController : MonoBehaviour {
 
         rigidBody.velocity = transform.TransformDirection(vel);
         #endregion
+
+    }
+    //trigger check for respawn
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == ("Check Point") || other.gameObject.tag == ("Start Line"))
+        {
+            spawnP = other.transform.position;
+            spawnR = other.transform.rotation;
+        }
+        
+        if(other.gameObject.tag == ("Reset Plane"))
+        {
+            transform.position = spawnP;
+            transform.rotation = spawnR;
+        }
 
     }
 
