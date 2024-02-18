@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10896074, g: 0.1564475, b: 0.3013565, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9207,63 +9207,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993057791}
   m_CullTransparentMesh: 1
---- !u!1001 &997962671
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3585202924357879069, guid: bc5ba9ec2505fa1448aa42dbfcd9678f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.565
-      objectReference: {fileID: 0}
-    - target: {fileID: 3585202924357879069, guid: bc5ba9ec2505fa1448aa42dbfcd9678f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 3585202924357879069, guid: bc5ba9ec2505fa1448aa42dbfcd9678f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 27.572
-      objectReference: {fileID: 0}
-    - target: {fileID: 3585202924357879069, guid: bc5ba9ec2505fa1448aa42dbfcd9678f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.78052163
-      objectReference: {fileID: 0}
-    - target: {fileID: 3585202924357879069, guid: bc5ba9ec2505fa1448aa42dbfcd9678f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.000000029463902
-      objectReference: {fileID: 0}
-    - target: {fileID: 3585202924357879069, guid: bc5ba9ec2505fa1448aa42dbfcd9678f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.62512887
-      objectReference: {fileID: 0}
-    - target: {fileID: 3585202924357879069, guid: bc5ba9ec2505fa1448aa42dbfcd9678f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.000000023597948
-      objectReference: {fileID: 0}
-    - target: {fileID: 3585202924357879069, guid: bc5ba9ec2505fa1448aa42dbfcd9678f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3585202924357879069, guid: bc5ba9ec2505fa1448aa42dbfcd9678f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 77.383
-      objectReference: {fileID: 0}
-    - target: {fileID: 3585202924357879069, guid: bc5ba9ec2505fa1448aa42dbfcd9678f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4218434397994180519, guid: bc5ba9ec2505fa1448aa42dbfcd9678f, type: 3}
-      propertyPath: m_Name
-      value: ShowCar
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bc5ba9ec2505fa1448aa42dbfcd9678f, type: 3}
 --- !u!1 &998931450
 GameObject:
   m_ObjectHideFlags: 0
@@ -9422,6 +9365,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011751942}
   m_CullTransparentMesh: 1
+--- !u!1001 &1019909096
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 59541b10919c1b74598b58f61562c3a0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.583
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59541b10919c1b74598b58f61562c3a0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.142
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59541b10919c1b74598b58f61562c3a0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 27.691
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59541b10919c1b74598b58f61562c3a0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49804655
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59541b10919c1b74598b58f61562c3a0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000001880073
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59541b10919c1b74598b58f61562c3a0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8671503
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59541b10919c1b74598b58f61562c3a0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000032734068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59541b10919c1b74598b58f61562c3a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59541b10919c1b74598b58f61562c3a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 120.258
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59541b10919c1b74598b58f61562c3a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59541b10919c1b74598b58f61562c3a0, type: 3}
+      propertyPath: m_Name
+      value: Sci-Fi Goblin Car (All Parts)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59541b10919c1b74598b58f61562c3a0, type: 3}
 --- !u!1 &1039682412
 GameObject:
   m_ObjectHideFlags: 0
@@ -26444,4 +26444,4 @@ SceneRoots:
   - {fileID: 543450653639238943}
   - {fileID: 1081699711}
   - {fileID: 626394049}
-  - {fileID: 997962671}
+  - {fileID: 1019909096}
