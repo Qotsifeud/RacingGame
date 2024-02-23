@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3053016562490302162}
   - component: {fileID: 8195782863895625534}
   - component: {fileID: 3156946837047413001}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bottom Chassis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,13 +119,14 @@ GameObject:
   - component: {fileID: 6917101967084387099}
   - component: {fileID: 7803699891348351816}
   - component: {fileID: 4933481224665106546}
-  m_Layer: 0
+  - component: {fileID: 2978609382228364305}
+  m_Layer: 3
   m_Name: Medium Car
   m_TagString: Medium Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5461290397395326422
 Transform:
   m_ObjectHideFlags: 0
@@ -196,6 +197,7 @@ MonoBehaviour:
   Accel: 30
   Deccel: 50
   Boost: 10
+  halfSpeed: 15
   TopSpeed: 90.69
   CurrentSpeed: 0
   GripX: 47.5
@@ -309,6 +311,23 @@ MonoBehaviour:
   SmallCarDefault: 80
   mediumCarDefault: 70
   largeCarDefault: 60
+--- !u!114 &2978609382228364305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557231653892310471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4596cea8e899c4799ccdff7cf62408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lapCounter: {fileID: 0}
+  gameOver: {fileID: 0}
+  currentNumberOfLaps: 1
+  maxLaps: 3
+  checkPopints: 0000000000
 --- !u!1 &606698375343190309
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6016461791425133711}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 3rdPersonCamTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +370,7 @@ GameObject:
   - component: {fileID: 932314444439491818}
   - component: {fileID: 2433244749428329945}
   - component: {fileID: 2326073071012147332}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Steering Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +454,7 @@ GameObject:
   - component: {fileID: 7579134285033138964}
   - component: {fileID: 108653340086581639}
   - component: {fileID: 126753042594246879}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Foot Pedal.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +539,7 @@ GameObject:
   - component: {fileID: 9023809851504411462}
   - component: {fileID: 3075087928035043846}
   - component: {fileID: 3934212797390506327}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Default Wheel FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +662,7 @@ GameObject:
   - component: {fileID: 1043647551797721770}
   - component: {fileID: 1880735857634133443}
   - component: {fileID: 1588528651742306469}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Default Wheel FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,7 +784,7 @@ GameObject:
   - component: {fileID: 8881230285988976304}
   - component: {fileID: 6714586034128830049}
   - component: {fileID: 5335543642989789835}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Back Booster.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,7 +889,7 @@ GameObject:
   - component: {fileID: 3838473228742769992}
   - component: {fileID: 3711139973942356153}
   - component: {fileID: 4663742964560519590}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Seat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -954,7 +973,7 @@ GameObject:
   - component: {fileID: 833946371261499218}
   - component: {fileID: 3193801245072453874}
   - component: {fileID: 729419856966947704}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Default Wheel BL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1063,7 +1082,7 @@ GameObject:
   - component: {fileID: 1506694098999158909}
   - component: {fileID: 7701177672986853657}
   - component: {fileID: 3235148307987860895}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Frontal Default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1166,7 +1185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7399748980783279888}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 1stPersonCamTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1197,7 +1216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7875366647798293184}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Steering_Wheel_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1231,7 +1250,7 @@ GameObject:
   - component: {fileID: 3141886965202343633}
   - component: {fileID: 9124039043360081338}
   - component: {fileID: 5362041576957443493}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Rear Spoiler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1335,7 +1354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1521790669278243289}
   - component: {fileID: 550119331241136946}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Steering Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1384,7 +1403,7 @@ GameObject:
   - component: {fileID: 5906741782719791920}
   - component: {fileID: 1079343939075309827}
   - component: {fileID: 1824631402891412878}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Default Wheel BR
   m_TagString: Untagged
   m_Icon: {fileID: 0}

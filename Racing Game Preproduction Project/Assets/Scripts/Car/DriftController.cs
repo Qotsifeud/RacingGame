@@ -15,7 +15,8 @@ public class DriftController : MonoBehaviour {
     public float Accel = 15.0f;         // In meters/second2
     public float Deccel = 40.0f;
     public float Boost = 4f/3;          // In ratio
-    public float TopSpeed = 30.0f;      // In meters/second
+    public float halfSpeed = 15.0f;      // In meters/second//half of the top speed for the large vehicle
+    public float TopSpeed = 30.0f;
     public float CurrentSpeed;
 
     public static bool thirdPersonCamera;//this bool checks to see what state the camera is in
