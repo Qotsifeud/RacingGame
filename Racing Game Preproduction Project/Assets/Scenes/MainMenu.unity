@@ -30939,13 +30939,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7374422870429967100}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.11753737, y: 0, z: 0, w: 0.99306846}
-  m_LocalPosition: {x: -3.2, y: 2, z: 23.5}
+  m_LocalRotation: {x: 0.09805541, y: 0.5475667, z: -0.064808756, w: 0.8284658}
+  m_LocalPosition: {x: 4.45, y: 2, z: 30.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 13.5, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.5, y: 66.925, z: 0}
 --- !u!4 &4256961209145042621
 Transform:
   m_ObjectHideFlags: 0
@@ -34218,6 +34218,7 @@ GameObject:
   - component: {fileID: 3310910370462748815}
   - component: {fileID: 1675853277878762226}
   - component: {fileID: 7374422870429967101}
+  - component: {fileID: 7374422870429967102}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -34239,8 +34240,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraLocations:
   - {x: -3.2, y: 2, z: 23.5}
+  targetLocation: {x: 0, y: 0, z: 0}
   cameraAngles:
   - {x: 13.5, y: 0, z: 0}
+  targetAngle: {x: 0, y: 0, z: 0}
+  ableToMove: 0
+--- !u!54 &7374422870429967102
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7374422870429967100}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7385965425029388160
 GameObject:
   m_ObjectHideFlags: 0

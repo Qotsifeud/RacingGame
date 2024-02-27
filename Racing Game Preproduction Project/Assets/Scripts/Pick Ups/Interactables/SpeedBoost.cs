@@ -40,8 +40,6 @@ public class SpeedBoost : MonoBehaviour
             StartCoroutine(SpeedBoostTimerSmallCar(largeCarDefault, largeCarBoost));
         }
 
-
-
     }
 
 
