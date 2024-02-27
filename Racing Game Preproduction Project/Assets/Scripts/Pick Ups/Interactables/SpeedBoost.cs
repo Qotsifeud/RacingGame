@@ -34,7 +34,7 @@ public class SpeedBoost : MonoBehaviour
         }
         else
         {
-            boostIndicator?.SetActive(false);
+            boostIndicator.SetActive(false);
         }
     }
 

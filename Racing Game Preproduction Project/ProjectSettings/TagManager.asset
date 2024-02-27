@@ -23,6 +23,7 @@ TagManager:
   - Reset Plane
   - CarSpawnControler
   - DestructableTrigger
+  - Oil
   layers:
   - Default
   - TransparentFX
