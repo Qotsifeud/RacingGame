@@ -12087,6 +12087,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064467886}
   m_CullTransparentMesh: 1
+--- !u!1 &1068892297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1068892299}
+  - component: {fileID: 1068892298}
+  m_Layer: 0
+  m_Name: Car Spawn Controler
+  m_TagString: CarSpawnControler
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1068892298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068892297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04272fed60bb6d54280414603924655f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carCustomiserObject: {fileID: 1112780122}
+  speed: 0
+  acceleration: 0
+  handeling: 0
+  carNumber: 0
+--- !u!4 &1068892299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068892297}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.8089764, y: 3.6779535, z: 24.046833}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1070287797
 GameObject:
   m_ObjectHideFlags: 0
@@ -13077,6 +13126,7 @@ MonoBehaviour:
   speed: 0
   acceleration: 0
   handeling: 0
+  carNumber: 1
 --- !u!1 &1116349071
 GameObject:
   m_ObjectHideFlags: 0
@@ -36647,3 +36697,4 @@ SceneRoots:
   - {fileID: 1200966172}
   - {fileID: 1112780123}
   - {fileID: 1460994591}
+  - {fileID: 1068892299}
