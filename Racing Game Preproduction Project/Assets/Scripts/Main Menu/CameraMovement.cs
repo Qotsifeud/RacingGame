@@ -71,5 +71,3 @@ public class CameraMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(targetAngle);
     }
 }
-
-//cinemachine

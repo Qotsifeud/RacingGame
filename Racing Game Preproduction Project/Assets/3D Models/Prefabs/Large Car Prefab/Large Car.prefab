@@ -137,8 +137,6 @@ GameObject:
   - component: {fileID: 8511698393445224410}
   - component: {fileID: 8009246670589546252}
   - component: {fileID: 5384372492785569671}
-  - component: {fileID: 164863895755515367}
-  - component: {fileID: 3228175931043569745}
   m_Layer: 3
   m_Name: Large Car
   m_TagString: Large Car
@@ -297,7 +295,6 @@ MonoBehaviour:
   SlipMod: 10
   turnTh: 20
   inTurn: 0
-  vel: {x: 0, y: 0, z: 0}
 --- !u!114 &8511698393445224410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,11 +321,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b19142e6eeb72340bd60edaaef54af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boost: 10
-  haveSpeedBoost: 0
-  boostTime: 5
-  boostIndicator: {fileID: 0}
-  warningIndicator: {fileID: 0}
+  smallCarBoost: 90
+  mediumCarBoost: 80
+  largeCarBoost: 70
+  BoostActive: 0
+  SmallCarDefault: 80
+  mediumCarDefault: 70
+  largeCarDefault: 60
 --- !u!114 &5384372492785569671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,36 +345,6 @@ MonoBehaviour:
   currentNumberOfLaps: 1
   maxLaps: 3
   checkPopints: 0000000000
---- !u!114 &164863895755515367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090060667146845268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45bc57749a6904d4b85f7f75bc1c8c4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destructionModel: {fileID: 0}
-  carCurrentSpeed: 0
-  playerCar: {fileID: 0}
---- !u!114 &3228175931043569745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090060667146845268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f4f188c55b6f824d9f2330c63b15358, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destructionModel: {fileID: 7976000286542702583, guid: 7e74aa6b26fc973478ed33e8ac374ed4, type: 3}
-  carCurrentSpeed: 0
-  playerCar: {fileID: 0}
 --- !u!1 &1124600920920560976
 GameObject:
   m_ObjectHideFlags: 0

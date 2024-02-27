@@ -91,7 +91,7 @@ public class DriftController : MonoBehaviour {
     Vector3 spawnP;
     Quaternion spawnR;
     
-    public Vector3 vel = new Vector3(0f, 0f, 0f);
+    Vector3 vel = new Vector3(0f, 0f, 0f);
     Vector3 pvel = new Vector3(0f, 0f, 0f);
     #endregion
 
@@ -124,6 +124,7 @@ public class DriftController : MonoBehaviour {
     void Update() {
 
         CurrentSpeed = vel.z;//just here because its easier to understand
+
         Debug.DrawRay(transform.position, rigidBody.velocity / 2, Color.green);
 
         // Reset to spawn if out of bounds

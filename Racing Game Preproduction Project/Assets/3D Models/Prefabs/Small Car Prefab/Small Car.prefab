@@ -485,7 +485,6 @@ GameObject:
   - component: {fileID: 8290203928727298720}
   - component: {fileID: -3591953391835222135}
   - component: {fileID: 8682345078427495168}
-  - component: {fileID: 1792157201481739799}
   m_Layer: 3
   m_Name: Small Car
   m_TagString: Small Car
@@ -644,7 +643,6 @@ MonoBehaviour:
   SlipMod: 20
   turnTh: 20
   inTurn: 0
-  vel: {x: 0, y: 0, z: 0}
 --- !u!114 &8290203928727298720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,11 +669,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b19142e6eeb72340bd60edaaef54af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boost: 10
-  haveSpeedBoost: 0
-  boostTime: 5
-  boostIndicator: {fileID: 0}
-  warningIndicator: {fileID: 0}
+  smallCarBoost: 90
+  mediumCarBoost: 80
+  largeCarBoost: 70
+  BoostActive: 0
+  SmallCarDefault: 80
+  mediumCarDefault: 70
+  largeCarDefault: 60
 --- !u!114 &8682345078427495168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,21 +693,6 @@ MonoBehaviour:
   currentNumberOfLaps: 1
   maxLaps: 3
   checkPopints: 0000000000
---- !u!114 &1792157201481739799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2541150566880292114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45bc57749a6904d4b85f7f75bc1c8c4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destructionModel: {fileID: 0}
-  carCurrentSpeed: 0
-  playerCar: {fileID: 0}
 --- !u!1 &2567635542792005133
 GameObject:
   m_ObjectHideFlags: 0

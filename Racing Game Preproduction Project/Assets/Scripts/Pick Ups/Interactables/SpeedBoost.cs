@@ -4,70 +4,110 @@ using UnityEngine;
 //using static UnityEditorInternal.ReorderableList;
 
 public class SpeedBoost : MonoBehaviour
-{
-    public float boost = 10;
+{//make sure to increase acceleration not the cars boost...
+    public int smallCarBoost = 90;
+    public int mediumCarBoost = 80;
+    public int largeCarBoost = 70;
 
-    public bool haveSpeedBoost = false;
-    public float boostTime = 5f;
-    public GameObject boostIndicator;
-    public GameObject warningIndicator;
+    public bool BoostActive = false;
 
-    private DriftController driftController;
-    private Rigidbody rb;
-    private void Start()
-    {
-        driftController = GetComponent<DriftController>();
-        rb = GetComponent<Rigidbody>();
-    }
 
-    private void Update()
-    {
-        if(haveSpeedBoost)
-        {
-            boostIndicator.SetActive(true);
+    //resetting the values back to the default after the boost
+    public int SmallCarDefault = 80;
+    public int mediumCarDefault = 70;
+    public int largeCarDefault = 60;
 
-            if(Input.GetKeyDown("v"))
-            {
-                StartCoroutine(Boost(boost));
-                haveSpeedBoost = false;
-            }
-        }
-        else
-        {
-            boostIndicator.SetActive(false);
-        }
-    }
 
+   
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == ("SpeedBooster") && this.gameObject.tag == ("Small Car"))
+        {
+            Destroy(other.gameObject);
+            StartCoroutine(SpeedBoostTimerSmallCar(SmallCarDefault, smallCarBoost));
+        }
+
         if (other.gameObject.tag == ("SpeedBooster") && this.gameObject.tag == ("Medium Car"))
         {
             Destroy(other.gameObject);
-            haveSpeedBoost = true;
-            
+            StartCoroutine(SpeedBoostTimerSmallCar(mediumCarDefault, mediumCarBoost));
+
         }
-        else if (other.gameObject.tag == ("SpeedBooster") && this.gameObject.tag != ("Medium Car"))
+        
+        if (other.gameObject.tag == ("SpeedBooster") && this.gameObject.tag == ("Large Car"))
         {
-            StartCoroutine(Warning());
+            Destroy(other.gameObject);
+            StartCoroutine(SpeedBoostTimerSmallCar(largeCarDefault, largeCarBoost));
         }
+
     }
 
-    IEnumerator Boost(float boost)
+
+
+
+
+
+
+
+    //private void Wraper()
+    //{
+    //    StartCoroutine(SpeedBoostTimer());
+    //}
+
+
+    IEnumerator SpeedBoostTimerSmallCar(float defaut, float boost)
     {
-        driftController.TopSpeed += boost;
-        rb.velocity += transform.forward * (driftController.TopSpeed + boost);
+
+        this.gameObject.GetComponent<DriftController>().TopSpeed = boost;
 
         Debug.Log("is being used");
-        yield return new WaitForSeconds(boostTime);
+        yield return new WaitForSeconds(10);//wait for 10 seconds!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         Debug.Log("is used");
 
-        driftController.TopSpeed -= boost;
+
+
+        this.gameObject.GetComponent<DriftController>().TopSpeed = defaut;
+
+
     }
 
-    IEnumerator Warning()
+    IEnumerator SpeedBoostTimerMediumCar(float defaut, float boost)
     {
-        warningIndicator.SetActive(true);
-        yield return new WaitForSeconds(2);
-        warningIndicator.SetActive(false);
+
+        this.gameObject.GetComponent<DriftController>().TopSpeed = boost;
+
+        Debug.Log("is being used");
+        yield return new WaitForSeconds(10);//wait for 10 seconds!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        Debug.Log("is used");
+
+
+
+        this.gameObject.GetComponent<DriftController>().TopSpeed = defaut;
+
+
     }
+
+    IEnumerator SpeedBoostTimerLargeCar(float defaut, float boost)
+    {
+
+        this.gameObject.GetComponent<DriftController>().TopSpeed = boost;
+
+        Debug.Log("is being used");
+        yield return new WaitForSeconds(10);//wait for 10 seconds!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        Debug.Log("is used");
+
+
+
+        this.gameObject.GetComponent<DriftController>().TopSpeed = defaut;
+
+
+    }
+
+
+
+
+
+
+
+
 }

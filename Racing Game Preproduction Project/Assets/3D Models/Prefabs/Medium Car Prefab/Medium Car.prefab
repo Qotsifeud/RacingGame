@@ -120,7 +120,6 @@ GameObject:
   - component: {fileID: 7803699891348351816}
   - component: {fileID: 4933481224665106546}
   - component: {fileID: 2978609382228364305}
-  - component: {fileID: 6900901604316325414}
   m_Layer: 3
   m_Name: Medium Car
   m_TagString: Medium Car
@@ -195,13 +194,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b28d51eaa6c2b442ac58943a138f548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Accel: 50
-  Deccel: 65
+  Accel: 30
+  Deccel: 50
   Boost: 10
   halfSpeed: 15
-  TopSpeed: 150
+  TopSpeed: 90.69
   CurrentSpeed: 0
-  GripX: 55
+  GripX: 47.5
   GripZ: 3
   Rotate: 95
   RotVel: 0.4
@@ -276,10 +275,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  SlipMod: 50
+  SlipMod: 32
   turnTh: 20
   inTurn: 0
-  vel: {x: 0, y: 0, z: 0}
 --- !u!114 &7803699891348351816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,11 +304,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b19142e6eeb72340bd60edaaef54af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boost: 10
-  haveSpeedBoost: 0
-  boostTime: 5
-  boostIndicator: {fileID: 0}
-  warningIndicator: {fileID: 0}
+  smallCarBoost: 90
+  mediumCarBoost: 80
+  largeCarBoost: 70
+  BoostActive: 0
+  SmallCarDefault: 80
+  mediumCarDefault: 70
+  largeCarDefault: 60
 --- !u!114 &2978609382228364305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,21 +328,6 @@ MonoBehaviour:
   currentNumberOfLaps: 1
   maxLaps: 3
   checkPopints: 0000000000
---- !u!114 &6900901604316325414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557231653892310471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45bc57749a6904d4b85f7f75bc1c8c4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destructionModel: {fileID: 0}
-  carCurrentSpeed: 0
-  playerCar: {fileID: 0}
 --- !u!1 &606698375343190309
 GameObject:
   m_ObjectHideFlags: 0
