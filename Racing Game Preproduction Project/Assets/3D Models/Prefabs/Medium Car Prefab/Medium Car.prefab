@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 7803699891348351816}
   - component: {fileID: 4933481224665106546}
   - component: {fileID: 2978609382228364305}
+  - component: {fileID: 9204670276477750479}
   m_Layer: 3
   m_Name: Medium Car
   m_TagString: Medium Car
@@ -194,13 +195,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b28d51eaa6c2b442ac58943a138f548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Accel: 30
-  Deccel: 50
+  Accel: 40
+  Deccel: 100
   Boost: 10
   halfSpeed: 15
-  TopSpeed: 90.69
+  TopSpeed: 110
   CurrentSpeed: 0
-  GripX: 47.5
+  GripX: 53
   GripZ: 3
   Rotate: 95
   RotVel: 0.4
@@ -275,7 +276,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  SlipMod: 32
+  SlipMod: 40
   turnTh: 20
   inTurn: 0
 --- !u!114 &7803699891348351816
@@ -328,6 +329,19 @@ MonoBehaviour:
   currentNumberOfLaps: 1
   maxLaps: 3
   checkPopints: 0000000000
+--- !u!114 &9204670276477750479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557231653892310471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45bc57749a6904d4b85f7f75bc1c8c4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hastriggeredOil: 0
 --- !u!1 &606698375343190309
 GameObject:
   m_ObjectHideFlags: 0

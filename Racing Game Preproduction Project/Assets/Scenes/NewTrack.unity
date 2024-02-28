@@ -317,6 +317,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4338864558003189474, guid: 73bb7f90f6a91ca4887322629676479e, type: 3}
+--- !u!1 &50749006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1090060667146845268, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+  m_PrefabInstance: {fileID: 1772389606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &73879330
 GameObject:
   m_ObjectHideFlags: 0
@@ -3305,6 +3310,18 @@ PrefabInstance:
     - target: {fileID: 1217011493795080500, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_Name
       value: TestWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829633564396002743, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829633564396002743, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033605831831794434, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6581,10 +6598,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small Car
       objectReference: {fileID: 0}
-    - target: {fileID: 2541150566880292114, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2884602112352647080, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -730.1861
@@ -7587,10 +7600,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large Car
       objectReference: {fileID: 0}
-    - target: {fileID: 1090060667146845268, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4392219406469603643, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: m_LocalPosition.x
       value: -730.3944
@@ -7639,42 +7648,13 @@ PrefabInstance:
       propertyPath: lapCounter
       value: 
       objectReference: {fileID: 1500800446}
-    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: CoM.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: CoM.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: CoM.z
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: GripX
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: turnTh
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: SlipMod
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8009246670589546252, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: boostIndicator
-      value: 
-      objectReference: {fileID: 925011768}
-    - target: {fileID: 8009246670589546252, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: warningIndicator
-      value: 
-      objectReference: {fileID: 397887059}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1090060667146845268, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1772389616}
   m_SourcePrefab: {fileID: 100100000, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
 --- !u!4 &1772389607 stripped
 Transform:
@@ -7691,6 +7671,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9097288832968601885, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
   m_PrefabInstance: {fileID: 1772389606}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1772389616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50749006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45bc57749a6904d4b85f7f75bc1c8c4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hastriggeredOil: 0
 --- !u!1 &1781040336
 GameObject:
   m_ObjectHideFlags: 0
@@ -9367,10 +9360,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium Car
       objectReference: {fileID: 0}
-    - target: {fileID: 557231653892310471, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2978609382228364305, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: gameOver
       value: 
@@ -9418,26 +9407,6 @@ PrefabInstance:
     - target: {fileID: 5461290397395326422, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: Accel
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: GripX
-      value: 53
-      objectReference: {fileID: 0}
-    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: Deccel
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: SlipMod
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: TopSpeed
-      value: 110
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
