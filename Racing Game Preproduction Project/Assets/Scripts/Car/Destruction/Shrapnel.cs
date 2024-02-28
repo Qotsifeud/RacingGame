@@ -14,7 +14,7 @@ public class Shrapn : MonoBehaviour
         thisBody = this.gameObject.GetComponent<Rigidbody>();
         thisBody.AddForce(transform.forward * useTheForce, ForceMode.Impulse);
 
-        Debug.Log("should be using the force");
+     
 
 
     }

@@ -73,7 +73,7 @@ public class OilSpill : MonoBehaviour
     IEnumerator OilSpinnerSmall()
     { 
         //temp change of car settings...
-        Debug.Log("currently spinning");
+    
 
         currentslipStatus += currentslipStatus * smallCarSlipValue;
 
@@ -82,15 +82,11 @@ public class OilSpill : MonoBehaviour
 
 
 
-
-        Debug.Log("No longer spinning");
-
-
     }
     IEnumerator OilSpinnerMedium()
     {
         //temp change of car settings...
-        Debug.Log("currently spinning");
+     
 
         currentslipStatus += currentslipStatus * mediumCarSlipValue;
 
@@ -100,14 +96,11 @@ public class OilSpill : MonoBehaviour
 
 
 
-        Debug.Log("No longer spinning");
-
-
     }
     IEnumerator OilSpinnerLarge()
     {
         //temp change of car settings...
-        Debug.Log("currently spinning");
+     
 
         currentslipStatus += currentslipStatus * largeCarSlipValue;
 
@@ -115,9 +108,6 @@ public class OilSpill : MonoBehaviour
         //resetting to defauls drivning settings for this car type..
 
 
-
-
-        Debug.Log("No longer spinning");
 
 
     }

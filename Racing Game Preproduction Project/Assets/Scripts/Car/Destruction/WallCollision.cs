@@ -12,12 +12,7 @@ public class WallCollision : MonoBehaviour
     public GameObject destructionModel;
     private DriftController driftControllerScript;
     public float carCurrentSpeed;
-
-
-
-
-
-
+    private bool destructionModelInstantiated = false;
 
 
 
@@ -35,26 +30,25 @@ public class WallCollision : MonoBehaviour
 
 
 
-        if (Wall.gameObject.tag == "Destructable" && this.gameObject.tag == ("Large Car")) 
+        if (Wall.gameObject.tag == "Destructable" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
         {
-            
-
-            if (driftControllerScript.CurrentSpeed >= driftControllerScript.halfSpeed)
+            if (!destructionModelInstantiated) // Check if destruction model is not already instantiated
             {
-
                 Instantiate(destructionModel, Wall.transform.position, Wall.transform.rotation);
-                Destroy(Wall.gameObject);
-                
+                destructionModelInstantiated = true; // Set flag to true indicating destruction model is instantiated
             }
+            else
+            {
+                Destroy(Wall.gameObject); // Destroy the collided wall object if destruction model is already instantiated
+            }
+
+
+
+
+
         }
 
 
-
-
-
-
     }
-
-
 }
 
