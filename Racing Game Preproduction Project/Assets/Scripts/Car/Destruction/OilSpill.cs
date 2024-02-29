@@ -46,13 +46,13 @@ public class OilSpill : MonoBehaviour
 
         if (Oil.gameObject.tag == "Oil" && this.gameObject.tag == ("Large Car"))
         {
-           
 
 
+            driftControllerScript.RotVel = 1.5f;
             driftControllerScript.AngDragG = 0f;
-            driftControllerScript.SlipMod = 100.0f;
+            driftControllerScript.SlipMod = 100f;
             driftControllerScript.GripX = 0f;
-            driftControllerScript.Rotate = 50.0f;
+            driftControllerScript.Rotate = 280;
             Debug.Log("Slip Active");
 
 
@@ -76,7 +76,7 @@ public class OilSpill : MonoBehaviour
 
         
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(6);
         //resetting to defauls drivning settings for this car type..
 
 
@@ -88,7 +88,7 @@ public class OilSpill : MonoBehaviour
      
 
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(6);
         //resetting to defauls drivning settings for this car type..
 
 
@@ -100,9 +100,10 @@ public class OilSpill : MonoBehaviour
         //temp change of car settings...
 
        
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(6);
         //resetting to defauls drivning settings for this car type..
 
+        driftControllerScript.RotVel = 0.7f;
         driftControllerScript.AngDragG = 5.0f;
         driftControllerScript.SlipMod = 10.0f;
         driftControllerScript.GripX = 12f;
