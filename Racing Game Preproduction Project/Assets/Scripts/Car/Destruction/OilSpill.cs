@@ -58,9 +58,12 @@ public class OilSpill : MonoBehaviour
         {
             hastriggeredOil = false;
 
+            driftControllerScript.AngDragG = 1.0f;
+
+
             //code for effecting car turning
             StartCoroutine(OilSpinnerLarge());
-
+            driftControllerScript.AngDragG = 5.0f;
             //Destroy(Oil.gameObject);
         }
 

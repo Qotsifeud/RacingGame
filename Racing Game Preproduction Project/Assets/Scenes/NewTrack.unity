@@ -4827,6 +4827,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Oil
       objectReference: {fileID: 0}
+    - target: {fileID: 6010865526115784060, guid: 2863a25b2f79d8142945ac7213e0e3a3, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 17d2e58fc02489343a56cf74bf707867, type: 2}
+    - target: {fileID: 6010865526115784060, guid: 2863a25b2f79d8142945ac7213e0e3a3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7700912745750151791, guid: 2863a25b2f79d8142945ac7213e0e3a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -296.1
