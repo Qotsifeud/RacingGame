@@ -9,62 +9,58 @@ using UnityEngine;
 public class OilSpill : MonoBehaviour
 {
 
-    public bool hastriggeredOil;
-    private DriftController driftControllerScript;
-    private float currentslipStatus;
-
-    //values added onto default
-    private float largeCarSlipValue = 100;
-    private float mediumCarSlipValue = 100;
-    private float smallCarSlipValue = 100;
+    
+    public DriftController driftControllerScript;
+   
 
     private void Start()
     {
 
         driftControllerScript = this.gameObject.GetComponent<DriftController>();
-        currentslipStatus = driftControllerScript.SlipMod;
+       
 
-
-        hastriggeredOil = false;
     }
 
 
     private void OnTriggerEnter(Collider Oil) //collision detection
     {
 
-        if (Oil.gameObject.tag == "Oil" && hastriggeredOil == false && this.gameObject.tag == ("Small Car")) 
+        if (Oil.gameObject.tag == "Oil" && this.gameObject.tag == ("Small Car")) 
         {
-            hastriggeredOil = false;
+         
 
             //code for effecting car turning
             StartCoroutine(OilSpinnerSmall());
 
-            //Destroy(Oil.gameObject);
         }
 
 
-        if (Oil.gameObject.tag == "Oil" && hastriggeredOil == false && this.gameObject.tag == ("Medium Car"))
+        if (Oil.gameObject.tag == "Oil" && this.gameObject.tag == ("Medium Car"))
         {
-            hastriggeredOil = false;
 
             //code for effecting car turning
             StartCoroutine(OilSpinnerMedium());
 
-            //Destroy(Oil.gameObject);
         }
 
 
-        if (Oil.gameObject.tag == "Oil" && hastriggeredOil == false && this.gameObject.tag == ("Large Car"))
+        if (Oil.gameObject.tag == "Oil" && this.gameObject.tag == ("Large Car"))
         {
-            hastriggeredOil = false;
+           
 
-            driftControllerScript.AngDragG = 1.0f;
+
+            driftControllerScript.AngDragG = 0f;
+            driftControllerScript.SlipMod = 100.0f;
+            driftControllerScript.GripX = 0f;
+            driftControllerScript.Rotate = 50.0f;
+            Debug.Log("Slip Active");
 
 
             //code for effecting car turning
             StartCoroutine(OilSpinnerLarge());
-            driftControllerScript.AngDragG = 5.0f;
-            //Destroy(Oil.gameObject);
+
+       
+
         }
 
 
@@ -78,9 +74,9 @@ public class OilSpill : MonoBehaviour
         //temp change of car settings...
     
 
-        currentslipStatus += currentslipStatus * smallCarSlipValue;
+        
 
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
         //resetting to defauls drivning settings for this car type..
 
 
@@ -91,9 +87,8 @@ public class OilSpill : MonoBehaviour
         //temp change of car settings...
      
 
-        currentslipStatus += currentslipStatus * mediumCarSlipValue;
 
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
         //resetting to defauls drivning settings for this car type..
 
 
@@ -103,13 +98,16 @@ public class OilSpill : MonoBehaviour
     IEnumerator OilSpinnerLarge()
     {
         //temp change of car settings...
-     
 
-        currentslipStatus += currentslipStatus * largeCarSlipValue;
-
-        yield return new WaitForSeconds(4);
+       
+        yield return new WaitForSeconds(3);
         //resetting to defauls drivning settings for this car type..
 
+        driftControllerScript.AngDragG = 5.0f;
+        driftControllerScript.SlipMod = 10.0f;
+        driftControllerScript.GripX = 12f;
+        driftControllerScript.Rotate = 140f;
+        Debug.Log("Slip Stopped");
 
 
 
