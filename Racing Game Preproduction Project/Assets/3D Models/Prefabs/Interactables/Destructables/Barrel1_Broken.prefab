@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83506254ffbd3034090d9f35086cc055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useTheForce: 100
+  useTheForce: 800
 --- !u!114 &8959971678958477857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb097a128d0f8b14c9de5eb9167f6452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 5
+  lifetime: 3
 --- !u!64 &8375810566449507134
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -121,7 +121,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677395075776836200}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ce9735b5bdf2ab6488a2797986a90115, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83506254ffbd3034090d9f35086cc055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useTheForce: 100
+  useTheForce: 800
 --- !u!114 &3142642141362798544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb097a128d0f8b14c9de5eb9167f6452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 5
+  lifetime: 3
 --- !u!64 &6436886236045612586
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3766048083705564572}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ce9735b5bdf2ab6488a2797986a90115, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83506254ffbd3034090d9f35086cc055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useTheForce: 100
+  useTheForce: 800
 --- !u!114 &1541139803846405795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb097a128d0f8b14c9de5eb9167f6452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 5
+  lifetime: 3
 --- !u!64 &87099266921361094
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -449,7 +449,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5819196012577745726}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ce9735b5bdf2ab6488a2797986a90115, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -517,7 +517,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1265071967550248516}
@@ -627,7 +627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83506254ffbd3034090d9f35086cc055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useTheForce: 100
+  useTheForce: 800
 --- !u!114 &407067842107348804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb097a128d0f8b14c9de5eb9167f6452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 5
+  lifetime: 3
 --- !u!64 &5557581093070028898
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -648,7 +648,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8923518195268957654}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ce9735b5bdf2ab6488a2797986a90115, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
