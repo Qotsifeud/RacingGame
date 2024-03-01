@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 7803699891348351816}
   - component: {fileID: 4933481224665106546}
   - component: {fileID: 2978609382228364305}
+  - component: {fileID: 321563294177317477}
   - component: {fileID: 9204670276477750479}
   m_Layer: 3
   m_Name: Medium Car
@@ -329,6 +330,21 @@ MonoBehaviour:
   currentNumberOfLaps: 1
   maxLaps: 3
   checkPopints: 0000000000
+--- !u!114 &321563294177317477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557231653892310471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c929893573ad8b0438906f143386e1fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedLineAnimation: {fileID: 0}
+  carDriftControllerScript: {fileID: 0}
+  alphaValue: 0
 --- !u!114 &9204670276477750479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45bc57749a6904d4b85f7f75bc1c8c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hastriggeredOil: 0
+  driftControllerScript: {fileID: 0}
 --- !u!1 &606698375343190309
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 // Global enum
 public enum Faction {
     Player,
     Enemy,
     Neutral
 };
+
+
 
 public class DriftController : MonoBehaviour {
 
