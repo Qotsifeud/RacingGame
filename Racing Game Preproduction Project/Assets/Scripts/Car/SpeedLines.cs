@@ -7,34 +7,26 @@ public class SpeedLines : MonoBehaviour
 {
     public Image speedLineAnimation;
     public DriftController carDriftControllerScript;
-    public float alphaValue;
+    private float alphaValue;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        alphaValue = 0.0f;//default alpha value
+        carDriftControllerScript = GetComponent<DriftController>();
+        alphaValue = 0.0f; // default alpha value
         speedLineAnimation.enabled = true;
-        speedLineAnimation.color = new Color (0f, 0f, 0f, alphaValue);//transparent
-
+        // Set the image color to white and transparent
+        speedLineAnimation.color = new Color(1f, 1f, 1f, alphaValue);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-            alphaValue = carDriftControllerScript.CurrentSpeed;
-            //match the alpha value with the current speed of the vehicle
+        alphaValue = carDriftControllerScript.CurrentSpeed / carDriftControllerScript.TopSpeed;
+        alphaValue = Mathf.Clamp01(alphaValue);
         
-        if(carDriftControllerScript.CurrentSpeed <= 0)
-        {
-            alphaValue = 0;
-        }
-        if(carDriftControllerScript.CurrentSpeed == carDriftControllerScript.TopSpeed)
-        {
-            alphaValue = 225;//default to max
-        }
-
+        speedLineAnimation.color = new Color(1f, 1f, 1f, alphaValue);
 
     }
 }

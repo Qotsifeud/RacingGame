@@ -159,6 +159,7 @@ RectTransform:
   - {fileID: 1701789337}
   - {fileID: 958842641}
   - {fileID: 656224760}
+  - {fileID: 1695142478}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -254,7 +255,7 @@ Transform:
   m_GameObject: {fileID: 22390913}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 400.45892, y: 530.10944, z: 3979.057}
+  m_LocalPosition: {x: -4581.0625, y: 530.10944, z: 3979.057}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1064,7 +1065,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2783401972556450629, guid: f15019ef7c1a8b6408d9e983b29ff37a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -193.3
+      value: -5174.8213
       objectReference: {fileID: 0}
     - target: {fileID: 2783401972556450629, guid: f15019ef7c1a8b6408d9e983b29ff37a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1163,7 +1164,7 @@ Transform:
   m_GameObject: {fileID: 250266856}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 727.52124, y: 699.85876, z: 843.85504}
+  m_LocalPosition: {x: -4254, y: 699.85876, z: 843.85504}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1514,7 +1515,7 @@ Transform:
   m_GameObject: {fileID: 311314312}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 313.0415, y: 717.8542, z: 4181.294}
+  m_LocalPosition: {x: -4668.48, y: 717.8542, z: 4181.294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2177,7 +2178,7 @@ Transform:
   m_GameObject: {fileID: 510390830}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1868.9818, y: 606.65686, z: 154.94623}
+  m_LocalPosition: {x: -3112.5396, y: 606.65686, z: 154.94623}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2299,7 +2300,7 @@ Transform:
   m_GameObject: {fileID: 543074118}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 517.67, z: 0}
+  m_LocalPosition: {x: -4981.5215, y: 517.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2650,7 +2651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7700912745750151791, guid: 2863a25b2f79d8142945ac7213e0e3a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -448.18
+      value: -5429.7017
       objectReference: {fileID: 0}
     - target: {fileID: 7700912745750151791, guid: 2863a25b2f79d8142945ac7213e0e3a3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3702,7 +3703,7 @@ Transform:
   m_GameObject: {fileID: 810285879}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 497, y: 665.8, z: 545}
+  m_LocalPosition: {x: -4484.5215, y: 665.8, z: 545}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4009,7 +4010,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 826, y: -393}
+  m_AnchoredPosition: {x: 191, y: -971}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925011770
@@ -4881,7 +4882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4387237541010462677, guid: 3e47831e3f07d5640a0103850ee8803b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -268.70892
+      value: -5250.2305
       objectReference: {fileID: 0}
     - target: {fileID: 4387237541010462677, guid: 3e47831e3f07d5640a0103850ee8803b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6658,6 +6659,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 810285880}
     m_Modifications:
+    - target: {fileID: 628658710647072268, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: speedLineAnimation
+      value: 
+      objectReference: {fileID: 1695142476}
     - target: {fileID: 2541150566880292114, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: m_Name
       value: Small Car
@@ -7214,6 +7219,81 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2014076543477297399, guid: 73bb7f90f6a91ca4887322629676479e, type: 3}
+--- !u!1 &1695142475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1695142478}
+  - component: {fileID: 1695142477}
+  - component: {fileID: 1695142476}
+  m_Layer: 5
+  m_Name: SpeedLines
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1695142476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695142475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1695142477
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695142475}
+  m_CullTransparentMesh: 1
+--- !u!224 &1695142478
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695142475}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2465690}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1700214859
 GameObject:
   m_ObjectHideFlags: 0
@@ -7391,7 +7471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -386.75702
+      value: -5368.2783
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7675,6 +7755,10 @@ PrefabInstance:
       propertyPath: lapCounter
       value: 
       objectReference: {fileID: 1500800446}
+    - target: {fileID: 5599406871170787264, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: speedLineAnimation
+      value: 
+      objectReference: {fileID: 1695142476}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8025,7 +8109,7 @@ Transform:
   m_GameObject: {fileID: 1876702119}
   serializedVersion: 2
   m_LocalRotation: {x: 0.11149377, y: 0.66092205, z: -0.4390294, w: 0.5983347}
-  m_LocalPosition: {x: -487, y: 2187.67, z: 4042.2}
+  m_LocalPosition: {x: -5468.5215, y: 2187.67, z: 4042.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9267,7 +9351,7 @@ Transform:
   m_GameObject: {fileID: 2066261744}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 729.4897, y: 683.3142, z: 907.8584}
+  m_LocalPosition: {x: -4252.0317, y: 683.3142, z: 907.8584}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9393,6 +9477,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 810285880}
     m_Modifications:
+    - target: {fileID: 321563294177317477, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: speedLineAnimation
+      value: 
+      objectReference: {fileID: 1695142476}
     - target: {fileID: 557231653892310471, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: m_Name
       value: Medium Car
