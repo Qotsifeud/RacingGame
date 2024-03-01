@@ -25,6 +25,7 @@ TagManager:
   - Oil
   - B1
   - B2
+  - B4
   layers:
   - Default
   - TransparentFX

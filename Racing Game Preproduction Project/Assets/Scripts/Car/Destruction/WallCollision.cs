@@ -10,9 +10,9 @@ public class WallCollision : MonoBehaviour
 
     //instantiated objects
     public GameObject destructionModel;
-    public GameObject brokenBarrell1;
-    public GameObject brokenBarrell2;
-    public GameObject brokenBarrell3;
+    public GameObject brokenBarrel1;
+    public GameObject brokenBarrel2;
+    public GameObject brokenBarrel3;
 
 
 
@@ -58,7 +58,7 @@ public class WallCollision : MonoBehaviour
         {
             if (!destructionModelInstantiated) // Check if destruction model is not already instantiated
             {
-                Instantiate(brokenBarrell1, Object.transform.position, Object.transform.rotation);
+                Instantiate(brokenBarrel1, Object.transform.position, Object.transform.rotation);
                 destructionModelInstantiated = true; // Set flag to true indicating destruction model is instantiated
             }
             else
@@ -74,7 +74,7 @@ public class WallCollision : MonoBehaviour
         {
             if (!destructionModelInstantiated) // Check if destruction model is not already instantiated
             {
-                Instantiate(brokenBarrell2, Object.transform.position, Object.transform.rotation);
+                Instantiate(brokenBarrel2, Object.transform.position, Object.transform.rotation);
                 destructionModelInstantiated = true; // Set flag to true indicating destruction model is instantiated
             }
             else
@@ -90,7 +90,7 @@ public class WallCollision : MonoBehaviour
         {
             if (!destructionModelInstantiated) // Check if destruction model is not already instantiated
             {
-                Instantiate(brokenBarrell2, Object.transform.position, Object.transform.rotation);
+                Instantiate(brokenBarrel2, Object.transform.position, Object.transform.rotation);
                 destructionModelInstantiated = true; // Set flag to true indicating destruction model is instantiated
             }
             else
