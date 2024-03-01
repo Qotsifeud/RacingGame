@@ -22,18 +22,25 @@ public class cameraFollow : MonoBehaviour
 
     public bool smoothRotation = true;
     public bool followBehind = true;
-    
+
+    public DriftController speed;
+    public float CurrentSpeed;
 
 
 
     void Update()
     {//default third person camera
-
-        if(DriftController.thirdPersonCamera == true)
+        CurrentSpeed = speed.CurrentSpeed;
+        if (DriftController.thirdPersonCamera == true)
         {
             
 
             Vector3 wantedPosition;
+            if (CurrentSpeed > 30)
+                thirdPdistance = 10f + (CurrentSpeed - 30) / 10;
+            else
+                thirdPdistance = 10f;
+            
             if (followBehind)
                 wantedPosition = thirdPersonTarget.TransformPoint(0, thirdPheight, -thirdPdistance);
             else
