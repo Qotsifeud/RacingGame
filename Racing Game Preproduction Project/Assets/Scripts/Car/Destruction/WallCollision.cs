@@ -8,8 +8,15 @@ using UnityEngine;
 public class WallCollision : MonoBehaviour
 {
 
-
+    //instantiated objects
     public GameObject destructionModel;
+    public GameObject brokenBarrell1;
+    public GameObject brokenBarrell2;
+    public GameObject brokenBarrell3;
+
+
+
+
     private DriftController driftControllerScript;
     public float carCurrentSpeed;
     private bool destructionModelInstantiated = false;
@@ -22,33 +29,83 @@ public class WallCollision : MonoBehaviour
         carCurrentSpeed = driftControllerScript.CurrentSpeed;
 
 
-
     }
 
-    private void OnTriggerEnter(Collider Wall) //collision detection
+
+
+    private void OnTriggerEnter(Collider Object) //collision detection
     {
 
 
 
-        if (Wall.gameObject.tag == "Destructable" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
+        if (Object.gameObject.tag == "Destructable" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
         {
             if (!destructionModelInstantiated) // Check if destruction model is not already instantiated
             {
-                Instantiate(destructionModel, Wall.transform.position, Wall.transform.rotation);
+                Instantiate(destructionModel, Object.transform.position, Object.transform.rotation);
                 destructionModelInstantiated = true; // Set flag to true indicating destruction model is instantiated
             }
             else
             {
-                Destroy(Wall.gameObject); // Destroy the collided wall object if destruction model is already instantiated
+                Destroy(Object.gameObject); // Destroy the collided wall object if destruction model is already instantiated
             }
-
-
-
 
 
         }
 
 
+        if (Object.gameObject.tag == "B1" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
+        {
+            if (!destructionModelInstantiated) // Check if destruction model is not already instantiated
+            {
+                Instantiate(brokenBarrell1, Object.transform.position, Object.transform.rotation);
+                destructionModelInstantiated = true; // Set flag to true indicating destruction model is instantiated
+            }
+            else
+            {
+                Destroy(Object.gameObject); // Destroy the collided wall object if destruction model is already instantiated
+            }
+
+
+        }
+
+
+        if (Object.gameObject.tag == "B2" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
+        {
+            if (!destructionModelInstantiated) // Check if destruction model is not already instantiated
+            {
+                Instantiate(brokenBarrell2, Object.transform.position, Object.transform.rotation);
+                destructionModelInstantiated = true; // Set flag to true indicating destruction model is instantiated
+            }
+            else
+            {
+                Destroy(Object.gameObject); // Destroy the collided wall object if destruction model is already instantiated
+            }
+
+
+        }
+
+
+        if (Object.gameObject.tag == "B4" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
+        {
+            if (!destructionModelInstantiated) // Check if destruction model is not already instantiated
+            {
+                Instantiate(brokenBarrell2, Object.transform.position, Object.transform.rotation);
+                destructionModelInstantiated = true; // Set flag to true indicating destruction model is instantiated
+            }
+            else
+            {
+                Destroy(Object.gameObject); // Destroy the collided wall object if destruction model is already instantiated
+            }
+
+
+        }
+
+
+
+
     }
+
+
 }
 

@@ -22,6 +22,9 @@ TagManager:
   - Start Line
   - Reset Plane
   - CarSpawnControler
+  - Oil
+  - B1
+  - B2
   layers:
   - Default
   - TransparentFX
