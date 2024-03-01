@@ -360,6 +360,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructionModel: {fileID: 7976000286542702583, guid: 76ce1643daef1c44fb39925cd6b0bf27, type: 3}
+  brokenBarrel1: {fileID: 5984202174707738361, guid: 72ee2956cd9d05c4dabe2b10eb2a275b, type: 3}
+  brokenBarrel2: {fileID: 1979759941924198745, guid: 99433bab6095be14faaa7785c63d85bc, type: 3}
+  brokenBarrel3: {fileID: 1979759941924198745, guid: 99433bab6095be14faaa7785c63d85bc, type: 3}
   carCurrentSpeed: 0
 --- !u!114 &5999359014403019925
 MonoBehaviour:

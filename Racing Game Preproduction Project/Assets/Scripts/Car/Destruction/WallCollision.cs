@@ -20,6 +20,10 @@ public class WallCollision : MonoBehaviour
     private DriftController driftControllerScript;
     public float carCurrentSpeed;
     private bool destructionModelInstantiated = false;
+    private bool B1CurrentlyInstantiated = false;
+    private bool B2CurrentlyInstantiated = false;
+
+    private bool B4CurrentlyInstantiated = false;
 
 
 
@@ -56,10 +60,10 @@ public class WallCollision : MonoBehaviour
 
         if (Object.gameObject.tag == "B1" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
         {
-            if (!destructionModelInstantiated) // Check if destruction model is not already instantiated
+            if (!B1CurrentlyInstantiated) // Check if destruction model is not already instantiated
             {
                 Instantiate(brokenBarrel1, Object.transform.position, Object.transform.rotation);
-                destructionModelInstantiated = true; // Set flag to true indicating destruction model is instantiated
+                B1CurrentlyInstantiated = true; // Set flag to true indicating destruction model is instantiated
             }
             else
             {
@@ -72,10 +76,10 @@ public class WallCollision : MonoBehaviour
 
         if (Object.gameObject.tag == "B2" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
         {
-            if (!destructionModelInstantiated) // Check if destruction model is not already instantiated
+            if (!B2CurrentlyInstantiated) // Check if destruction model is not already instantiated
             {
                 Instantiate(brokenBarrel2, Object.transform.position, Object.transform.rotation);
-                destructionModelInstantiated = true; // Set flag to true indicating destruction model is instantiated
+                B2CurrentlyInstantiated = true; // Set flag to true indicating destruction model is instantiated
             }
             else
             {
@@ -88,10 +92,10 @@ public class WallCollision : MonoBehaviour
 
         if (Object.gameObject.tag == "B4" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
         {
-            if (!destructionModelInstantiated) // Check if destruction model is not already instantiated
+            if (!B4CurrentlyInstantiated) // Check if destruction model is not already instantiated
             {
                 Instantiate(brokenBarrel2, Object.transform.position, Object.transform.rotation);
-                destructionModelInstantiated = true; // Set flag to true indicating destruction model is instantiated
+                B4CurrentlyInstantiated = true; // Set flag to true indicating destruction model is instantiated
             }
             else
             {
