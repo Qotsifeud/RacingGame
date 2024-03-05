@@ -55,7 +55,7 @@ public class StartTimer : MonoBehaviour
         yield return new WaitForSeconds(1);
         go.SetActive(false);
         timer.startTimer = true;//setting the time to true at the start of the race
-        DriftController.canStartDriving = true;//setting the driving to true after the countdown
+       
         Debug.Log("GO!");
      
         driftController.GetComponent<DriftController>().enabled = true;
