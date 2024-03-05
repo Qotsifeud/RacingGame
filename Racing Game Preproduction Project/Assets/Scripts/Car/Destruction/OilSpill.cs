@@ -18,7 +18,6 @@ public class OilSpill : MonoBehaviour
 
         driftControllerScript = this.gameObject.GetComponent<DriftController>();
        
-
     }
 
 
@@ -27,11 +26,8 @@ public class OilSpill : MonoBehaviour
 
         if (Oil.gameObject.tag == "Oil" && this.gameObject.tag == ("Small Car")) 
         {
-         
-
             //code for effecting car turning
             StartCoroutine(OilSpinnerSmall());
-
         }
 
 
@@ -59,11 +55,7 @@ public class OilSpill : MonoBehaviour
             //code for effecting car turning
             StartCoroutine(OilSpinnerLarge());
 
-       
-
         }
-
-
 
     }
 
@@ -73,26 +65,16 @@ public class OilSpill : MonoBehaviour
     { 
         //temp change of car settings...
     
-
-        
-
         yield return new WaitForSeconds(6);
         //resetting to defauls drivning settings for this car type..
-
-
 
     }
     IEnumerator OilSpinnerMedium()
     {
         //temp change of car settings...
      
-
-
         yield return new WaitForSeconds(6);
         //resetting to defauls drivning settings for this car type..
-
-
-
 
     }
     IEnumerator OilSpinnerLarge()
@@ -110,13 +92,7 @@ public class OilSpill : MonoBehaviour
         driftControllerScript.Rotate = 140f;
         Debug.Log("Slip Stopped");
 
-
-
     }
-
-
-
-
 }
 
 

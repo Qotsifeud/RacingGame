@@ -34,9 +34,7 @@ public class LapCounter : MonoBehaviour
             gameOver.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-
         }
-
 
         if(currentNumberOfLaps == 1)
         {
@@ -52,19 +50,6 @@ public class LapCounter : MonoBehaviour
         {
             finishSign.enabled = true;
         }
-       
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -102,14 +87,4 @@ public class LapCounter : MonoBehaviour
 
         return true;
     }
-
-
-
-
-
-
-
-
-
-
 }
