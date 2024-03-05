@@ -1361,6 +1361,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 810285880}
     m_Modifications:
     - target: {fileID: 924301505625474905, guid: d56cb763ef88bf04f84cda845a5aaa69, type: 3}
+      propertyPath: far clip plane
+      value: 6000
+      objectReference: {fileID: 0}
+    - target: {fileID: 924301505625474905, guid: d56cb763ef88bf04f84cda845a5aaa69, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 639
       objectReference: {fileID: 0}
@@ -5283,7 +5287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1772389607}
-  adjustableHeight: 70
+  adjustableHeight: 100
   zOffset: 0
 --- !u!20 &985309221
 Camera:
@@ -5320,7 +5324,7 @@ Camera:
   far clip plane: 2000
   field of view: 34
   orthographic: 1
-  orthographic size: 200
+  orthographic size: 300
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -6445,6 +6449,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 810285880}
     m_Modifications:
+    - target: {fileID: 924301505625474905, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
+      propertyPath: far clip plane
+      value: 6000
+      objectReference: {fileID: 0}
     - target: {fileID: 924301505625474905, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 639
@@ -9505,6 +9513,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 810285880}
     m_Modifications:
+    - target: {fileID: 924301505625474905, guid: f1448835af69e7b458b3929fff8c90c0, type: 3}
+      propertyPath: far clip plane
+      value: 6000
+      objectReference: {fileID: 0}
     - target: {fileID: 924301505625474905, guid: f1448835af69e7b458b3929fff8c90c0, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 639
