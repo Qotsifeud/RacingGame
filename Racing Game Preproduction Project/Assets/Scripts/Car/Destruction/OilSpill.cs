@@ -8,7 +8,9 @@ using UnityEngine;
 
 public class OilSpill : MonoBehaviour
 {
-
+    public float slipValueSmallCar = 2;
+    public float slipValueMediumCar = 2;
+    public float slipValueLargeCar = 2;
     
     public DriftController driftControllerScript;
    
@@ -76,7 +78,7 @@ public class OilSpill : MonoBehaviour
 
         
 
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(slipValueSmallCar);
         //resetting to defauls drivning settings for this car type..
 
 
@@ -88,7 +90,7 @@ public class OilSpill : MonoBehaviour
      
 
 
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(slipValueMediumCar);
         //resetting to defauls drivning settings for this car type..
 
 
@@ -100,7 +102,7 @@ public class OilSpill : MonoBehaviour
         //temp change of car settings...
 
        
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(slipValueLargeCar);
         //resetting to defauls drivning settings for this car type..
 
         driftControllerScript.RotVel = 0.7f;

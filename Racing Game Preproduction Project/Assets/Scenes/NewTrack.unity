@@ -4879,7 +4879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &925011769
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7711,6 +7711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small Car
       objectReference: {fileID: 0}
+    - target: {fileID: 2541150566880292114, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2884602112352647080, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1058.4858
@@ -8784,6 +8788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large Car
       objectReference: {fileID: 0}
+    - target: {fileID: 1090060667146845268, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4392219406469603643, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: m_LocalPosition.x
       value: -866.1079
@@ -8844,6 +8852,10 @@ PrefabInstance:
       propertyPath: speedLineAnimation
       value: 
       objectReference: {fileID: 1695142476}
+    - target: {fileID: 5999359014403019925, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: slipValue
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8009246670589546252, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: Warning
       value: 
@@ -10764,6 +10776,10 @@ PrefabInstance:
     - target: {fileID: 557231653892310471, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: m_Name
       value: Medium Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 557231653892310471, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2978609382228364305, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: gameOver
