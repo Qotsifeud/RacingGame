@@ -13,18 +13,12 @@ public class MainMenuScript : MonoBehaviour
         SceneManager.LoadScene("GCU RaceTrack");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-
-
-
-
     }
 
     public void BackToMenu() 
     {
-        SceneManager.LoadScene("UpdatedScene");
+        SceneManager.LoadScene("NewTrack");
     }
-
 
     public void CloseMenuScreen() {
 
@@ -32,18 +26,5 @@ public class MainMenuScript : MonoBehaviour
         Cursor.visible = false;
 
         //MenuCharacter.InMenuScreen = false;
-       
-
-
-
     }
-
-
-
-
-
-
-
-
-
 }
