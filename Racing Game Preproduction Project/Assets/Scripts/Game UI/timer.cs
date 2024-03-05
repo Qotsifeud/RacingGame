@@ -16,7 +16,10 @@ public class timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Timer.enabled = false;
+
+
+
     }
 
     // Update is called once per frame
@@ -25,7 +28,7 @@ public class timer : MonoBehaviour
 
         if (startTimer)
         {
-
+            Timer.enabled = true;
             time += Time.deltaTime;
             int seconds = ((int)time % 60);
             int minutes = ((int)time / 60);
