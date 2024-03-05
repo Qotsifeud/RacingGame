@@ -123,6 +123,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &170084392
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 452fbb904c9927848828758576749d4b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -401.34692
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 452fbb904c9927848828758576749d4b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 452fbb904c9927848828758576749d4b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1743.0684
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 452fbb904c9927848828758576749d4b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 452fbb904c9927848828758576749d4b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 452fbb904c9927848828758576749d4b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 452fbb904c9927848828758576749d4b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 452fbb904c9927848828758576749d4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 452fbb904c9927848828758576749d4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 452fbb904c9927848828758576749d4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 452fbb904c9927848828758576749d4b, type: 3}
+      propertyPath: m_Name
+      value: UFO 2 Mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944837411930795506, guid: 452fbb904c9927848828758576749d4b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cedd01aeefd3ebf49b7ebffb534cca5c, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 452fbb904c9927848828758576749d4b, type: 3}
 --- !u!1 &827380326
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,3 +376,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1578188187}
   - {fileID: 827380328}
+  - {fileID: 170084392}
