@@ -1428,6 +1428,10 @@ PrefabInstance:
       propertyPath: thirdPersonTarget
       value: 
       objectReference: {fileID: 1559851790}
+    - target: {fileID: 8973653300246631014, guid: d56cb763ef88bf04f84cda845a5aaa69, type: 3}
+      propertyPath: largeCarAdjustment
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6449,21 +6453,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 810285880}
     m_Modifications:
-    - target: {fileID: 924301505625474905, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
-      propertyPath: far clip plane
-      value: 6000
-      objectReference: {fileID: 0}
-    - target: {fileID: 924301505625474905, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 639
-      objectReference: {fileID: 0}
     - target: {fileID: 5690250253694779545, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
       propertyPath: m_Name
       value: LargeCarCam
-      objectReference: {fileID: 0}
-    - target: {fileID: 5690250253694779545, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7766281347717918933, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6510,12 +6502,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1772389615}
     - target: {fileID: 8973653300246631014, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
-      propertyPath: thirdPheight
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 8973653300246631014, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
       propertyPath: thirdPdistance
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8973653300246631014, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
       propertyPath: firstPersonTarget
@@ -6525,6 +6513,14 @@ PrefabInstance:
       propertyPath: thirdPersonTarget
       value: 
       objectReference: {fileID: 1772389608}
+    - target: {fileID: 8973653300246631014, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
+      propertyPath: largeCarDistanceAtSpeed
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973653300246631014, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
+      propertyPath: speedOfLargeCarWhenCamDistanceChanges
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9513,21 +9509,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 810285880}
     m_Modifications:
-    - target: {fileID: 924301505625474905, guid: f1448835af69e7b458b3929fff8c90c0, type: 3}
-      propertyPath: far clip plane
-      value: 6000
-      objectReference: {fileID: 0}
-    - target: {fileID: 924301505625474905, guid: f1448835af69e7b458b3929fff8c90c0, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 639
-      objectReference: {fileID: 0}
     - target: {fileID: 5690250253694779545, guid: f1448835af69e7b458b3929fff8c90c0, type: 3}
       propertyPath: m_Name
       value: mediumCarCam
-      objectReference: {fileID: 0}
-    - target: {fileID: 5690250253694779545, guid: f1448835af69e7b458b3929fff8c90c0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7766281347717918933, guid: f1448835af69e7b458b3929fff8c90c0, type: 3}
       propertyPath: m_LocalPosition.x
