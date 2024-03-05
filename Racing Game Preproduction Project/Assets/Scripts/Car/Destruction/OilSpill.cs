@@ -11,6 +11,33 @@ public class OilSpill : MonoBehaviour
     public float slipValueSmallCar = 2;
     public float slipValueMediumCar = 2;
     public float slipValueLargeCar = 2;
+
+    //valuse for the small car
+    public float rotationVelocitySMALL = 1;
+    public float angularDragSMALL = 1;
+    public float slipModifySMALL = 1;
+    public float gripxAxisSMALL = 1;
+    public float rotationSMALL = 1;
+
+    //valuse for the medium car
+    public float rotationVelocityMED = 1;
+    public float angularDragMED = 1;
+    public float slipModifyMED = 1;
+    public float gripxAxisMED = 1;
+    public float rotationMED = 1;
+
+
+    //values for the large car
+    public float rotationVelocityLARGE = 1.5f;
+    public float angularDragLARGE = 0f;
+    public float slipModifyLARGE = 100f;
+    public float gripxAxisLARGE = 0f;
+    public float rotationLARGE = 280;
+
+
+
+
+    public float slipTest;
     
     public DriftController driftControllerScript;
    
@@ -29,8 +56,13 @@ public class OilSpill : MonoBehaviour
 
         if (Oil.gameObject.tag == "Oil" && this.gameObject.tag == ("Small Car")) 
         {
-         
 
+            driftControllerScript.RotVel += rotationVelocitySMALL;
+            driftControllerScript.AngDragG += angularDragSMALL;
+            driftControllerScript.SlipMod += slipModifySMALL;
+            driftControllerScript.GripX += gripxAxisSMALL;
+            driftControllerScript.Rotate += rotationSMALL;
+            Debug.Log("Slip Active");
             //code for effecting car turning
             StartCoroutine(OilSpinnerSmall());
 
@@ -39,7 +71,12 @@ public class OilSpill : MonoBehaviour
 
         if (Oil.gameObject.tag == "Oil" && this.gameObject.tag == ("Medium Car"))
         {
-
+            driftControllerScript.RotVel += rotationVelocityMED;
+            driftControllerScript.AngDragG += angularDragMED;
+            driftControllerScript.SlipMod += slipModifyMED;
+            driftControllerScript.GripX += gripxAxisMED;
+            driftControllerScript.Rotate += rotationMED;
+            Debug.Log("Slip Active");
             //code for effecting car turning
             StartCoroutine(OilSpinnerMedium());
 
@@ -50,11 +87,11 @@ public class OilSpill : MonoBehaviour
         {
 
 
-            driftControllerScript.RotVel = 1.5f;
-            driftControllerScript.AngDragG = 0f;
-            driftControllerScript.SlipMod = 100f;
-            driftControllerScript.GripX = 0f;
-            driftControllerScript.Rotate = 280;
+            driftControllerScript.RotVel += rotationVelocityLARGE;
+            driftControllerScript.AngDragG += angularDragLARGE;
+            driftControllerScript.SlipMod += slipModifyLARGE;
+            driftControllerScript.GripX += gripxAxisLARGE;
+            driftControllerScript.Rotate += rotationLARGE;
             Debug.Log("Slip Active");
 
 
@@ -75,12 +112,14 @@ public class OilSpill : MonoBehaviour
     { 
         //temp change of car settings...
     
-
-        
-
         yield return new WaitForSeconds(slipValueSmallCar);
         //resetting to defauls drivning settings for this car type..
-
+        driftControllerScript.RotVel -= rotationVelocitySMALL;
+        driftControllerScript.AngDragG -= angularDragSMALL;
+        driftControllerScript.SlipMod -= slipModifySMALL;
+        driftControllerScript.GripX -= gripxAxisSMALL;
+        driftControllerScript.Rotate -= rotationSMALL;
+        Debug.Log("Slip Stopped");
 
 
     }
@@ -88,11 +127,14 @@ public class OilSpill : MonoBehaviour
     {
         //temp change of car settings...
      
-
-
         yield return new WaitForSeconds(slipValueMediumCar);
         //resetting to defauls drivning settings for this car type..
-
+        driftControllerScript.RotVel -= rotationVelocityMED;
+        driftControllerScript.AngDragG -= angularDragMED;
+        driftControllerScript.SlipMod -= slipModifyMED;
+        driftControllerScript.GripX -= gripxAxisMED;
+        driftControllerScript.Rotate -= rotationMED;
+        Debug.Log("Slip Stopped");
 
 
 
@@ -105,11 +147,11 @@ public class OilSpill : MonoBehaviour
         yield return new WaitForSeconds(slipValueLargeCar);
         //resetting to defauls drivning settings for this car type..
 
-        driftControllerScript.RotVel = 0.7f;
-        driftControllerScript.AngDragG = 5.0f;
-        driftControllerScript.SlipMod = 10.0f;
-        driftControllerScript.GripX = 12f;
-        driftControllerScript.Rotate = 140f;
+        driftControllerScript.RotVel -= rotationVelocityLARGE;
+        driftControllerScript.AngDragG -= angularDragLARGE;
+        driftControllerScript.SlipMod -= slipModifyLARGE;
+        driftControllerScript.GripX -= gripxAxisLARGE;
+        driftControllerScript.Rotate -= rotationLARGE;
         Debug.Log("Slip Stopped");
 
 

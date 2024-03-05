@@ -9,7 +9,8 @@ public class SpeedLines : MonoBehaviour
     public Image speedLineAnimation;
     public DriftController carDriftControllerScript;
     private float alphaValue;
-    [SerializeField] Animator speedlineAnimation;
+    public GameObject speedLineGameObject;
+    [SerializeField] Animator speedlineAnim;
     public float animSpeed = 1f;
 
 
@@ -19,10 +20,11 @@ public class SpeedLines : MonoBehaviour
         carDriftControllerScript = GetComponent<DriftController>();
         alphaValue = 0.0f; // default alpha value
         speedLineAnimation.enabled = true;
-      
-
         // Set the image color to white and transparent
         speedLineAnimation.color = new Color(1f, 1f, 1f, alphaValue);
+
+        speedLineGameObject = GameObject.Find("SpeedLines");
+        speedlineAnim = speedLineGameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -33,6 +35,6 @@ public class SpeedLines : MonoBehaviour
         
         speedLineAnimation.color = new Color(1f, 1f, 1f, alphaValue);
 
-        speedlineAnimation.SetFloat("animationSpeed", alphaValue);
+        speedlineAnim.SetFloat("animationSpeed", alphaValue);
     }
 }
