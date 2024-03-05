@@ -26,6 +26,14 @@ public class DriftController : MonoBehaviour {
     public static bool DriveB;
 
 
+
+    public static bool canStartDriving;
+
+
+
+
+
+
     //public float Jump = 3.0f;           // In meters/second2
     public float GripX = 12.0f;          // In meters/second2
     public float GripZ = 3.0f;          // In meters/second2
@@ -103,8 +111,6 @@ public class DriftController : MonoBehaviour {
     void Start () {
 
         
-
-
         thirdPersonCamera = true;
 
 		rigidBody = GetComponent<Rigidbody>();
@@ -148,23 +154,23 @@ public class DriftController : MonoBehaviour {
             thirdPersonCamera = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.W)){
+        if (Input.GetKeyDown(KeyCode.W) && canStartDriving){
             DriveF = true;
         }
-        if (Input.GetKeyUp(KeyCode.W))
+        if (Input.GetKeyUp(KeyCode.W) && canStartDriving)
         {
             DriveF = false;
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) && canStartDriving)
         {
             DriveB = true;
         }
-        if (Input.GetKeyUp(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.S) && canStartDriving)
         {
             DriveB = false;
         }
 
-        if(Input.GetKey(KeyCode.R))
+        if(Input.GetKey(KeyCode.R) && canStartDriving)
         {
             transform.position = spawnP;
             transform.rotation = spawnR;

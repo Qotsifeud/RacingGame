@@ -6,6 +6,7 @@ using UnityEngine.Windows.WebCam;
 
 public class MiniMapPickup : MonoBehaviour
 {
+    public Vector3 rotation;
     public Transform pickUp;
     void Update()
     {
@@ -14,16 +15,7 @@ public class MiniMapPickup : MonoBehaviour
 
             transform.position = pickUp.transform.position;
 
-
-
-
-
-
-            //transform.rotation = Quaternion.Euler(yrotation);
-
-            float yRotation = pickUp.transform.rotation.eulerAngles.y;
-            Quaternion newRotation = Quaternion.Euler(0, yRotation, 0);
-            transform.rotation = newRotation;
+            transform.rotation = Quaternion.Euler(rotation);
         }
 
         else

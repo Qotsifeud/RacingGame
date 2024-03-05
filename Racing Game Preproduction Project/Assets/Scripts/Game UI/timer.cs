@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class timer : MonoBehaviour
 {
+    public static bool startTimer;
+    //mine
+
+
     public TextMeshProUGUI Timer;
     public float time = 0f;
 
@@ -18,17 +22,22 @@ public class timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        int seconds = ((int)time % 60);
-        int minutes = ((int)time / 60);
 
-        Timer.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+        if (startTimer)
+        {
 
-        //if(time <= 0) 
-        //{
-        //    gameOver.SetActive(true);
-        //    Cursor.lockState = CursorLockMode.None;
-        //    Cursor.visible = true;
-        //}
+            time += Time.deltaTime;
+            int seconds = ((int)time % 60);
+            int minutes = ((int)time / 60);
+
+            Timer.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+
+            //if(time <= 0) 
+            //{
+            //    gameOver.SetActive(true);
+            //    Cursor.lockState = CursorLockMode.None;
+            //    Cursor.visible = true;
+            //}
+        }
     }
 }
