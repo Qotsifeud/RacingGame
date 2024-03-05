@@ -62,7 +62,7 @@ public class DriftController : MonoBehaviour {
     #endregion
 
     #region Intermediate
-    Rigidbody rigidBody;
+    public Rigidbody rigidBody;
     Bounds groupCollider;
     float distToGround;
 
