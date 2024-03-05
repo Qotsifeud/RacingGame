@@ -13,26 +13,26 @@ public class OilSpill : MonoBehaviour
     public float slipValueLargeCar = 2;
 
     //valuse for the small car
-    public float rotationVelocitySMALL = 1;
-    public float angularDragSMALL = 1;
-    public float slipModifySMALL = 1;
-    public float gripxAxisSMALL = 1;
-    public float rotationSMALL = 1;
+    public float rotationVelocitySMALL = 0.1f;
+    public float angularDragSMALL = 0.1f;
+    public float slipModifySMALL = 0.1f;
+    public float gripxAxisSMALL = 0.1f;
+    public float rotationSMALL = 0.1f;
 
     //valuse for the medium car
-    public float rotationVelocityMED = 1;
-    public float angularDragMED = 1;
-    public float slipModifyMED = 1;
-    public float gripxAxisMED = 1;
-    public float rotationMED = 1;
+    public float rotationVelocityMED = 0.1f;
+    public float angularDragMED = 0.1f;
+    public float slipModifyMED = 0.1f;
+    public float gripxAxisMED = 0.1f;
+    public float rotationMED = 0.1f;
 
 
     //values for the large car
-    public float rotationVelocityLARGE = 1.5f;
-    public float angularDragLARGE = 0f;
-    public float slipModifyLARGE = 100f;
-    public float gripxAxisLARGE = 0f;
-    public float rotationLARGE = 280;
+    public float rotationVelocityLARGE = 0.1f;
+    public float angularDragLARGE = 0.1f;
+    public float slipModifyLARGE = 0.1f;
+    public float gripxAxisLARGE = 0.1f;
+    public float rotationLARGE = 0.1f;
 
 
 
