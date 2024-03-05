@@ -6,7 +6,8 @@ using UnityEngine;
 public class LapCounter : MonoBehaviour
 {
     public TextMeshProUGUI lapCounter;
-
+    public TextMeshProUGUI startSign;
+    public TextMeshProUGUI finishSign;
     public GameObject gameOver;
 
     public int currentNumberOfLaps = 1;
@@ -15,10 +16,11 @@ public class LapCounter : MonoBehaviour
     public bool[] checkPopints = new bool[5];
     
 
-    //public void Start()
-    //{
-
-    //}
+   public void Start()
+    {
+        startSign.enabled = true;
+        finishSign.enabled = false;
+    }
 
     public void Update()
     {
@@ -34,6 +36,35 @@ public class LapCounter : MonoBehaviour
             Cursor.visible = true;
 
         }
+
+
+        if(currentNumberOfLaps == 1)
+        {
+            startSign.enabled = true;
+        }
+
+        if(currentNumberOfLaps == 2)
+        {
+            startSign.enabled = false;
+        }
+
+        if (currentNumberOfLaps == 3)
+        {
+            finishSign.enabled = true;
+        }
+       
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     private void OnTriggerEnter(Collider other)
