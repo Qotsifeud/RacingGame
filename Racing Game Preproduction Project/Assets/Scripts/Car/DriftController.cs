@@ -27,11 +27,6 @@ public class DriftController : MonoBehaviour {
 
 
 
-    public static bool canStartDriving;
-
-
-
-
 
 
     //public float Jump = 3.0f;           // In meters/second2
@@ -154,23 +149,23 @@ public class DriftController : MonoBehaviour {
             thirdPersonCamera = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.W) && canStartDriving){
+        if (Input.GetKeyDown(KeyCode.W)  ){
             DriveF = true;
         }
-        if (Input.GetKeyUp(KeyCode.W) && canStartDriving)
+        if (Input.GetKeyUp(KeyCode.W)  )
         {
             DriveF = false;
         }
-        if (Input.GetKeyDown(KeyCode.S) && canStartDriving)
+        if (Input.GetKeyDown(KeyCode.S)  )
         {
             DriveB = true;
         }
-        if (Input.GetKeyUp(KeyCode.S) && canStartDriving)
+        if (Input.GetKeyUp(KeyCode.S)  )
         {
             DriveB = false;
         }
 
-        if(Input.GetKey(KeyCode.R) && canStartDriving)
+        if(Input.GetKey(KeyCode.R)  )
         {
             transform.position = spawnP;
             transform.rotation = spawnR;
