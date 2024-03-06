@@ -5,6 +5,17 @@ using UnityEngine;
 
 public class LapCounter : MonoBehaviour
 {
+    public GameObject EndOfRaceStance;//this appears at the end of each race
+    public GameObject playerDisplaySpot;
+    public GameObject carDisplaySpot;
+    public GameObject playerCharacter;
+    public GameObject playersCar;
+    private Vector3 playerDisplayPosition;
+    private Vector3 carDisplayPosition;
+    //the above variables ar for the winning game over screen at the end of each race
+
+
+
     public TextMeshProUGUI lapCounter;
     public TextMeshProUGUI startSign;
     public TextMeshProUGUI finishSign;
@@ -20,6 +31,16 @@ public class LapCounter : MonoBehaviour
     {
         startSign.enabled = true;
         finishSign.enabled = false;
+        EndOfRaceStance.SetActive(false);//default off
+
+
+        playerCharacter = GameObject.Find("Player");//the player character is the object named player
+        playersCar = this.gameObject;//this car is the car object
+
+         playerDisplayPosition = playerDisplaySpot.transform.position;
+         carDisplayPosition = carDisplaySpot.transform.position;
+
+
     }
 
     public void Update()
@@ -34,6 +55,21 @@ public class LapCounter : MonoBehaviour
             gameOver.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+
+            EndOfRaceStance.SetActive(true);//turns it on
+
+            //moving the position of the player character and the car...
+
+            this.gameObject.GetComponent<DriftController>().enabled = false;
+            playerCharacter.transform.position = playerDisplayPosition;
+            playerCharacter.transform.rotation = Quaternion.identity;
+            playersCar.transform.position = carDisplayPosition;
+            playersCar.transform.rotation = Quaternion.identity;
+
+
+
+
+
         }
 
         if(currentNumberOfLaps == 1)
