@@ -482,7 +482,6 @@ GameObject:
   - component: {fileID: 2884602112352647080}
   - component: {fileID: 913427874191606286}
   - component: {fileID: 2254568775588342926}
-  - component: {fileID: 8290203928727298720}
   - component: {fileID: -3591953391835222135}
   - component: {fileID: 8682345078427495168}
   - component: {fileID: 628658710647072268}
@@ -493,7 +492,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2884602112352647080
 Transform:
   m_ObjectHideFlags: 0
@@ -644,21 +643,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   SlipMod: 20
   turnTh: 20
+  rigidBody: {fileID: 0}
   inTurn: 0
---- !u!114 &8290203928727298720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2541150566880292114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b44179b378a69b040b31edc99be80315, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentMass: 0
-  IsTriggering: 0
 --- !u!114 &-3591953391835222135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,13 +657,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b19142e6eeb72340bd60edaaef54af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallCarBoost: 90
-  mediumCarBoost: 80
-  largeCarBoost: 70
-  BoostActive: 0
-  SmallCarDefault: 80
-  mediumCarDefault: 70
-  largeCarDefault: 60
+  CarBoost: 10
+  boostAvaiable: 0
+  boostIndicator: {fileID: 0}
+  Warning: {fileID: 0}
 --- !u!114 &8682345078427495168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,6 +674,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lapCounter: {fileID: 0}
+  startSign: {fileID: 0}
+  finishSign: {fileID: 0}
   gameOver: {fileID: 0}
   currentNumberOfLaps: 1
   maxLaps: 3
@@ -707,9 +692,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c929893573ad8b0438906f143386e1fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedOmeterPointer: {fileID: 0}
   speedLineAnimation: {fileID: 0}
   carDriftControllerScript: {fileID: 0}
-  alphaValue: 0
+  speedLineGameObject: {fileID: 0}
+  speedlineAnim: {fileID: 0}
+  animSpeed: 1
 --- !u!114 &1067246553619108238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,6 +710,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45bc57749a6904d4b85f7f75bc1c8c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slipValueSmallCar: 2
+  slipValueMediumCar: 2
+  slipValueLargeCar: 2
+  rotationVelocitySMALL: 0.1
+  angularDragSMALL: 0.1
+  slipModifySMALL: 0.1
+  gripxAxisSMALL: 0.1
+  rotationSMALL: 0.1
+  rotationVelocityMED: 0.1
+  angularDragMED: 0.1
+  slipModifyMED: 0.1
+  gripxAxisMED: 0.1
+  rotationMED: 0.1
+  rotationVelocityLARGE: 0.1
+  angularDragLARGE: 0.1
+  slipModifyLARGE: 0.1
+  gripxAxisLARGE: 0.1
+  rotationLARGE: 0.1
+  slipTest: 0
   driftControllerScript: {fileID: 0}
 --- !u!1 &2567635542792005133
 GameObject:

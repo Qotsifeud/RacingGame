@@ -53,13 +53,16 @@ public class cameraMan : MonoBehaviour
     }
 
     private void DisplayImage(int index)//physically displaying the images on the renderable objects i create in the scene on the canvas...
-    {
-        Sprite sprite = Sprite.Create(imageTexture[index], new Rect(0, 0, imageWidth, imageHeight), Vector2.zero);
-        imageDisplays[index].sprite = sprite;
-        Debug.Log("Image Properties - Index: " + index);
+    {   Debug.Log("Image Properties - Index: " + index);
         Debug.Log("Width: " + imageTexture[index].width);
         Debug.Log("Height: " + imageTexture[index].height);
         Debug.Log("Format: " + imageTexture[index].format);
+        Debug.Log("Displaying image at index: " + index);
+
+
+        Sprite sprite = Sprite.Create(imageTexture[index], new Rect(0, 0, imageWidth, imageHeight), Vector2.zero);
+        imageDisplays[index].sprite = sprite;
+      
     }
 
 }

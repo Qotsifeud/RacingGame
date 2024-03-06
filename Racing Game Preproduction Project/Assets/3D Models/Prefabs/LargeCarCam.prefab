@@ -107,13 +107,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstPersonTarget: {fileID: 0}
   thirdPersonTarget: {fileID: 0}
-  thirdPdistance: 10
+  thirdPdistance: 5
   thirdPheight: 0.65
   thirdPdamping: 15
   thirdProtationDamping: 15
   smallCarAdjustment: 10
   mediumCarAdjustment: 20
   largeCarAdjustment: 10
+  smallCarDistanceAtSpeed: 10
+  mediumCarDistanceAtSpeed: 10
+  largeCarDistanceAtSpeed: -10
+  speedOfSmallCarWhenCamDistanceChanges: 10
+  speedOfMediumCarWhenCamDistanceChanges: 10
+  speedOfLargeCarWhenCamDistanceChanges: 30
   smallCarCameraInUse: 0
   mediumCarCameraInUse: 0
   largeCarCameraInUse: 0
