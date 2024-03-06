@@ -14,6 +14,11 @@ public class SpeedLines : MonoBehaviour
     [SerializeField] Animator speedlineAnim;
     public float animSpeed = 1f;
 
+    //default values for the angle of the pointer on the speedometer...
+    public float smallCarSpeedOmeterAngle = 15f;
+    public float mediumCarSpeedOmeterAngle = 30f;
+    public float largeCarSpeedOmeterAngle = 45f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,9 +44,9 @@ public class SpeedLines : MonoBehaviour
 
         //this float uses the 90 degree angle as the start for no speed and gradually rotates to 0 degrees/ upwards when at the cars top speed
         //similar to the previous code for the windstreaks it rotates based on car speet/ the cars top speed when incramenting up and down
-        float pointerTargetPositionLarge = Mathf.Lerp(90f, 45f, carDriftControllerScript.CurrentSpeed / carDriftControllerScript.TopSpeed);
-        float pointerTargetPositionMedium = Mathf.Lerp(90f, 30f, carDriftControllerScript.CurrentSpeed / carDriftControllerScript.TopSpeed);
-        float pointerTargetPositionSmall = Mathf.Lerp(90f, 15f, carDriftControllerScript.CurrentSpeed / carDriftControllerScript.TopSpeed);
+        float pointerTargetPositionLarge = Mathf.Lerp(90f, largeCarSpeedOmeterAngle, carDriftControllerScript.CurrentSpeed / carDriftControllerScript.TopSpeed);
+        float pointerTargetPositionMedium = Mathf.Lerp(90f, mediumCarSpeedOmeterAngle, carDriftControllerScript.CurrentSpeed / carDriftControllerScript.TopSpeed);
+        float pointerTargetPositionSmall = Mathf.Lerp(90f, smallCarSpeedOmeterAngle, carDriftControllerScript.CurrentSpeed / carDriftControllerScript.TopSpeed);
 
         if(carDriftControllerScript.gameObject.tag == ("Large Car"))
         {
