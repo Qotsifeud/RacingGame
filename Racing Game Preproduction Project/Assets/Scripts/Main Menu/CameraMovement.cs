@@ -6,6 +6,8 @@ using UnityEngine.UIElements;
 public class CameraMovement : MonoBehaviour
 {
     public GameObject door;
+    public GameObject doorR;
+    public GameObject doorL;
 
     public Vector3[] cameraLocations;
 
@@ -15,9 +17,12 @@ public class CameraMovement : MonoBehaviour
     private Vector3 desiredVelocity;
     private Vector3 steeringVelocity;
 
+
     private float distanceToTaget;
     private float maxVelocity = 100f;
     private float maxForce = 5f;
+
+    private float rotationSpeed = 5;
 
     public Vector3[] cameraAngles;
 
@@ -27,7 +32,7 @@ public class CameraMovement : MonoBehaviour
 
     private Rigidbody rb;
 
-    public bool canchange = true;
+    private bool canchange = false;
 
     //canvas Objects
     public GameObject canvas;
@@ -39,9 +44,11 @@ public class CameraMovement : MonoBehaviour
     public GameObject leaderboard;
     public GameObject play;
 
-    // Start is called before the first frame update
+    // Stuff for doors
+    private float currentDistance = 0f;
     void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
         targetLocation = new Vector3(0.17f, 2.53f, 21.41f);
         targetAngle = new Vector3(9.419f, 0f, 0f);
@@ -50,6 +57,12 @@ public class CameraMovement : MonoBehaviour
 
     private void Update()
     {   
+        if(currentDistance < 1.7f)
+        {
+            currentDistance += Time.deltaTime;
+            OpneMainDoors(currentDistance);
+        }
+
         distanceToTaget = Vector3.Distance(transform.position, targetLocation);
 
         if(ableToMove)
@@ -69,7 +82,7 @@ public class CameraMovement : MonoBehaviour
 
     private void MoveCamera(Vector3 target)
     {
-        desiredVelocity = (targetLocation - transform.position).normalized * maxVelocity;
+        desiredVelocity = (target - transform.position).normalized * maxVelocity;
 
         steeringVelocity = desiredVelocity - currentVelocity;
         steeringVelocity = Vector3.ClampMagnitude(steeringVelocity, maxForce);
@@ -83,7 +96,9 @@ public class CameraMovement : MonoBehaviour
 
     private void RotateCamera(Vector3 targetAngle)
     {
-        transform.rotation = Quaternion.Euler(targetAngle);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(targetAngle), Time.deltaTime * rotationSpeed);
+
+        //transform.rotation = Quaternion.Euler(targetAngle);
     }
 
     public void MoveToCar()
@@ -164,5 +179,11 @@ public class CameraMovement : MonoBehaviour
     private void clearcanvas()
     {
         canvas.SetActive(false);
+    }
+
+    private void OpneMainDoors(float distance)
+    {
+        doorR.transform.position = new Vector3 (distance +2, doorR.transform.position.y, doorR.transform.position.z);
+        doorL.transform.position = new Vector3 (-distance -2 , doorL.transform.position.y, doorL.transform.position.z);
     }
 }
