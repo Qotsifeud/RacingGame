@@ -774,9 +774,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4596cea8e899c4799ccdff7cf62408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EndOfRaceStance: {fileID: 0}
+  playerDisplaySpot: {fileID: 0}
+  carDisplaySpot: {fileID: 0}
+  playerCharacter: {fileID: 0}
+  playersCar: {fileID: 0}
+  playerDisplayPosition: {x: 0, y: 0, z: 0}
+  carDisplayPosition: {x: 0, y: 0, z: 0}
+  CarCamera: {fileID: 0}
   lapCounter: {fileID: 0}
   startSign: {fileID: 0}
   finishSign: {fileID: 0}
+  raceCompleteSign: {fileID: 0}
+  fadingToBlackImage: {fileID: 0}
+  raceObjects: {fileID: 0}
+  afterRaceObjects: {fileID: 0}
+  theCarsRb: {fileID: 0}
+  timeOfFade: 3
   gameOver: {fileID: 0}
   currentNumberOfLaps: 1
   maxLaps: 3
@@ -793,8 +807,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c929893573ad8b0438906f143386e1fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedOmeterPointer: {fileID: 0}
   speedLineAnimation: {fileID: 0}
   carDriftControllerScript: {fileID: 0}
+  speedLineGameObject: {fileID: 0}
+  speedlineAnim: {fileID: 0}
+  animSpeed: 1
+  smallCarSpeedOmeterAngle: 15
+  mediumCarSpeedOmeterAngle: 30
+  largeCarSpeedOmeterAngle: 45
 --- !u!114 &3338354792793584319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,6 +845,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45bc57749a6904d4b85f7f75bc1c8c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slipValueSmallCar: 2
+  slipValueMediumCar: 2
+  slipValueLargeCar: 2
+  rotationVelocitySMALL: 0.1
+  angularDragSMALL: 0.1
+  slipModifySMALL: 0.1
+  gripxAxisSMALL: 0.1
+  rotationSMALL: 0.1
+  rotationVelocityMED: 0.1
+  angularDragMED: 0.1
+  slipModifyMED: 0.1
+  gripxAxisMED: 0.1
+  rotationMED: 0.1
+  rotationVelocityLARGE: 0.1
+  angularDragLARGE: 0.1
+  slipModifyLARGE: 0.1
+  gripxAxisLARGE: 0.1
+  rotationLARGE: 0.1
+  slipTest: 0
   driftControllerScript: {fileID: 0}
 --- !u!1 &3487626107634152015
 GameObject:
@@ -874,7 +914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6515425061411499837
 Transform:
   m_ObjectHideFlags: 0
@@ -967,6 +1007,21 @@ MonoBehaviour:
   thirdPheight: 0.65
   thirdPdamping: 15
   thirdProtationDamping: 15
+  smallCarAdjustment: 10
+  mediumCarAdjustment: 10
+  largeCarAdjustment: 10
+  smallCarDistanceAtSpeed: -10
+  mediumCarDistanceAtSpeed: -10
+  largeCarDistanceAtSpeed: -10
+  speedOfSmallCarWhenCamDistanceChanges: 10
+  speedOfMediumCarWhenCamDistanceChanges: 10
+  speedOfLargeCarWhenCamDistanceChanges: 10
+  smallCarCameraInUse: 0
+  mediumCarCameraInUse: 0
+  largeCarCameraInUse: 0
+  smallCar: {fileID: 0}
+  mediumCar: {fileID: 0}
+  largeCar: {fileID: 0}
   firstPdistance: 5.2
   firstPheight: 0.1
   firstPdamping: 300
