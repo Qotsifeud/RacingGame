@@ -167,8 +167,8 @@ public class LapCounter : MonoBehaviour
 
 
         //new way for testing...
-        Vector3 playerDirection = playerDisplayPosition - playerCharacter.transform.position;
-        Vector3 carDirection = carDisplayPosition - playersCar.transform.position;
+        Vector3 playerDirection = playerDisplayPosition;
+        Vector3 carDirection = carDisplayPosition;
         Quaternion playerRotation = Quaternion.LookRotation(playerDirection);
         Quaternion carRotation = Quaternion.LookRotation(carDirection);
         playerCharacter.transform.position = playerDisplayPosition;
