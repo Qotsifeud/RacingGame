@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LapCounter : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class LapCounter : MonoBehaviour
     public GameObject playersCar;
     private Vector3 playerDisplayPosition;
     private Vector3 carDisplayPosition;
+
+    public GameObject CarCamera;//disable afte rthe race
     //the above variables ar for the winning game over screen at the end of each race
 
 
@@ -19,6 +22,17 @@ public class LapCounter : MonoBehaviour
     public TextMeshProUGUI lapCounter;
     public TextMeshProUGUI startSign;
     public TextMeshProUGUI finishSign;
+    public TextMeshProUGUI raceCompleteSign;
+
+
+    public Image fadingToBlackImage;
+    public GameObject raceObjects;//this holds all objects wihtin the canvas regarding the race/ need to be used during the race
+    public GameObject afterRaceObjects;//this holds to other game objects on the canvas that we want visable at the end of the race only.
+
+
+    private bool raceEnded = false;
+    private bool afterRaceComplete = false;
+    public float timeOfFade = 3.0f;
     public GameObject gameOver;
 
     public int currentNumberOfLaps = 1;
@@ -29,6 +43,11 @@ public class LapCounter : MonoBehaviour
 
    public void Start()
     {
+        CarCamera.SetActive(true);
+        raceObjects.SetActive(true);//lets us see what we need on the canvas during the race
+        afterRaceObjects.SetActive(false);//canvis ibjects only for when race is complete
+
+        raceCompleteSign.enabled = false;
         startSign.enabled = true;
         finishSign.enabled = false;
         EndOfRaceStance.SetActive(false);//default off
@@ -47,32 +66,13 @@ public class LapCounter : MonoBehaviour
     {
         lapCounter.text = "Lap " + currentNumberOfLaps.ToString() + "/3";
 
-        if (currentNumberOfLaps > maxLaps)
+        if (!raceEnded && currentNumberOfLaps > maxLaps)
         {
-            //end game
-            //Debug.Log("i finished the laps");
-
-            gameOver.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-
-            EndOfRaceStance.SetActive(true);//turns it on
-
-            //moving the position of the player character and the car...
-
-            this.gameObject.GetComponent<DriftController>().enabled = false;
-            playerCharacter.transform.position = playerDisplayPosition;
-            playerCharacter.transform.rotation = Quaternion.identity;
-            playersCar.transform.position = carDisplayPosition;
-            playersCar.transform.rotation = Quaternion.identity;
-
-
-
-
-
+            raceEnded = true;
+            AfterRace();//after race function instead of coroutine.
         }
 
-        if(currentNumberOfLaps == 1)
+        if (currentNumberOfLaps == 1)
         {
             startSign.enabled = true;
         }
@@ -123,4 +123,92 @@ public class LapCounter : MonoBehaviour
 
         return true;
     }
+
+
+
+    void AfterRace()
+    {
+        raceCompleteSign.enabled = true;
+        Debug.Log("Starting AfterRace coroutine...");
+        if (raceCompleteSign.enabled && !afterRaceComplete)
+        {
+            StartCoroutine(FadingToBlackCoroutine());
+            afterRaceComplete = true; // Set the flag to true to indicate AfterRace has been executed
+        }
+    }
+
+    IEnumerator FadingToBlackCoroutine()
+    {
+        yield return StartCoroutine(FadingToBlack());
+        raceCompleteSign.enabled = false;
+        yield return new WaitForSeconds(1);
+
+        gameOver.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        EndOfRaceStance.SetActive(true); // Turns it on
+
+        // Moving the position of the player character and the car...
+        this.gameObject.GetComponent<DriftController>().enabled = false;
+        this.gameObject.GetComponent<DriftController>().CurrentSpeed = 0;//set the speed to 0 for a sudden stop at the end of the race
+        playerCharacter.transform.position = playerDisplayPosition;
+        playerCharacter.transform.rotation = Quaternion.identity;
+        playersCar.transform.position = carDisplayPosition;
+        playersCar.transform.rotation = Quaternion.identity;
+
+        raceObjects.SetActive(false);//lets us see what we need on the canvas during the race
+        afterRaceObjects.SetActive(true);//canvis ibjects only for when race is complete
+        CarCamera.SetActive(false);
+
+        StartCoroutine(FromBlackToTransparent());
+    }
+
+    IEnumerator FadingToBlack()//fading out
+    {
+      
+        float elapsedTime = 0f;
+        Color imageColour = fadingToBlackImage.color;
+        //while the pre set time is greater than elapse time itll change the alpha value on the image, increasing it to black
+        while (elapsedTime < timeOfFade)
+        {
+            elapsedTime += Time.deltaTime;
+            imageColour.a = Mathf.Lerp(0f, 1f, elapsedTime / timeOfFade);
+            //updating the image with the new alpha value
+            fadingToBlackImage.color = imageColour;
+
+            yield return null;
+        }
+       
+    }
+
+    IEnumerator FromBlackToTransparent()//fading in
+    {
+       
+        float elapsedTime = 0f;
+        Color imageColour = fadingToBlackImage.color;
+
+        while (elapsedTime < timeOfFade)
+        {
+            elapsedTime += Time.deltaTime;
+            //starts in reverse going from 1 for the alpha to 0 to go from black to transparent again
+            imageColour.a = Mathf.Lerp(1f, 0f, elapsedTime / timeOfFade);
+            fadingToBlackImage.color = imageColour;
+            yield return null;
+        }
+       
+    }
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
