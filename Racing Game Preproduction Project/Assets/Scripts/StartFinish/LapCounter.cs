@@ -11,24 +11,19 @@ public class LapCounter : MonoBehaviour
     public GameObject carDisplaySpot;
     public GameObject playerCharacter;
     public GameObject playersCar;
-    private Vector3 playerDisplayPosition;
-    private Vector3 carDisplayPosition;
+    public Vector3 playerDisplayPosition;
+    public Vector3 carDisplayPosition;
 
     public GameObject CarCamera;//disable afte rthe race
     //the above variables ar for the winning game over screen at the end of each race
-
-
-
     public TextMeshProUGUI lapCounter;
     public TextMeshProUGUI startSign;
     public TextMeshProUGUI finishSign;
     public TextMeshProUGUI raceCompleteSign;
-
-
     public Image fadingToBlackImage;
     public GameObject raceObjects;//this holds all objects wihtin the canvas regarding the race/ need to be used during the race
     public GameObject afterRaceObjects;//this holds to other game objects on the canvas that we want visable at the end of the race only.
-
+    public Rigidbody theCarsRb;
 
     private bool raceEnded = false;
     private bool afterRaceComplete = false;
@@ -43,6 +38,8 @@ public class LapCounter : MonoBehaviour
 
    public void Start()
     {
+        theCarsRb = GetComponent<Rigidbody>();
+        theCarsRb.isKinematic = false;
         CarCamera.SetActive(true);
         raceObjects.SetActive(true);//lets us see what we need on the canvas during the race
         afterRaceObjects.SetActive(false);//canvis ibjects only for when race is complete
@@ -150,11 +147,25 @@ public class LapCounter : MonoBehaviour
 
         // Moving the position of the player character and the car...
         this.gameObject.GetComponent<DriftController>().enabled = false;
-        this.gameObject.GetComponent<DriftController>().CurrentSpeed = 0;//set the speed to 0 for a sudden stop at the end of the race
+        theCarsRb.isKinematic = true;//setting it to kinematic so it doent move away from the end of race position.
+
+
+        //new way for testing...
+        Vector3 playerDirection = playerDisplayPosition - playerCharacter.transform.position;
+        Vector3 carDirection = carDisplayPosition - playersCar.transform.position;
+        Quaternion playerRotation = Quaternion.LookRotation(playerDirection);
+        Quaternion carRotation = Quaternion.LookRotation(carDirection);
         playerCharacter.transform.position = playerDisplayPosition;
-        playerCharacter.transform.rotation = Quaternion.identity;
+        playerCharacter.transform.rotation = playerRotation;
         playersCar.transform.position = carDisplayPosition;
-        playersCar.transform.rotation = Quaternion.identity;
+        playersCar.transform.rotation = carRotation;
+
+
+        //old way...
+        //playerCharacter.transform.position = playerDisplayPosition;
+        //playerCharacter.transform.rotation = Quaternion.identity;
+        //playersCar.transform.position = carDisplayPosition;
+        //playersCar.transform.rotation = Quaternion.identity;
 
         raceObjects.SetActive(false);//lets us see what we need on the canvas during the race
         afterRaceObjects.SetActive(true);//canvis ibjects only for when race is complete

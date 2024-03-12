@@ -9962,6 +9962,22 @@ PrefabInstance:
       propertyPath: fadingToBlackImage
       value: 
       objectReference: {fileID: 1981426154}
+    - target: {fileID: 5384372492785569671, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: checkPopints.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384372492785569671, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: checkPopints.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384372492785569671, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: checkPopints.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384372492785569671, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: checkPopints.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5599406871170787264, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: speedLineAnimation
       value: 
