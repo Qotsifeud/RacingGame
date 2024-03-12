@@ -390,6 +390,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4338864558003189474, guid: 73bb7f90f6a91ca4887322629676479e, type: 3}
+--- !u!1 &42662796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5690250253694779545, guid: d56cb763ef88bf04f84cda845a5aaa69, type: 3}
+  m_PrefabInstance: {fileID: 288841665}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &71163636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,7 +1927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5690250253694779545, guid: d56cb763ef88bf04f84cda845a5aaa69, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7766281347717918933, guid: d56cb763ef88bf04f84cda845a5aaa69, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2503,6 +2508,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8760935334189082795, guid: 73bb7f90f6a91ca4887322629676479e, type: 3}
+--- !u!1 &394043551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5690250253694779545, guid: f1448835af69e7b458b3929fff8c90c0, type: 3}
+  m_PrefabInstance: {fileID: 1919005305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &394452831 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7274071811589208565, guid: 73bb7f90f6a91ca4887322629676479e, type: 3}
@@ -8690,7 +8700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2541150566880292114, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2884602112352647080, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8737,6 +8747,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1701789334}
     - target: {fileID: 8682345078427495168, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: CarCamera
+      value: 
+      objectReference: {fileID: 42662796}
+    - target: {fileID: 8682345078427495168, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: startSign
       value: 
       objectReference: {fileID: 886458877}
@@ -8749,9 +8763,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1500800446}
     - target: {fileID: 8682345078427495168, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: raceObjects
+      value: 
+      objectReference: {fileID: 1010255737}
+    - target: {fileID: 8682345078427495168, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: carDisplaySpot
+      value: 
+      objectReference: {fileID: 169080968}
+    - target: {fileID: 8682345078427495168, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: EndOfRaceStance
+      value: 
+      objectReference: {fileID: 118713518}
+    - target: {fileID: 8682345078427495168, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: afterRaceObjects
+      value: 
+      objectReference: {fileID: 1691169349}
+    - target: {fileID: 8682345078427495168, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: raceCompleteSign
       value: 
       objectReference: {fileID: 79131249}
+    - target: {fileID: 8682345078427495168, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: playerDisplaySpot
+      value: 
+      objectReference: {fileID: 1272441479}
+    - target: {fileID: 8682345078427495168, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: fadingToBlackImage
+      value: 
+      objectReference: {fileID: 1981426154}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9419,7 +9457,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1691169350
 Transform:
   m_ObjectHideFlags: 0
@@ -10724,7 +10762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5690250253694779545, guid: f1448835af69e7b458b3929fff8c90c0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7766281347717918933, guid: f1448835af69e7b458b3929fff8c90c0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12137,12 +12175,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 557231653892310471, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2978609382228364305, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 1701789334}
+    - target: {fileID: 2978609382228364305, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: CarCamera
+      value: 
+      objectReference: {fileID: 394043551}
     - target: {fileID: 2978609382228364305, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: startSign
       value: 
@@ -12156,9 +12198,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1500800446}
     - target: {fileID: 2978609382228364305, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: raceObjects
+      value: 
+      objectReference: {fileID: 1010255737}
+    - target: {fileID: 2978609382228364305, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: carDisplaySpot
+      value: 
+      objectReference: {fileID: 169080968}
+    - target: {fileID: 2978609382228364305, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: EndOfRaceStance
+      value: 
+      objectReference: {fileID: 118713518}
+    - target: {fileID: 2978609382228364305, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: afterRaceObjects
+      value: 
+      objectReference: {fileID: 1691169349}
+    - target: {fileID: 2978609382228364305, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: raceCompleteSign
       value: 
       objectReference: {fileID: 79131249}
+    - target: {fileID: 2978609382228364305, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: playerDisplaySpot
+      value: 
+      objectReference: {fileID: 1272441479}
+    - target: {fileID: 2978609382228364305, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: fadingToBlackImage
+      value: 
+      objectReference: {fileID: 1981426154}
     - target: {fileID: 3609799640588323548, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: m_Mass
       value: 150
