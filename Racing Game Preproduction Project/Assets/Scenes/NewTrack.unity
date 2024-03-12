@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44807816, g: 0.4980898, b: 0.57553136, a: 1}
+  m_IndirectSpecularColor: {r: 0.44807798, g: 0.4980892, b: 0.5755306, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9976,6 +9976,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384372492785569671, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: checkPopints.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384372492785569671, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: checkPopints.Array.data[4]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5599406871170787264, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
