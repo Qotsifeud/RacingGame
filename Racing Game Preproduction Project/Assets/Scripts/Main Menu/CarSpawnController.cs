@@ -7,13 +7,24 @@ public class CarSpawnController : MonoBehaviour
     public GameObject carCustomiserObject;
     private CarCustomisation carCustomiser;
 
-    [SerializeField]float speed;
-    [SerializeField]float acceleration;
-    [SerializeField]float handeling;
+    public float speed;
+    public float acceleration;
+    public float handeling;
 
-    [SerializeField]float carNumber;
+    // Car No. = 1: light car 2: medium car 3: heavy cars
+    public float carNumber;
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("CarSpawnControler");
+
+        if(objs.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
+
+        DontDestroyOnLoad(this.gameObject);
+    }
     void Start()
     {
         carCustomiser = carCustomiserObject.GetComponent<CarCustomisation>();
@@ -28,4 +39,6 @@ public class CarSpawnController : MonoBehaviour
         acceleration = carCustomiser.acceleration;
         handeling = carCustomiser.handeling;
     }
+
+    //0.17 2.53 18.33 9.419 0 0
 }

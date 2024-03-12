@@ -35,12 +35,11 @@ public class timer : MonoBehaviour
 
             Timer.text = string.Format("{0:00} : {1:00}", minutes, seconds);
 
-            //if(time <= 0) 
-            //{
-            //    gameOver.SetActive(true);
-            //    Cursor.lockState = CursorLockMode.None;
-            //    Cursor.visible = true;
-            //}
+        }
+
+        if(gameOver.activeInHierarchy)
+        {
+            StatTracker.TotalTime = time;
         }
     }
 }
