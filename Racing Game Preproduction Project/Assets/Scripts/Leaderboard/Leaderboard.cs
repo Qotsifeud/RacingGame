@@ -5,6 +5,42 @@ using System.IO;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Networking;
+using Realms;
+using Realms.Sync;
+
+public class StatTracker
+{
+    private static float fastestLap;
+
+    private static float totalTime;
+
+    public static float TotalTime
+    {
+        get { return totalTime; }
+        set { totalTime = value; }
+    }
+
+    public static void SetLapTimes(float[] times)
+    {
+        fastestLap = times[0];
+
+        for (int i = 0; i < times.Length; i++)
+        {
+            if (times[i] < fastestLap)
+            {
+                fastestLap = times[i];
+            }
+        }
+    }
+
+    public static void setPlayerInfo()
+    {
+        PlayerPrefs.SetFloat("fastestLap", fastestLap);
+        PlayerPrefs.SetFloat("totalTime", totalTime);
+    }
+
+}
 
 public class Leaderboard : MonoBehaviour
 {
@@ -43,12 +79,19 @@ public class Leaderboard : MonoBehaviour
         }
     }
 
+    [Serializable]
     public class PlayerInfo
     {
         public string Name { get; set; }
-        public string RaceTime { get; set; }
+        public string RaceTime = PlayerPrefs.GetFloat("totalTime").ToString();
+        public string FastestTime = PlayerPrefs.GetFloat("fastestTime").ToString();
+    }
 
-        public string FastestTime {  get; set; }
+    private void sendPlayerInfo()
+    {
+        PlayerInfo player = new PlayerInfo();
+
+        string json = JsonUtility.ToJson(player);
     }
 
     private void loadLeaderboard()
