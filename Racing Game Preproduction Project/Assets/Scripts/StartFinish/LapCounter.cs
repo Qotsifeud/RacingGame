@@ -32,6 +32,9 @@ public class LapCounter : MonoBehaviour
 
     public int currentNumberOfLaps = 1;
     public int maxLaps = 3;
+    public float[] lapTimes = new float[3];
+
+    public float time = 0f;
 
     public bool[] checkPopints = new bool[5];
     
@@ -63,10 +66,16 @@ public class LapCounter : MonoBehaviour
     {
         lapCounter.text = "Lap " + currentNumberOfLaps.ToString() + "/3";
 
+        
+
         if (!raceEnded && currentNumberOfLaps > maxLaps)
         {
             raceEnded = true;
             AfterRace();//after race function instead of coroutine.
+        }
+        else
+        {
+            time += Time.deltaTime;
         }
 
         if (currentNumberOfLaps == 1)
@@ -91,6 +100,7 @@ public class LapCounter : MonoBehaviour
         {
             int checkPointNumber = other.GetComponent<checkPoint>().checkPointNumber;
             checkPopints[checkPointNumber] = true;
+            
         }
 
     }
@@ -99,8 +109,12 @@ public class LapCounter : MonoBehaviour
     {
         if (other.gameObject.tag == ("Start Line") && AllCheckpoints(checkPopints))
         {
+            lapTimes[currentNumberOfLaps - 1] = time;
+
             currentNumberOfLaps += 1;//incramented
-            
+
+            time = 0f;
+
             for (int i = 0; i < checkPopints.Length; i++)
             {
                 checkPopints[i] = false;
@@ -131,6 +145,8 @@ public class LapCounter : MonoBehaviour
         {
             StartCoroutine(FadingToBlackCoroutine());
             afterRaceComplete = true; // Set the flag to true to indicate AfterRace has been executed
+            StatTracker.SetLapTimes(lapTimes);
+            
         }
     }
 
