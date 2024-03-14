@@ -11,8 +11,8 @@ public class LapCounter : MonoBehaviour
     public GameObject carDisplaySpot;
     public GameObject playerCharacter;
     public GameObject playersCar;
-    public Vector3 playerDisplayPosition;
-    public Vector3 carDisplayPosition;
+    private Transform playerDisplayPosition;
+    private Transform carDisplayPosition;
 
     public GameObject CarCamera;//disable afte rthe race
     //the above variables ar for the winning game over screen at the end of each race
@@ -55,10 +55,6 @@ public class LapCounter : MonoBehaviour
 
         playerCharacter = GameObject.Find("Player");//the player character is the object named player
         playersCar = this.gameObject;//this car is the car object
-
-         playerDisplayPosition = playerDisplaySpot.transform.position;
-         carDisplayPosition = carDisplaySpot.transform.position;
-
 
     }
 
@@ -163,28 +159,20 @@ public class LapCounter : MonoBehaviour
 
         // Moving the position of the player character and the car...
         this.gameObject.GetComponent<DriftController>().enabled = false;
-        theCarsRb.isKinematic = true;//setting it to kinematic so it doent move away from the end of race position.
+        theCarsRb.isKinematic = true; // setting it to kinematic so it doesn't move away from the end of race position.
 
+        // Get the Transform components of playerDisplaySpot and carDisplaySpot
+        Transform playerDisplayTransform = playerDisplaySpot.transform;
+        Transform carDisplayTransform = carDisplaySpot.transform;
 
-        //new way for testing...
-        Vector3 playerDirection = playerDisplayPosition;
-        Vector3 carDirection = carDisplayPosition;
-        Quaternion playerRotation = Quaternion.LookRotation(playerDirection);
-        Quaternion carRotation = Quaternion.LookRotation(carDirection);
-        playerCharacter.transform.position = playerDisplayPosition;
-        playerCharacter.transform.rotation = playerRotation;
-        playersCar.transform.position = carDisplayPosition;
-        playersCar.transform.rotation = carRotation;
+        // Set the position and rotation of the player character and the car to match their display spots
+        playerCharacter.transform.position = playerDisplayTransform.position;
+        playerCharacter.transform.rotation = playerDisplayTransform.rotation;
+        playersCar.transform.position = carDisplayTransform.position;
+        playersCar.transform.rotation = carDisplayTransform.rotation;
 
-
-        //old way...
-        //playerCharacter.transform.position = playerDisplayPosition;
-        //playerCharacter.transform.rotation = Quaternion.identity;
-        //playersCar.transform.position = carDisplayPosition;
-        //playersCar.transform.rotation = Quaternion.identity;
-
-        raceObjects.SetActive(false);//lets us see what we need on the canvas during the race
-        afterRaceObjects.SetActive(true);//canvis ibjects only for when race is complete
+        raceObjects.SetActive(false); // lets us see what we need on the canvas during the race
+        afterRaceObjects.SetActive(true); // canvas objects only for when race is complete
         CarCamera.SetActive(false);
 
         StartCoroutine(FromBlackToTransparent());

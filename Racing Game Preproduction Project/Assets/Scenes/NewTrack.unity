@@ -1921,6 +1921,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 810285880}
     m_Modifications:
+    - target: {fileID: 924301505625474905, guid: d56cb763ef88bf04f84cda845a5aaa69, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1663
+      objectReference: {fileID: 0}
     - target: {fileID: 5690250253694779545, guid: d56cb763ef88bf04f84cda845a5aaa69, type: 3}
       propertyPath: m_Name
       value: smallCarCam
@@ -7277,6 +7281,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 810285880}
     m_Modifications:
+    - target: {fileID: 924301505625474905, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1663
+      objectReference: {fileID: 0}
     - target: {fileID: 5690250253694779545, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
       propertyPath: m_Name
       value: LargeCarCam
@@ -9401,7 +9409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1691169350
 Transform:
   m_ObjectHideFlags: 0
@@ -10705,6 +10713,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 810285880}
     m_Modifications:
+    - target: {fileID: 924301505625474905, guid: f1448835af69e7b458b3929fff8c90c0, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1663
+      objectReference: {fileID: 0}
     - target: {fileID: 5690250253694779545, guid: f1448835af69e7b458b3929fff8c90c0, type: 3}
       propertyPath: m_Name
       value: mediumCarCam

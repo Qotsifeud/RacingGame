@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2820595983533995623}
   - component: {fileID: 6227744366474088612}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CameraMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 3791159934456430244}
   - component: {fileID: 9043855815325122332}
   - component: {fileID: 5421298028046353608}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8963325216047987510}
   - component: {fileID: 5888513267968737056}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FilmCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ Transform:
   m_GameObject: {fileID: 5956846248217734157}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0063476562, y: -0.13568115, z: 0.2849121}
+  m_LocalPosition: {x: -0.0063476562, y: -0.13568115, z: 0.641}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -243,7 +243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 770193080805449461}
   - component: {fileID: 1276455142826096282}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RedLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8632096188986855082}
   - component: {fileID: 1351524450500117416}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GreenLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,6 +488,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8c2509f88a468144394a3ce010f303e4, type: 3}
       propertyPath: m_Name
       value: Drone
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8c2509f88a468144394a3ce010f303e4, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
