@@ -46,14 +46,21 @@ public class CameraMovement : MonoBehaviour
 
     // Stuff for doors
     private float currentDistance = 0f;
-    void Start()
+  
+
+    public void startButton()
     {
-        
         rb = GetComponent<Rigidbody>();
         targetLocation = new Vector3(0.17f, 2.53f, 21.41f);
         targetAngle = new Vector3(9.419f, 0f, 0f);
         ableToMove = true;
     }
+
+
+
+
+
+
 
     private void Update()
     {   
