@@ -7389,11 +7389,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: bb426aa1bc25fab49883153f07b76839, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.704
+      value: -16.71
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb426aa1bc25fab49883153f07b76839, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.219
+      value: -2.36
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb426aa1bc25fab49883153f07b76839, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8107,6 +8107,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556024010}
   m_CullTransparentMesh: 1
+--- !u!1 &576472792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 576472794}
+  - component: {fileID: 576472793}
+  m_Layer: 0
+  m_Name: Outside Wind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &576472793
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576472792}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 65a9d3008ae1a194b8583a9942032b60, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
+  m_Pitch: -0.33
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 10
+  MaxDistance: 25
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1.1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &576472794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576472792}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.324788, y: -0.42967975, z: -38.268192}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 681487758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &594198421
 GameObject:
   m_ObjectHideFlags: 0
@@ -9730,6 +9858,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1569479491}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &660954429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10084,6 +10224,7 @@ Transform:
   - {fileID: 841115606}
   - {fileID: 1755006289}
   - {fileID: 826962869}
+  - {fileID: 576472794}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &685569253
@@ -27234,9 +27375,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852167133}
   serializedVersion: 4
-  m_Mass: 0.15
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 0.3
+  m_Drag: 0.7
+  m_AngularDrag: 0.7
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -34581,7 +34722,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4032355699556225750, guid: 8e676bac1758952448aceaaa1a6a55ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.620258
+      value: 18.62
       objectReference: {fileID: 0}
     - target: {fileID: 4032355699556225750, guid: 8e676bac1758952448aceaaa1a6a55ce, type: 3}
       propertyPath: m_LocalPosition.y
@@ -34589,7 +34730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4032355699556225750, guid: 8e676bac1758952448aceaaa1a6a55ce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -37.248196
+      value: -31.45
       objectReference: {fileID: 0}
     - target: {fileID: 4032355699556225750, guid: 8e676bac1758952448aceaaa1a6a55ce, type: 3}
       propertyPath: m_LocalRotation.w
@@ -40332,6 +40473,7 @@ MonoBehaviour:
   door: {fileID: 8389524659218692952}
   doorR: {fileID: 2796505005839740495}
   doorL: {fileID: 2301483021469900349}
+  openTheDoors: 0
   cameraLocations:
   - {x: -3.2, y: 3, z: 23.5}
   - {x: -5.912, y: 3.8, z: 32.335}
