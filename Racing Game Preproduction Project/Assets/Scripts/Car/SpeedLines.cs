@@ -19,6 +19,9 @@ public class SpeedLines : MonoBehaviour
     public float mediumCarSpeedOmeterAngle = 30f;
     public float largeCarSpeedOmeterAngle = 45f;
 
+    public GameObject windAudioSource;
+    private AudioSource windRushing;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +34,7 @@ public class SpeedLines : MonoBehaviour
 
         speedLineGameObject = GameObject.Find("SpeedLines");
         speedlineAnim = speedLineGameObject.GetComponent<Animator>();
-
+        windRushing = windAudioSource.GetComponent<AudioSource>();//getting the wind audiosource
     }
 
     // Update is called once per frame
@@ -48,7 +51,11 @@ public class SpeedLines : MonoBehaviour
         float pointerTargetPositionMedium = Mathf.Lerp(90f, mediumCarSpeedOmeterAngle, carDriftControllerScript.CurrentSpeed / carDriftControllerScript.TopSpeed);
         float pointerTargetPositionSmall = Mathf.Lerp(90f, smallCarSpeedOmeterAngle, carDriftControllerScript.CurrentSpeed / carDriftControllerScript.TopSpeed);
 
-        if(carDriftControllerScript.gameObject.tag == ("Large Car"))
+        float targetVolume = Mathf.Lerp(0f, 1f, alphaValue);
+        windRushing.volume = targetVolume;
+
+
+        if (carDriftControllerScript.gameObject.tag == ("Large Car"))
         {
             speedOmeterPointer.transform.rotation = Quaternion.Euler(0f, 0f, pointerTargetPositionLarge);
         }

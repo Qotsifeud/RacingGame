@@ -4501,6 +4501,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6029a395a7c16d249b37a6eaf1dba215, type: 3}
+--- !u!1 &713316338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8532503686370725653, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+  m_PrefabInstance: {fileID: 7514848968736582438}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &715613915
 GameObject:
   m_ObjectHideFlags: 0
@@ -8607,6 +8612,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 810285880}
     m_Modifications:
     - target: {fileID: 628658710647072268, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: windAudioSource
+      value: 
+      objectReference: {fileID: 713316338}
+    - target: {fileID: 628658710647072268, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: speedLineAnimation
       value: 
       objectReference: {fileID: 1695142476}
@@ -10062,6 +10071,10 @@ PrefabInstance:
       propertyPath: checkPopints.Array.data[4]
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5599406871170787264, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: windAudioSource
+      value: 
+      objectReference: {fileID: 713316338}
     - target: {fileID: 5599406871170787264, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: speedLineAnimation
       value: 
@@ -12131,6 +12144,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 810285880}
     m_Modifications:
     - target: {fileID: 321563294177317477, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: windAudioSource
+      value: 
+      objectReference: {fileID: 713316338}
+    - target: {fileID: 321563294177317477, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: speedLineAnimation
       value: 
       objectReference: {fileID: 1695142476}
@@ -12490,9 +12507,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1631087801431543399, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346562797880240044, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_Volume
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702257136118719064, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266519069310074606, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300676703199923376, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456196569912917659, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456196569912917659, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456196569912917659, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8902305073245669350, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
       propertyPath: m_Name
       value: AudioControl
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933394361420209848, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
