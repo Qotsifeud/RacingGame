@@ -529,7 +529,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2541150566880292114}
   serializedVersion: 4
-  m_Mass: 100
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 20
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -560,21 +560,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b28d51eaa6c2b442ac58943a138f548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Accel: 25
-  Deccel: 90
+  Accel: 40
+  Deccel: 30
   Boost: 10
-  halfSpeed: 15
+  halfSpeed: 40
   TopSpeed: 80
   CurrentSpeed: 0
-  GripX: 12
-  GripZ: 3
-  Rotate: 140
-  RotVel: 0.8
+  GripX: 30
+  GripZ: 60
+  Rotate: 200
+  RotVel: 0.4
   CoM: {x: 0.3, y: 0.3, z: 0.3}
   carFaction: 0
   Target: {fileID: 4047405888688938927}
   AngDragG: 5
-  AngDragA: 0.05
+  AngDragA: 10
   SlipL:
     serializedVersion: 2
     m_Curve:
@@ -673,12 +673,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4596cea8e899c4799ccdff7cf62408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EndOfRaceStance: {fileID: 0}
+  playerDisplaySpot: {fileID: 0}
+  carDisplaySpot: {fileID: 0}
+  playerCharacter: {fileID: 0}
+  playersCar: {fileID: 0}
+  CarCamera: {fileID: 0}
   lapCounter: {fileID: 0}
   startSign: {fileID: 0}
   finishSign: {fileID: 0}
+  raceCompleteSign: {fileID: 0}
+  fadingToBlackImage: {fileID: 0}
+  raceObjects: {fileID: 0}
+  afterRaceObjects: {fileID: 0}
+  theCarsRb: {fileID: 0}
+  timeOfFade: 3
   gameOver: {fileID: 0}
   currentNumberOfLaps: 1
   maxLaps: 3
+  lapTimes:
+  - 0
+  - 0
+  - 0
+  time: 0
   checkPopints: 0000000000
 --- !u!114 &628658710647072268
 MonoBehaviour:
@@ -698,6 +715,10 @@ MonoBehaviour:
   speedLineGameObject: {fileID: 0}
   speedlineAnim: {fileID: 0}
   animSpeed: 1
+  smallCarSpeedOmeterAngle: 15
+  mediumCarSpeedOmeterAngle: 30
+  largeCarSpeedOmeterAngle: 45
+  windAudioSource: {fileID: 0}
 --- !u!114 &1067246553619108238
 MonoBehaviour:
   m_ObjectHideFlags: 0
