@@ -8,6 +8,7 @@ public class CameraMovement : MonoBehaviour
     public GameObject door;
     public GameObject doorR;
     public GameObject doorL;
+    public bool openTheDoors;
 
     public Vector3[] cameraLocations;
 
@@ -46,14 +47,21 @@ public class CameraMovement : MonoBehaviour
 
     // Stuff for doors
     private float currentDistance = 0f;
-  
 
+    public void Start()
+    {
+        openTheDoors = false;
+    }
     public void startButton()
     {
         rb = GetComponent<Rigidbody>();
         targetLocation = new Vector3(0.17f, 2.53f, 21.41f);
         targetAngle = new Vector3(9.419f, 0f, 0f);
         ableToMove = true;
+
+        openTheDoors = true;
+
+
     }
 
 
@@ -63,8 +71,8 @@ public class CameraMovement : MonoBehaviour
 
 
     private void Update()
-    {   
-        if(currentDistance < 1.7f)
+    {
+        if (currentDistance < 1.7f && openTheDoors)
         {
             currentDistance += Time.deltaTime;
             OpneMainDoors(currentDistance);
