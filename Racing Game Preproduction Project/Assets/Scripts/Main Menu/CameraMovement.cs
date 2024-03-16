@@ -9,8 +9,15 @@ public class CameraMovement : MonoBehaviour
     public GameObject doorL;
     private bool openTheDoors;
     public GameObject bathroomDoor;
+    public GameObject exitDoor;
+    public GameObject garageDoor;
     private bool openBathroomDoor;
+    private bool openExitDoor;
+    private bool openGarageDoor;
     private Animator doorAnimations;
+    private Animator exitDoorObject;
+    private Animator backDoorObject;
+
     public Vector3[] cameraLocations;
 
     public Vector3 targetLocation;
@@ -54,6 +61,8 @@ public class CameraMovement : MonoBehaviour
     {
         openTheDoors = false;
         doorAnimations = bathroomDoor.GetComponent<Animator>();
+        exitDoorObject = exitDoor.GetComponent<Animator>();
+        backDoorObject = garageDoor.GetComponent<Animator>();
     }
     public void startButton()
     {
@@ -78,7 +87,26 @@ public class CameraMovement : MonoBehaviour
         openBathroomDoor = false;
 
     }
+    public void exitOpen()
+    {
+        openExitDoor = true;
 
+    }
+    public void exitClosed()
+    {
+        openExitDoor = false;
+
+    }
+    public void backOpen()
+    {
+        openGarageDoor = true;
+
+    }
+    public void backClosed()
+    {
+        openGarageDoor = false;
+
+    }
 
     private void Update()
     {
@@ -87,7 +115,7 @@ public class CameraMovement : MonoBehaviour
             currentDistance += Time.deltaTime;
             OpneMainDoors(currentDistance);
         }
-
+        /////////////////////////////////////////////////////////////////////////////////
         if (openBathroomDoor)
         {//play anim door opened
 
@@ -100,7 +128,31 @@ public class CameraMovement : MonoBehaviour
 
             doorAnimations.SetBool("isOpen", false);
         }
+        if (openExitDoor)
+        {//play anim door opened
 
+            exitDoorObject.SetBool("exitOpen", true);
+
+        }
+
+        if (!openExitDoor)
+        {//play anim door closed
+
+            exitDoorObject.SetBool("exitOpen", false);
+        }
+        if (openGarageDoor)
+        {//play anim door opened
+
+            backDoorObject.SetBool("backDoorOpen", true);
+
+        }
+
+        if (!openGarageDoor)
+        {//play anim door closed
+
+            backDoorObject.SetBool("backDoorOpen", false);
+        }
+        ////////////////////////////////////////////////////////////////////////////////
 
 
         distanceToTaget = Vector3.Distance(transform.position, targetLocation);
