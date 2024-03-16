@@ -26,6 +26,8 @@ TagManager:
   - B1
   - B2
   - B4
+  - Bar1
+  - Bar2
   layers:
   - Default
   - TransparentFX
