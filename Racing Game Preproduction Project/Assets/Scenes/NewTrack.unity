@@ -6782,18 +6782,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large Car
       objectReference: {fileID: 0}
-    - target: {fileID: 1090060667146845268, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1559221512193654269, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: barrier1Broken
-      value: 
-      objectReference: {fileID: 7204894956249978724, guid: 4dbeb15871d76f84086e174e9ba66d20, type: 3}
-    - target: {fileID: 1559221512193654269, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: barrier2Broken
-      value: 
-      objectReference: {fileID: 1255498647177916366, guid: bebe9de30ecb852458025a30a62589c2, type: 3}
     - target: {fileID: 4392219406469603643, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: m_LocalPosition.x
       value: -934.978
@@ -9216,6 +9204,6 @@ SceneRoots:
   - {fileID: 2531871232945070023}
   - {fileID: 1566402185}
   - {fileID: 7514848968736582438}
+  - {fileID: 2192328231833549863}
   - {fileID: 1052027700}
   - {fileID: 205529108}
-  - {fileID: 2192328231833549863}
