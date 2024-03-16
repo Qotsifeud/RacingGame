@@ -5,11 +5,12 @@ using UnityEngine.UIElements;
 
 public class CameraMovement : MonoBehaviour
 {
-    public GameObject door;
     public GameObject doorR;
     public GameObject doorL;
-    public bool openTheDoors;
-
+    private bool openTheDoors;
+    public GameObject bathroomDoor;
+    private bool openBathroomDoor;
+    private Animator doorAnimations;
     public Vector3[] cameraLocations;
 
     public Vector3 targetLocation;
@@ -44,6 +45,7 @@ public class CameraMovement : MonoBehaviour
     public GameObject settings;
     public GameObject leaderboard;
     public GameObject play;
+    
 
     // Stuff for doors
     private float currentDistance = 0f;
@@ -51,6 +53,7 @@ public class CameraMovement : MonoBehaviour
     public void Start()
     {
         openTheDoors = false;
+        doorAnimations = bathroomDoor.GetComponent<Animator>();
     }
     public void startButton()
     {
@@ -61,13 +64,20 @@ public class CameraMovement : MonoBehaviour
 
         openTheDoors = true;
 
-
     }
 
 
+    //Bathroom door test code.........................
+    public void doorOpen()
+    {
+        openBathroomDoor = true;
 
+    }
+    public void doorclose()
+    {
+        openBathroomDoor = false;
 
-
+    }
 
 
     private void Update()
@@ -77,6 +87,21 @@ public class CameraMovement : MonoBehaviour
             currentDistance += Time.deltaTime;
             OpneMainDoors(currentDistance);
         }
+
+        if (openBathroomDoor)
+        {//play anim door opened
+
+            doorAnimations.SetBool("isOpen", true);
+
+        }
+
+        if (!openBathroomDoor)
+        {//play anim door closed
+
+            doorAnimations.SetBool("isOpen", false);
+        }
+
+
 
         distanceToTaget = Vector3.Distance(transform.position, targetLocation);
 
@@ -93,7 +118,11 @@ public class CameraMovement : MonoBehaviour
             }
         }
 
+
+
     }
+
+
 
     private void MoveCamera(Vector3 target)
     {
@@ -201,4 +230,5 @@ public class CameraMovement : MonoBehaviour
         doorR.transform.position = new Vector3 (distance +2, doorR.transform.position.y, doorR.transform.position.z);
         doorL.transform.position = new Vector3 (-distance -2 , doorL.transform.position.y, doorL.transform.position.z);
     }
+
 }
