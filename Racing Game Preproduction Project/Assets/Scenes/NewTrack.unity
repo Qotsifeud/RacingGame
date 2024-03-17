@@ -7114,6 +7114,10 @@ PrefabInstance:
       propertyPath: speedOmeterPointer
       value: 
       objectReference: {fileID: 1585603153}
+    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: rotationspeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8009246670589546252, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: Warning
       value: 

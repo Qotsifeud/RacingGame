@@ -25,7 +25,7 @@ public class DriftController : MonoBehaviour {
     public static bool DriveF;
     public static bool DriveB;
 
-
+    
 
 
 
@@ -100,7 +100,8 @@ public class DriftController : MonoBehaviour {
     Vector3 pvel = new Vector3(0f, 0f, 0f);
     #endregion
 
-
+    //rotation speed 
+    public float rotationspeed = 1;
 
     // Use this for initialization
     void Start () {
@@ -400,7 +401,7 @@ public class DriftController : MonoBehaviour {
 
     void RotateGradConst(float isCW) {
         // Delta = right(taget) - left(current)
-        drot.y = isCW * rotate * Time.deltaTime;
+        drot.y = isCW * rotate * (Time.deltaTime / rotationspeed);
         transform.rotation *= Quaternion.AngleAxis(drot.y, transform.up);
         isRotating = true;
     }
