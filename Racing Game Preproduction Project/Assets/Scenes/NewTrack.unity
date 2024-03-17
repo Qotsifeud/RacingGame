@@ -6192,6 +6192,10 @@ PrefabInstance:
       propertyPath: speedOmeterPointer
       value: 
       objectReference: {fileID: 1585603153}
+    - target: {fileID: 2254568775588342926, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: TopSpeed
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 2541150566880292114, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: m_Name
       value: Small Car
@@ -7630,6 +7634,22 @@ PrefabInstance:
       propertyPath: speedOmeterPointer
       value: 
       objectReference: {fileID: 1585603153}
+    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: GripX
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: GripZ
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: Rotate
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: TopSpeed
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: rotationspeed
       value: 3
@@ -9614,6 +9634,10 @@ PrefabInstance:
     - target: {fileID: 5461290397395326422, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: TopSpeed
+      value: 85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
