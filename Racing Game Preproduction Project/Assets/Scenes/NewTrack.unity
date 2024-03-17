@@ -5228,7 +5228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5690250253694779545, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7766281347717918933, guid: 40f552052412f8740a8a47f7767bc6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6192,7 +6192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2254568775588342926, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: rotationspeed
-      value: 2
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 2541150566880292114, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: m_Name
@@ -7530,7 +7530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1090060667146845268, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1559221512193654269, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: barrier2Broken
@@ -7639,6 +7639,10 @@ PrefabInstance:
     - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: Accel
       value: 7.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: Boost
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: GripX
@@ -8105,7 +8109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5690250253694779545, guid: f1448835af69e7b458b3929fff8c90c0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7766281347717918933, guid: f1448835af69e7b458b3929fff8c90c0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9557,6 +9561,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium Car
       objectReference: {fileID: 0}
+    - target: {fileID: 557231653892310471, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2978609382228364305, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: gameOver
       value: 
@@ -9646,8 +9654,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: Accel
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: Boost
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: GripZ
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: TopSpeed
       value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: rotationspeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9779,6 +9803,10 @@ PrefabInstance:
     - target: {fileID: 3508304965667040018, guid: be982f016c59a6e4080643bda39ec29b, type: 3}
       propertyPath: m_DynamicOccludee
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885699664250258401, guid: be982f016c59a6e4080643bda39ec29b, type: 3}
+      propertyPath: m_TagString
+      value: Destructable
       objectReference: {fileID: 0}
     - target: {fileID: 7823260064342592165, guid: be982f016c59a6e4080643bda39ec29b, type: 3}
       propertyPath: m_LocalPosition.x
