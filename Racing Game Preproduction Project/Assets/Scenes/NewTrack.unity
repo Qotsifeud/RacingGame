@@ -737,11 +737,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1166895983991932193, guid: 73bb7f90f6a91ca4887322629676479e, type: 3}
---- !u!1 &163336274 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8404619883440453085, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
-  m_PrefabInstance: {fileID: 2494026783257828301}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &166254385 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6070945487089366618, guid: 5f7701d7459ea434cafd51124ac8fa3e, type: 3}
@@ -2412,7 +2407,6 @@ MonoBehaviour:
   two: {fileID: 1897835103}
   one: {fileID: 1346588404}
   go: {fileID: 1447794002}
-  raceComplete: {fileID: 163336274}
   driftController: {fileID: 0}
   gameClock: {fileID: 510390831}
 --- !u!1 &521837334 stripped
@@ -6196,6 +6190,10 @@ PrefabInstance:
       propertyPath: TopSpeed
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2254568775588342926, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: rotationspeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2541150566880292114, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: m_Name
       value: Small Car
@@ -7530,6 +7528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large Car
       objectReference: {fileID: 0}
+    - target: {fileID: 1090060667146845268, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1559221512193654269, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: barrier2Broken
       value: 
@@ -7635,16 +7637,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1585603153}
     - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: GripX
-      value: 20
+      propertyPath: Accel
+      value: 7.2
       objectReference: {fileID: 0}
     - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: GripZ
+      propertyPath: GripX
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: GripZ
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: Deccel
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: Rotate
-      value: 60
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: TopSpeed
@@ -7652,7 +7662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: rotationspeed
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8009246670589546252, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: Warning
