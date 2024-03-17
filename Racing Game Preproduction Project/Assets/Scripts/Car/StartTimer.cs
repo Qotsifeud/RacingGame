@@ -9,7 +9,6 @@ public class StartTimer : MonoBehaviour
     public GameObject two;
     public GameObject one;
     public GameObject go;
-    public GameObject raceComplete;
 
     public DriftController driftController;
     public timer gameClock;
@@ -22,7 +21,6 @@ public class StartTimer : MonoBehaviour
         two.SetActive(false);
         one.SetActive(false);
         go.SetActive(false);
-        raceComplete.SetActive(false);
 
      
         driftController = FindObjectOfType<DriftController>();//finds an object in the scene with the drift controller attached
