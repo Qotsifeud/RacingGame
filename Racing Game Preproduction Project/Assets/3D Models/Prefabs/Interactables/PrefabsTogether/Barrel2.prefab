@@ -146,6 +146,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2783401972556450629}
     m_Modifications:
+    - target: {fileID: 2147386811679769767, guid: 177e28ceb17842e4ea7ae275051903b0, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147386811679769767, guid: 177e28ceb17842e4ea7ae275051903b0, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2602786352117008109, guid: 177e28ceb17842e4ea7ae275051903b0, type: 3}
       propertyPath: m_Name
       value: Minimap Icon Barrel2
