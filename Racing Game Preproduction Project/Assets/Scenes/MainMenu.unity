@@ -15732,9 +15732,9 @@ MonoBehaviour:
   lightCar: {fileID: 919132148966338233}
   mediumCar: {fileID: 213439332}
   heavyCar: {fileID: 1337515167}
-  lightCarInfo: {fileID: 685138730}
-  mediumCarInfo: {fileID: 940076296}
-  heavyCarInfo: {fileID: 2069802580}
+  lightCarInfo: {fileID: 0}
+  mediumCarInfo: {fileID: 0}
+  heavyCarInfo: {fileID: 0}
   speed: 0
   acceleration: 0
   handeling: 0
