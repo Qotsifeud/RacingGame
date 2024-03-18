@@ -7152,11 +7152,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: bb426aa1bc25fab49883153f07b76839, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.71
+      value: -20.51
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb426aa1bc25fab49883153f07b76839, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.36
+      value: -2.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb426aa1bc25fab49883153f07b76839, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10151,13 +10151,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711786789}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.012743668, y: 0.00016642742, z: -0.030325478, w: 0.99945885}
+  m_LocalRotation: {x: -0.012744602, y: 0.00006236505, z: -0.03848542, w: 0.9991779}
   m_LocalPosition: {x: -46.28, y: -0.91, z: -13.99}
   m_LocalScale: {x: 3.6519754, y: 1, z: 0.6042386}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 681487758}
-  m_LocalEulerAnglesHint: {x: -1.459, y: 0.063, z: -3.477}
+  m_LocalEulerAnglesHint: {x: -1.459, y: 0.063, z: -4.412}
 --- !u!64 &711786791
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -42083,8 +42083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eac76cecb383c842843d7543daf3056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorR: {fileID: 2301483020764068541}
-  doorL: {fileID: 2796505005205457615}
+  doorR: {fileID: 2796505005205457615}
+  doorL: {fileID: 2301483020764068541}
   bathroomDoor: {fileID: 8389524659593175000}
   exitDoor: {fileID: 7913767760019689793}
   garageDoor: {fileID: 2069069075222432945}
