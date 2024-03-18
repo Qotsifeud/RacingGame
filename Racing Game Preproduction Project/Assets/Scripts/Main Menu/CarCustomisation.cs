@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,9 +11,9 @@ public class CarCustomisation : MonoBehaviour
     public GameObject mediumCar;
     public GameObject heavyCar;
 
-    public Slider speedSlider;
-    public Slider accelerationSlider;
-    public Slider handelingSlider;
+    public GameObject lightCarInfo;
+    public GameObject mediumCarInfo;
+    public GameObject heavyCarInfo;
 
     public float speed;
     public float acceleration;
@@ -25,12 +26,6 @@ public class CarCustomisation : MonoBehaviour
     {
         transform.Rotate(0, rotatonSpeed * Time.deltaTime, 0);
 
-        handelingSlider.value = -(accelerationSlider.value + speedSlider.value) / 2;
-
-        speed = speedSlider.value;
-        acceleration = accelerationSlider.value;
-        handeling = handelingSlider.value;
-
         
     }
 
@@ -40,18 +35,28 @@ public class CarCustomisation : MonoBehaviour
         {
             lightCar.SetActive(false);
             mediumCar.SetActive(true);
+            lightCarInfo.SetActive(true);
+            heavyCarInfo.SetActive(false);
+            mediumCarInfo.SetActive(false);
             carNumber = 2;
         }
         else if (mediumCar.activeInHierarchy)
         {
             mediumCar.SetActive(false);
             heavyCar.SetActive(true);
+            mediumCarInfo.SetActive (true);
+            heavyCarInfo.SetActive(false) ;
+            lightCarInfo.SetActive(false);
+
             carNumber = 3;
         }
         else if (heavyCar.activeInHierarchy)
         {
             heavyCar.SetActive(false);
             lightCar.SetActive(true);
+            heavyCarInfo.SetActive(true);
+            mediumCarInfo.SetActive(false);
+            lightCarInfo.SetActive(false);
             carNumber = 1;
         }
     }
@@ -62,19 +67,28 @@ public class CarCustomisation : MonoBehaviour
         {
             lightCar.SetActive(false);
             heavyCar.SetActive(true);
+            lightCarInfo.SetActive(true);
+            heavyCarInfo.SetActive(false);
+            mediumCarInfo.SetActive(false);
             carNumber = 3;
 
         }
         else if (mediumCar.activeInHierarchy)
         {
             mediumCar.SetActive(false);
-            lightCar.SetActive(true); 
+            lightCar.SetActive(true);
+            mediumCarInfo.SetActive(true);
+            heavyCarInfo.SetActive(false);
+            lightCarInfo.SetActive(false);
             carNumber = 1;
         }
         else if (heavyCar.activeInHierarchy)
         {
             heavyCar.SetActive(false);
             mediumCar.SetActive(true);
+            heavyCarInfo.SetActive(true);
+            mediumCarInfo.SetActive(false);
+            lightCarInfo.SetActive(false);
             carNumber = 2;
         }
     }
