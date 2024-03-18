@@ -15588,9 +15588,9 @@ MonoBehaviour:
   lightCar: {fileID: 919132148966338233}
   mediumCar: {fileID: 213439332}
   heavyCar: {fileID: 1337515167}
-  lightCarInfo: {fileID: 0}
-  mediumCarInfo: {fileID: 0}
-  heavyCarInfo: {fileID: 0}
+  lightCarInfo: {fileID: 685138730}
+  mediumCarInfo: {fileID: 940076296}
+  heavyCarInfo: {fileID: 2069802580}
   speed: 0
   acceleration: 0
   handeling: 0
@@ -27610,9 +27610,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 254800630}
   - {fileID: 1172422165}
   - {fileID: 874180337}
-  - {fileID: 254800630}
   m_Father: {fileID: 1259327388}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
