@@ -11,6 +11,7 @@ public class GoToRace : MonoBehaviour
     public float timeOfFade = 1.0f;
     public GameObject menuAudio;
     public GameObject driftAudio;
+    public GameObject newTrack, kamesTrack;
     private AudioSource mainMenuAudioClip;
     private AudioSource menuDriftAudio;
 
@@ -18,6 +19,34 @@ public class GoToRace : MonoBehaviour
     {
         mainMenuAudioClip = menuAudio.GetComponent<AudioSource>();//getting /assigning the audio source (not clip)
         menuDriftAudio = driftAudio.GetComponent<AudioSource>();
+    }
+
+    public void ChooseTrack()
+    {
+        if(newTrack.activeInHierarchy)
+        {
+            newTrack.SetActive(false);
+            kamesTrack.SetActive(true);
+        }
+        else if(kamesTrack.activeInHierarchy)
+        {
+            kamesTrack.SetActive(false);
+            newTrack.SetActive(true);
+        }
+    }
+
+    public void ChooseTrackReverse()
+    {
+        if (newTrack.activeInHierarchy)
+        {
+            newTrack.SetActive(false);
+            kamesTrack.SetActive(true);
+        }
+        else if (kamesTrack.activeInHierarchy)
+        {
+            kamesTrack.SetActive(false);
+            newTrack.SetActive(true);
+        }
     }
 
     public void TestTrack()
@@ -48,7 +77,15 @@ public class GoToRace : MonoBehaviour
             yield return null;
         }
 
-        SceneManager.LoadScene("KamesTrack");
+        if(newTrack.activeInHierarchy)
+        {
+            SceneManager.LoadScene("NewTrack");
+        }
+        else if(kamesTrack.activeInHierarchy)
+        {
+            SceneManager.LoadScene("KamesTrack");
+        }
+        
 
     }
 }
