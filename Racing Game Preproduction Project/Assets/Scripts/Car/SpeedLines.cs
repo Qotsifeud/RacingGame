@@ -56,20 +56,25 @@ public class SpeedLines : MonoBehaviour
 
 
         float targetVolume = Mathf.Lerp(0f, 1f, alphaValue);
-        windRushing.volume = targetVolume;
+
         //setting a min and max volume and pitch for the engine, made it so you can always hear then engine even if car not moving, more realistic that way.
         //same as before increased speed means higher volume but also change of engine pitch/ speed essentially...
-        float minimumVolume = 0.1f;
-        float maximumVolume = 1f;
-        float minimumPitch = 0.1f;
+        float minimumWindVol = 0f;
+        float maximumWindVol = 0.5f;
+        float minimumVolume = 0.2f;
+        float maximumVolume = 0.6f;
+        float minimumPitch = 0.5f;
         float maximumPitch = 2f;
         //could make adjustable per car type and more designer friendly later//
         float tergetEngineVolume = Mathf.Lerp(minimumVolume, maximumVolume, alphaValue);
+        float targetWindVolume = Mathf.Lerp(minimumWindVol, maximumWindVol, alphaValue);
         float targetEnginePitch = Mathf.Lerp(minimumPitch, maximumPitch, alphaValue);
         tergetEngineVolume = Mathf.Max(tergetEngineVolume, minimumVolume);
         CarEngine.volume = tergetEngineVolume;
         CarEngine.pitch = targetEnginePitch;
-
+        //made a new volume with its own max and min for the wind.
+        windRushing.volume = targetWindVolume;
+        windRushing.pitch = targetEnginePitch;
 
 
         if (carDriftControllerScript.gameObject.tag == ("Large Car"))

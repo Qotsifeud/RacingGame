@@ -12771,18 +12771,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 500498287561298023, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 500498287561298023, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 500498287561298023, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 891530900374050839, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5511.9146
@@ -12823,49 +12811,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1631087801431543399, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4346562797880240044, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
-      propertyPath: m_Volume
-      value: 0.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 5702257136118719064, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266519069310074606, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
-      propertyPath: m_Volume
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 6300676703199923376, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257234583061317354, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456196569912917659, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456196569912917659, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456196569912917659, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8902305073245669350, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
       propertyPath: m_Name
       value: AudioControl
-      objectReference: {fileID: 0}
-    - target: {fileID: 8933394361420209848, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
