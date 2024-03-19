@@ -7,7 +7,14 @@ using UnityEngine;
 
 public class WallCollision : MonoBehaviour
 {
-
+    private Dictionary<GameObject, bool> destructionModelStatus = new Dictionary<GameObject, bool>();
+    private Dictionary<GameObject, bool> B1CurrentlyInstantiated = new Dictionary<GameObject, bool>();
+    private Dictionary<GameObject, bool> B2CurrentlyInstantiated = new Dictionary<GameObject, bool>();
+    private Dictionary<GameObject, bool> B4CurrentlyInstantiated = new Dictionary<GameObject, bool>();
+    private Dictionary<GameObject, bool> Bar1Instantiated = new Dictionary<GameObject, bool>();
+    private Dictionary<GameObject, bool> Bar2Instantiated = new Dictionary<GameObject, bool>();
+    //allows for checking each bool per object that gets destroyed rather then only using the bool once and letting us destroy 1 wall or object at a time.../1 type only once
+    //now all can be broken!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     //instantiated objects
     public GameObject destructionModel;
     public GameObject brokenBarrel1;
@@ -21,20 +28,11 @@ public class WallCollision : MonoBehaviour
 
     private DriftController driftControllerScript;
     public float carCurrentSpeed;
-    private bool destructionModelInstantiated = false;
-    private bool B1CurrentlyInstantiated = false;
-    private bool B2CurrentlyInstantiated = false;
-    private bool B4CurrentlyInstantiated = false;
-
-    private bool Bar1Instantiated = false;
-    private bool Bar2Instantiated = false;
-
 
     void Update()
     {
         driftControllerScript = this.gameObject.GetComponent<DriftController>();
         carCurrentSpeed = driftControllerScript.CurrentSpeed;
-
 
     }
 
@@ -47,26 +45,24 @@ public class WallCollision : MonoBehaviour
 
         if (Object.gameObject.tag == "Destructable" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
         {
-            if (!destructionModelInstantiated) // Check if destruction model is not already instantiated
+            if (!destructionModelStatus.ContainsKey(Object.gameObject))
             {
                 Instantiate(destructionModel, Object.transform.position, Object.transform.rotation);
-                destructionModelInstantiated = true; // Set flag to true indicating destruction model is instantiated
+                destructionModelStatus.Add(Object.gameObject, true);
             }
             else
             {
-                Destroy(Object.gameObject); // Destroy the collided wall object if destruction model is already instantiated
+                Destroy(Object.gameObject);
             }
-
-
         }
 
 
         if (Object.gameObject.tag == "B1" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
         {
-            if (!B1CurrentlyInstantiated) // Check if destruction model is not already instantiated
+            if (!B1CurrentlyInstantiated.ContainsKey(Object.gameObject)) // Check if destruction model is not already instantiated
             {
                 Instantiate(brokenBarrel1, Object.transform.position, Object.transform.rotation);
-                B1CurrentlyInstantiated = true; // Set flag to true indicating destruction model is instantiated
+                B1CurrentlyInstantiated.Add(Object.gameObject, true);
             }
             else
             {
@@ -79,10 +75,10 @@ public class WallCollision : MonoBehaviour
 
         if (Object.gameObject.tag == "B2" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
         {
-            if (!B2CurrentlyInstantiated) // Check if destruction model is not already instantiated
+            if (!B2CurrentlyInstantiated.ContainsKey(Object.gameObject)) // Check if destruction model is not already instantiated
             {
                 Instantiate(brokenBarrel2, Object.transform.position, Object.transform.rotation);
-                B2CurrentlyInstantiated = true; // Set flag to true indicating destruction model is instantiated
+                B2CurrentlyInstantiated.Add(Object.gameObject, true);
             }
             else
             {
@@ -95,10 +91,10 @@ public class WallCollision : MonoBehaviour
 
         if (Object.gameObject.tag == "B4" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
         {
-            if (!B4CurrentlyInstantiated) // Check if destruction model is not already instantiated
+            if (!B4CurrentlyInstantiated.ContainsKey(Object.gameObject)) // Check if destruction model is not already instantiated
             {
                 Instantiate(brokenBarrel2, Object.transform.position, Object.transform.rotation);
-                B4CurrentlyInstantiated = true; // Set flag to true indicating destruction model is instantiated
+                B4CurrentlyInstantiated.Add(Object.gameObject, true);
             }
             else
             {
@@ -114,10 +110,10 @@ public class WallCollision : MonoBehaviour
 
         if (Object.gameObject.tag == "Bar1" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
         {
-            if (!Bar1Instantiated) // Check if destruction model is not already instantiated
+            if (!Bar1Instantiated.ContainsKey(Object.gameObject)) // Check if destruction model is not already instantiated
             {
                 Instantiate(barrier1Broken, Object.transform.position, Object.transform.rotation);
-                Bar1Instantiated = true; // Set flag to true indicating destruction model is instantiated
+                Bar1Instantiated.Add(Object.gameObject, true);
             }
             else
             {
@@ -129,10 +125,10 @@ public class WallCollision : MonoBehaviour
 
         if (Object.gameObject.tag == "Bar2" && gameObject.tag == "Large Car" && carCurrentSpeed >= driftControllerScript.halfSpeed)
         {
-            if (!Bar2Instantiated) // Check if destruction model is not already instantiated
+            if (!Bar2Instantiated.ContainsKey(Object.gameObject)) // Check if destruction model is not already instantiated
             {
                 Instantiate(barrier2Broken, Object.transform.position, Object.transform.rotation);
-                Bar2Instantiated = true; // Set flag to true indicating destruction model is instantiated
+                Bar2Instantiated.Add(Object.gameObject, true);
             }
             else
             {
