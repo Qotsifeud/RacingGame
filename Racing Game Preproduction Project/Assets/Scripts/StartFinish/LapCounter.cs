@@ -71,7 +71,11 @@ public class LapCounter : MonoBehaviour
         }
         else
         {
-            time += Time.deltaTime;
+            if(!gameOver.activeInHierarchy)
+            {
+                time += Time.deltaTime;
+            }
+            
         }
 
         if (currentNumberOfLaps == 1)

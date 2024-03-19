@@ -15,10 +15,23 @@ public class StatTracker
 
     private static float totalTime;
 
+    public static TextMeshProUGUI totalTimeText;
+    public static TextMeshProUGUI fastestTimeText;
+    public static GameObject test;
+
     public static float TotalTime
     {
         get { return totalTime; }
-        set { totalTime = value; }
+    }
+
+    public static float FastestLap
+    {
+        get { return fastestLap; }
+    }
+
+    public static void SetTotalTime(float time)
+    {
+        totalTime = time;
     }
 
     public static void SetLapTimes(float[] times)
@@ -34,37 +47,22 @@ public class StatTracker
         }
     }
 
+
+
     public static void setPlayerInfo()
     {
         PlayerPrefs.SetFloat("fastestLap", fastestLap);
-        PlayerPrefs.SetFloat("totalTime", totalTime);
+        PlayerPrefs.SetFloat("totalTime", TotalTime);
     }
 
 }
 
 public class Leaderboard : MonoBehaviour
 {
-    public TextMeshProUGUI nameText1;
-    public TextMeshProUGUI totalTimeText1;
-    public TextMeshProUGUI fastestLapText1;
 
-    public TextMeshProUGUI nameText2;
-    public TextMeshProUGUI totalTimeText2;
-    public TextMeshProUGUI fastestLapText2;
-
-    public TextMeshProUGUI nameText3;
-    public TextMeshProUGUI totalTimeText3;
-    public TextMeshProUGUI fastestLapText3;
-
-    public TextMeshProUGUI nameText4;
-    public TextMeshProUGUI totalTimeText4;
-    public TextMeshProUGUI fastestLapText4;
-
-    public TextMeshProUGUI nameText5;
-    public TextMeshProUGUI totalTimeText5;
-    public TextMeshProUGUI fastestLapText5;
-
-    public GameObject leaderboardScreen;
+    public GameObject gameOverScreen;
+    public TextMeshProUGUI playerTotalTime;
+    public TextMeshProUGUI playerFastestTime;
 
     private void Start()
     {
@@ -73,10 +71,24 @@ public class Leaderboard : MonoBehaviour
 
     void Update()
     {
-        if (leaderboardScreen.activeInHierarchy)
+        //if (leaderboardScreen.activeInHierarchy)
+        //{
+        //    loadLeaderboard();
+        //}
+
+        if(gameOverScreen.activeInHierarchy)
         {
-            loadLeaderboard();
+            setTimeText();
         }
+    }
+
+    public void setTimeText()
+    {
+        TimeSpan totalTime = TimeSpan.FromSeconds(StatTracker.TotalTime);
+        TimeSpan fastestTime = TimeSpan.FromSeconds(StatTracker.FastestLap);
+
+        playerTotalTime.text = totalTime.ToString("mm':'ss");
+        playerFastestTime.text = fastestTime.ToString("mm':'ss");
     }
 
     [Serializable]
