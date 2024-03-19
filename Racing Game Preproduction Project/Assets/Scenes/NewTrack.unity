@@ -17848,7 +17848,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &606698375466377926
 GameObject:
   m_ObjectHideFlags: 0
@@ -18842,9 +18842,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3493010747710751243, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6865595683199526392, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570662380538221537, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -230
       objectReference: {fileID: 0}
     - target: {fileID: 8192522495100705696, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -19632,8 +19640,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CarBoost: 10
   boostAvaiable: 0
-  boostIndicator: {fileID: 0}
-  Warning: {fileID: 0}
+  boostIndicator: {fileID: 925011768}
+  Warning: {fileID: 397887059}
 --- !u!1 &5028525374210798930
 GameObject:
   m_ObjectHideFlags: 0
@@ -19910,8 +19918,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CarBoost: 10
   boostAvaiable: 0
-  boostIndicator: {fileID: 0}
-  Warning: {fileID: 0}
+  boostIndicator: {fileID: 925011768}
+  Warning: {fileID: 397887059}
 --- !u!4 &5632507557285309558
 Transform:
   m_ObjectHideFlags: 0
