@@ -22,7 +22,7 @@ public class addForce : MonoBehaviour
 
     IEnumerator DestroyOnSecond()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(8);
 
         Destroy(this.gameObject);
     }
