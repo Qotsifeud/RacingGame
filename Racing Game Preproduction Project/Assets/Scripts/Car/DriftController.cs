@@ -243,7 +243,8 @@ public class DriftController : MonoBehaviour {
             if (slip == 0f) inSlip = false;
         }
 
-
+        //playing and pausing not the best option for the breaking or drifting audio. need to play/ fade out when stopped then to replay from beginning instead of playing and pausing
+        //added in the stop which should reset the audio.
         //Audio for drifting....................................................................................................
         if (slip > 0.5f)
         {
@@ -258,7 +259,7 @@ public class DriftController : MonoBehaviour {
             // Car is not drifting, pause audio
             if (driftAudiosource.isPlaying)
             {
-                driftAudiosource.Pause();
+                driftAudiosource.Stop();
             }
         }
         //Audio for breaking....................................................................................................
@@ -275,7 +276,7 @@ public class DriftController : MonoBehaviour {
             // Car is not braking, pause audio
             if (breakingAudioSource.isPlaying)
             {
-                breakingAudioSource.Pause();
+                breakingAudioSource.Stop();
             }
         }
 
