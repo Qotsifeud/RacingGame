@@ -10,14 +10,14 @@ public class timer : MonoBehaviour
 
 
     public TextMeshProUGUI Timer;
-    public float time = 0f;
+    public float time;
 
     public GameObject gameOver;
     // Start is called before the first frame update
     void Start()
     {
         Timer.enabled = false;
-
+        time = 0f;
 
 
     }
@@ -36,10 +36,13 @@ public class timer : MonoBehaviour
             Timer.text = string.Format("{0:00} : {1:00}", minutes, seconds);
 
         }
-
+        
         if(gameOver.activeInHierarchy)
         {
-            StatTracker.TotalTime = time;
+            Timer.enabled = false;
+            startTimer = false;
+            StatTracker.SetTotalTime(time);
+            StatTracker.setPlayerInfo();
         }
     }
 }
