@@ -2302,6 +2302,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6659802765966625788, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413270149394561939, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 8902305073245669350, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
       propertyPath: m_Name
       value: AudioControl
@@ -2319,6 +2327,16 @@ GameObject:
 --- !u!1 &958323134 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8532503686370725653, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+  m_PrefabInstance: {fileID: 958323132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &958323135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6507302541383463306, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+  m_PrefabInstance: {fileID: 958323132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &958323136 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6890317112502511131, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
   m_PrefabInstance: {fileID: 958323132}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &968980877 stripped
@@ -3275,6 +3293,14 @@ PrefabInstance:
       propertyPath: speedOmeterPointer
       value: 
       objectReference: {fileID: 837993542}
+    - target: {fileID: 2254568775588342926, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: DriftAudioOBJ
+      value: 
+      objectReference: {fileID: 958323135}
+    - target: {fileID: 2254568775588342926, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: breakingAudioOBJ
+      value: 
+      objectReference: {fileID: 958323136}
     - target: {fileID: 2541150566880292114, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: m_Name
       value: Small Car
@@ -6196,15 +6222,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5504507665131708792, guid: f278273c5fd12ea4cb334069baed6b38, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5524.34
+      value: -5436.71
       objectReference: {fileID: 0}
     - target: {fileID: 5504507665131708792, guid: f278273c5fd12ea4cb334069baed6b38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 783.05
+      value: 766.82
       objectReference: {fileID: 0}
     - target: {fileID: 5504507665131708792, guid: f278273c5fd12ea4cb334069baed6b38, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 620.1
+      value: 622.15
       objectReference: {fileID: 0}
     - target: {fileID: 5504507665131708792, guid: f278273c5fd12ea4cb334069baed6b38, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6726,7 +6752,7 @@ Transform:
   m_GameObject: {fileID: 1772408504}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4484.5215, y: 649.34, z: 545}
+  m_LocalPosition: {x: -4439.59, y: 649.34, z: 545}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7095,6 +7121,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: DriftAudioOBJ
+      value: 
+      objectReference: {fileID: 958323135}
+    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: breakingAudioOBJ
+      value: 
+      objectReference: {fileID: 958323136}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7700,6 +7734,14 @@ PrefabInstance:
       propertyPath: speedOmeterPointer
       value: 
       objectReference: {fileID: 837993542}
+    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: DriftAudioOBJ
+      value: 
+      objectReference: {fileID: 958323135}
+    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: breakingAudioOBJ
+      value: 
+      objectReference: {fileID: 958323136}
     - target: {fileID: 8009246670589546252, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: Warning
       value: 

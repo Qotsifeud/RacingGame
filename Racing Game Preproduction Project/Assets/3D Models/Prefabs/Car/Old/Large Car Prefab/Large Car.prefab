@@ -219,6 +219,8 @@ MonoBehaviour:
   halfSpeed: 30
   TopSpeed: 100
   CurrentSpeed: 0
+  DriftAudioOBJ: {fileID: 0}
+  breakingAudioOBJ: {fileID: 0}
   GripX: 10
   GripZ: 70
   Rotate: 65

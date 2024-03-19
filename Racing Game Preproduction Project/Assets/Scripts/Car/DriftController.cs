@@ -25,7 +25,11 @@ public class DriftController : MonoBehaviour {
     public static bool DriveF;
     public static bool DriveB;
 
-    
+    //Audio for drifting...................
+    public GameObject DriftAudioOBJ;
+    private AudioSource driftAudiosource;
+    public GameObject breakingAudioOBJ;
+    private AudioSource breakingAudioSource;
 
 
 
@@ -106,7 +110,11 @@ public class DriftController : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        
+   
+        driftAudiosource = DriftAudioOBJ.GetComponent<AudioSource>();//assigning audio for the audio source.
+        breakingAudioSource = breakingAudioOBJ.GetComponent<AudioSource>();//assigning audio for the audio source.
+
+
         thirdPersonCamera = true;
 
 		rigidBody = GetComponent<Rigidbody>();
@@ -233,6 +241,42 @@ public class DriftController : MonoBehaviour {
             // Slip => Normal
             slip = this.SlipU.Evaluate(Mathf.Abs(pvel.x)/SlipMod);
             if (slip == 0f) inSlip = false;
+        }
+
+
+        //Audio for drifting....................................................................................................
+        if (slip > 0.5f)
+        {
+            // Car is drifting, play audio
+            if (!driftAudiosource.isPlaying)
+            {
+                driftAudiosource.Play();
+            }
+        }
+        else
+        {
+            // Car is not drifting, pause audio
+            if (driftAudiosource.isPlaying)
+            {
+                driftAudiosource.Pause();
+            }
+        }
+        //Audio for breaking....................................................................................................
+        if (breaking > 0.5f)
+        {
+            // Car is braking, play audio
+            if (!breakingAudioSource.isPlaying)
+            {
+                breakingAudioSource.Play();
+            }
+        }
+        else
+        {
+            // Car is not braking, pause audio
+            if (breakingAudioSource.isPlaying)
+            {
+                breakingAudioSource.Pause();
+            }
         }
 
         //DebugPlayer(slip);

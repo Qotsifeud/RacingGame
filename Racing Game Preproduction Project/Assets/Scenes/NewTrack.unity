@@ -7841,6 +7841,14 @@ PrefabInstance:
       propertyPath: speedOmeterPointer
       value: 
       objectReference: {fileID: 1585603153}
+    - target: {fileID: 2254568775588342926, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: DriftAudioOBJ
+      value: 
+      objectReference: {fileID: 1657696763}
+    - target: {fileID: 2254568775588342926, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: breakingAudioOBJ
+      value: 
+      objectReference: {fileID: 7514848968736582439}
     - target: {fileID: 2541150566880292114, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: m_Name
       value: Small Car
@@ -8450,6 +8458,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1146931527601099252, guid: 73bb7f90f6a91ca4887322629676479e, type: 3}
+--- !u!1 &1657696763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6507302541383463306, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+  m_PrefabInstance: {fileID: 7514848968736582438}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1657784609 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6874307285311445809, guid: 5f7701d7459ea434cafd51124ac8fa3e, type: 3}
@@ -9722,6 +9735,14 @@ PrefabInstance:
       propertyPath: speedOmeterPointer
       value: 
       objectReference: {fileID: 1585603153}
+    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: DriftAudioOBJ
+      value: 
+      objectReference: {fileID: 1657696763}
+    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: breakingAudioOBJ
+      value: 
+      objectReference: {fileID: 7514848968736582439}
     - target: {fileID: 8009246670589546252, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: Warning
       value: 
@@ -10210,7 +10231,7 @@ GameObject:
   - component: {fileID: 1876702121}
   - component: {fileID: 1876702120}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12462,6 +12483,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: DriftAudioOBJ
+      value: 
+      objectReference: {fileID: 1657696763}
+    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: breakingAudioOBJ
+      value: 
+      objectReference: {fileID: 7514848968736582439}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12896,6 +12925,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6659802765966625788, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413270149394561939, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 8902305073245669350, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
       propertyPath: m_Name
       value: AudioControl
@@ -12905,6 +12942,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+--- !u!1 &7514848968736582439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6890317112502511131, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+  m_PrefabInstance: {fileID: 7514848968736582438}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
