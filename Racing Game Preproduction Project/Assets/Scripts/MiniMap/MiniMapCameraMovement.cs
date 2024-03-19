@@ -8,6 +8,25 @@ public class MiniMapCameraMovement : MonoBehaviour
     public float adjustableHeight = 2.0f;
     public float zOffset = 5.0f;
 
+    public GameObject smallCar;
+    public GameObject largeCar;
+    public GameObject mediumCar;
+
+    public void Start()
+    {
+        if(smallCar.activeInHierarchy)
+        {
+            target = smallCar.transform;
+        }
+        else if(mediumCar.activeInHierarchy)
+        {
+            target = mediumCar.transform;
+        }
+        else if(largeCar.activeInHierarchy)
+        {
+            target = largeCar.transform;
+        }
+    }
 
     private void Update()
     {

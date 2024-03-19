@@ -1674,6 +1674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniMapIconHolder Large
       objectReference: {fileID: 0}
+    - target: {fileID: 9099017623974707546, guid: 31bd9ef1b187e5b47af2580778f8db91, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1682,6 +1686,11 @@ PrefabInstance:
 --- !u!4 &221749469 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7679978116989821894, guid: 31bd9ef1b187e5b47af2580778f8db91, type: 3}
+  m_PrefabInstance: {fileID: 221749468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &221749470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9099017623974707546, guid: 31bd9ef1b187e5b47af2580778f8db91, type: 3}
   m_PrefabInstance: {fileID: 221749468}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &233102632
@@ -4157,6 +4166,7 @@ GameObject:
   - component: {fileID: 510390831}
   - component: {fileID: 510390833}
   - component: {fileID: 510390834}
+  - component: {fileID: 510390835}
   m_Layer: 0
   m_Name: UI Manager
   m_TagString: Untagged
@@ -4227,6 +4237,24 @@ MonoBehaviour:
   gameOverScreen: {fileID: 1701789334}
   playerTotalTime: {fileID: 1566015352}
   playerFastestTime: {fileID: 2100211797}
+--- !u!114 &510390835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510390830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b106759bf747eb4da61588f08f793ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallMiniMap: {fileID: 695568459}
+  largeMiniMap: {fileID: 803326319}
+  mediumMiniMap: {fileID: 221749470}
+  smallCar: {fileID: 2541150567612800542}
+  largeCar: {fileID: 557231654842865188}
+  mediumCar: {fileID: 1090060666750711986}
 --- !u!1 &513588612
 GameObject:
   m_ObjectHideFlags: 0
@@ -5332,6 +5360,11 @@ PrefabInstance:
 --- !u!4 &695568458 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6388291316878629155, guid: 31cb0e0569a9d884ea587538cd876baf, type: 3}
+  m_PrefabInstance: {fileID: 695568457}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &695568459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6593921944624614112, guid: 31cb0e0569a9d884ea587538cd876baf, type: 3}
   m_PrefabInstance: {fileID: 695568457}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &701214613 stripped
@@ -6505,6 +6538,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4279436181863661245, guid: 9a55d8685df5fc543923795c30d2e7ae, type: 3}
   m_PrefabInstance: {fileID: 803326317}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &803326319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9171749154429833023, guid: 9a55d8685df5fc543923795c30d2e7ae, type: 3}
+  m_PrefabInstance: {fileID: 803326317}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &810285879
 GameObject:
   m_ObjectHideFlags: 0
@@ -7653,6 +7691,9 @@ MonoBehaviour:
   target: {fileID: 4392219404748072413}
   adjustableHeight: 100
   zOffset: 0
+  smallCar: {fileID: 2541150567612800542}
+  largeCar: {fileID: 557231654842865188}
+  mediumCar: {fileID: 1090060666750711986}
 --- !u!20 &985309221
 Camera:
   m_ObjectHideFlags: 0
@@ -17848,7 +17889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &606698375466377926
 GameObject:
   m_ObjectHideFlags: 0
