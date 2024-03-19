@@ -492,7 +492,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2884602112352647080
 Transform:
   m_ObjectHideFlags: 0
@@ -503,7 +503,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2959339771449545060}
@@ -529,7 +529,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2541150566880292114}
   serializedVersion: 4
-  m_Mass: 1000
+  m_Mass: 2000
   m_Drag: 0
   m_AngularDrag: 20
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -562,9 +562,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Accel: 40
   Deccel: 30
-  Boost: 10
+  Boost: 5
   halfSpeed: 40
-  TopSpeed: 80
+  TopSpeed: 90
   CurrentSpeed: 0
   GripX: 30
   GripZ: 60
@@ -645,6 +645,7 @@ MonoBehaviour:
   turnTh: 20
   rigidBody: {fileID: 0}
   inTurn: 0
+  rotationspeed: 1.75
 --- !u!114 &-3591953391835222135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,10 +716,11 @@ MonoBehaviour:
   speedLineGameObject: {fileID: 0}
   speedlineAnim: {fileID: 0}
   animSpeed: 1
-  smallCarSpeedOmeterAngle: 15
-  mediumCarSpeedOmeterAngle: 30
-  largeCarSpeedOmeterAngle: 45
+  smallCarSpeedOmeterAngle: 21
+  mediumCarSpeedOmeterAngle: 45
+  largeCarSpeedOmeterAngle: 15
   windAudioSource: {fileID: 0}
+  carEngineAudioObj: {fileID: 0}
 --- !u!114 &1067246553619108238
 MonoBehaviour:
   m_ObjectHideFlags: 0

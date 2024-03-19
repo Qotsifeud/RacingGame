@@ -21,6 +21,8 @@ public class SpeedLines : MonoBehaviour
 
     public GameObject windAudioSource;
     private AudioSource windRushing;
+    public GameObject carEngineAudioObj;
+    private AudioSource CarEngine;
 
 
     // Start is called before the first frame update
@@ -35,6 +37,7 @@ public class SpeedLines : MonoBehaviour
         speedLineGameObject = GameObject.Find("SpeedLines");
         speedlineAnim = speedLineGameObject.GetComponent<Animator>();
         windRushing = windAudioSource.GetComponent<AudioSource>();//getting the wind audiosource
+        CarEngine = carEngineAudioObj.GetComponent<AudioSource>();//get/set of car audio
     }
 
     // Update is called once per frame
@@ -51,8 +54,22 @@ public class SpeedLines : MonoBehaviour
         float pointerTargetPositionMedium = Mathf.Lerp(90f, mediumCarSpeedOmeterAngle, carDriftControllerScript.CurrentSpeed / carDriftControllerScript.TopSpeed);
         float pointerTargetPositionSmall = Mathf.Lerp(90f, smallCarSpeedOmeterAngle, carDriftControllerScript.CurrentSpeed / carDriftControllerScript.TopSpeed);
 
+
         float targetVolume = Mathf.Lerp(0f, 1f, alphaValue);
         windRushing.volume = targetVolume;
+        //setting a min and max volume and pitch for the engine, made it so you can always hear then engine even if car not moving, more realistic that way.
+        //same as before increased speed means higher volume but also change of engine pitch/ speed essentially...
+        float minimumVolume = 0.1f;
+        float maximumVolume = 1f;
+        float minimumPitch = 0.1f;
+        float maximumPitch = 2f;
+        //could make adjustable per car type and more designer friendly later//
+        float tergetEngineVolume = Mathf.Lerp(minimumVolume, maximumVolume, alphaValue);
+        float targetEnginePitch = Mathf.Lerp(minimumPitch, maximumPitch, alphaValue);
+        tergetEngineVolume = Mathf.Max(tergetEngineVolume, minimumVolume);
+        CarEngine.volume = tergetEngineVolume;
+        CarEngine.pitch = targetEnginePitch;
+
 
 
         if (carDriftControllerScript.gameObject.tag == ("Large Car"))

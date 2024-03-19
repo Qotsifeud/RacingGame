@@ -213,15 +213,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b28d51eaa6c2b442ac58943a138f548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Accel: 20
-  Deccel: 70
-  Boost: 10
+  Accel: 10
+  Deccel: 100
+  Boost: 1
   halfSpeed: 30
-  TopSpeed: 80
+  TopSpeed: 100
   CurrentSpeed: 0
-  GripX: 12
-  GripZ: 3
-  Rotate: 120
+  GripX: 10
+  GripZ: 70
+  Rotate: 65
   RotVel: 0.9
   CoM: {x: 0.3, y: 0.3, z: 0.3}
   carFaction: 0
@@ -298,6 +298,7 @@ MonoBehaviour:
   turnTh: 20
   rigidBody: {fileID: 0}
   inTurn: 0
+  rotationspeed: 1
 --- !u!114 &8009246670589546252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,10 +369,11 @@ MonoBehaviour:
   speedLineGameObject: {fileID: 0}
   speedlineAnim: {fileID: 0}
   animSpeed: 1
-  smallCarSpeedOmeterAngle: 15
+  smallCarSpeedOmeterAngle: 21
   mediumCarSpeedOmeterAngle: 30
-  largeCarSpeedOmeterAngle: 45
+  largeCarSpeedOmeterAngle: 7
   windAudioSource: {fileID: 0}
+  carEngineAudioObj: {fileID: 0}
 --- !u!114 &1559221512193654269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,7 +391,7 @@ MonoBehaviour:
   brokenBarrel2: {fileID: 1979759941924198745, guid: 99433bab6095be14faaa7785c63d85bc, type: 3}
   brokenBarrel3: {fileID: 1979759941924198745, guid: 99433bab6095be14faaa7785c63d85bc, type: 3}
   barrier1Broken: {fileID: 9132748998687317446, guid: e23c75f1bd07ead4eb57130704bfe6f5, type: 3}
-  barrier2Broken: {fileID: 7674469582555139917, guid: 317e3d579f5cc1d4e853fd5f22e1669c, type: 3}
+  barrier2Broken: {fileID: 9132748998687317446, guid: 90f3079e231c5c3408b45f90e6102d87, type: 3}
   carCurrentSpeed: 0
 --- !u!114 &5999359014403019925
 MonoBehaviour:

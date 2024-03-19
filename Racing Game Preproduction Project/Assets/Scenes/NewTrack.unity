@@ -7758,6 +7758,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 713316338}
     - target: {fileID: 628658710647072268, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
+      propertyPath: carEngineAudioObj
+      value: 
+      objectReference: {fileID: 1850215551}
+    - target: {fileID: 628658710647072268, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: speedLineAnimation
       value: 
       objectReference: {fileID: 1695142476}
@@ -7765,53 +7769,9 @@ PrefabInstance:
       propertyPath: speedOmeterPointer
       value: 
       objectReference: {fileID: 1585603153}
-    - target: {fileID: 628658710647072268, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
-      propertyPath: largeCarSpeedOmeterAngle
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 628658710647072268, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
-      propertyPath: smallCarSpeedOmeterAngle
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 628658710647072268, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
-      propertyPath: mediumCarSpeedOmeterAngle
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 913427874191606286, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
-      propertyPath: m_Mass
-      value: 2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2254568775588342926, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
-      propertyPath: Boost
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2254568775588342926, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
-      propertyPath: TopSpeed
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2254568775588342926, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
-      propertyPath: rotationspeed
-      value: 1.75
-      objectReference: {fileID: 0}
     - target: {fileID: 2541150566880292114, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: m_Name
       value: Small Car
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541150566880292114, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884602112352647080, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884602112352647080, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884602112352647080, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2884602112352647080, guid: 6d06a42f66c307e4bb74ddf6c36d2eeb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9573,14 +9533,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large Car
       objectReference: {fileID: 0}
-    - target: {fileID: 1090060667146845268, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1559221512193654269, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: barrier2Broken
-      value: 
-      objectReference: {fileID: 9132748998687317446, guid: 90f3079e231c5c3408b45f90e6102d87, type: 3}
     - target: {fileID: 4392219406469603643, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: m_LocalPosition.x
       value: -945
@@ -9674,6 +9626,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 713316338}
     - target: {fileID: 5599406871170787264, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
+      propertyPath: carEngineAudioObj
+      value: 
+      objectReference: {fileID: 1850215551}
+    - target: {fileID: 5599406871170787264, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: speedLineAnimation
       value: 
       objectReference: {fileID: 1695142476}
@@ -9681,46 +9637,6 @@ PrefabInstance:
       propertyPath: speedOmeterPointer
       value: 
       objectReference: {fileID: 1585603153}
-    - target: {fileID: 5599406871170787264, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: largeCarSpeedOmeterAngle
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5599406871170787264, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: smallCarSpeedOmeterAngle
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: Accel
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: Boost
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: GripX
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: GripZ
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: Deccel
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: Rotate
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: TopSpeed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7202827335050058608, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
-      propertyPath: rotationspeed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8009246670589546252, guid: 41df885a2b323fb4686c7481ec8e0e82, type: 3}
       propertyPath: Warning
       value: 
@@ -10047,6 +9963,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4511402105792983667, guid: 282e30cd0709bed4daef73e8116104ef, type: 3}
   m_PrefabInstance: {fileID: 980395981}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1850215551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 680234219148690447, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+  m_PrefabInstance: {fileID: 7514848968736582438}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1852400795
 GameObject:
   m_ObjectHideFlags: 0
@@ -10222,7 +10143,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -12353,6 +12274,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 713316338}
     - target: {fileID: 321563294177317477, guid: a267500041200654a89f8942383fd4c8, type: 3}
+      propertyPath: carEngineAudioObj
+      value: 
+      objectReference: {fileID: 1850215551}
+    - target: {fileID: 321563294177317477, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: speedLineAnimation
       value: 
       objectReference: {fileID: 1695142476}
@@ -12360,21 +12285,9 @@ PrefabInstance:
       propertyPath: speedOmeterPointer
       value: 
       objectReference: {fileID: 1585603153}
-    - target: {fileID: 321563294177317477, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: smallCarSpeedOmeterAngle
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 321563294177317477, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: mediumCarSpeedOmeterAngle
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 557231653892310471, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: m_Name
       value: Medium Car
-      objectReference: {fileID: 0}
-    - target: {fileID: 557231653892310471, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2978609382228364305, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: gameOver
@@ -12425,18 +12338,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1981426154}
     - target: {fileID: 5461290397395326422, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5461290397395326422, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5461290397395326422, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5461290397395326422, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -937
       objectReference: {fileID: 0}
@@ -12475,26 +12376,6 @@ PrefabInstance:
     - target: {fileID: 5461290397395326422, guid: a267500041200654a89f8942383fd4c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: Accel
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: Boost
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: GripZ
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: TopSpeed
-      value: 85
-      objectReference: {fileID: 0}
-    - target: {fileID: 6917101967084387099, guid: a267500041200654a89f8942383fd4c8, type: 3}
-      propertyPath: rotationspeed
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12576,12 +12457,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5504507665131708792, guid: f278273c5fd12ea4cb334069baed6b38, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8851
+      objectReference: {fileID: 0}
+    - target: {fileID: 5504507665131708792, guid: f278273c5fd12ea4cb334069baed6b38, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8851
+      objectReference: {fileID: 0}
+    - target: {fileID: 5504507665131708792, guid: f278273c5fd12ea4cb334069baed6b38, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8851
+      objectReference: {fileID: 0}
+    - target: {fileID: 5504507665131708792, guid: f278273c5fd12ea4cb334069baed6b38, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5521.26
+      value: -5524.34
       objectReference: {fileID: 0}
     - target: {fileID: 5504507665131708792, guid: f278273c5fd12ea4cb334069baed6b38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 777.3
+      value: 783.05
       objectReference: {fileID: 0}
     - target: {fileID: 5504507665131708792, guid: f278273c5fd12ea4cb334069baed6b38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12878,6 +12771,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 500498287561298023, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 500498287561298023, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 500498287561298023, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 891530900374050839, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5511.9146
