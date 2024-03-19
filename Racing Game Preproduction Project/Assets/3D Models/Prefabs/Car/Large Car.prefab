@@ -587,7 +587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3467295965356649737}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7075413, z: -0, w: 0.7066721}
+  m_LocalRotation: {x: 0, y: -0.70753855, z: 0, w: 0.70667475}
   m_LocalPosition: {x: -866.1079, y: 89.97998, z: 72.77545}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
@@ -732,6 +732,7 @@ MonoBehaviour:
   turnTh: 20
   rigidBody: {fileID: 0}
   inTurn: 0
+  rotationspeed: 1
 --- !u!114 &8786363530093862090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,8 +780,6 @@ MonoBehaviour:
   carDisplaySpot: {fileID: 0}
   playerCharacter: {fileID: 0}
   playersCar: {fileID: 0}
-  playerDisplayPosition: {x: 0, y: 0, z: 0}
-  carDisplayPosition: {x: 0, y: 0, z: 0}
   CarCamera: {fileID: 0}
   lapCounter: {fileID: 0}
   startSign: {fileID: 0}
@@ -794,6 +793,11 @@ MonoBehaviour:
   gameOver: {fileID: 0}
   currentNumberOfLaps: 1
   maxLaps: 3
+  lapTimes:
+  - 0
+  - 0
+  - 0
+  time: 0
   checkPopints: 0000000000
 --- !u!114 &502948680219441865
 MonoBehaviour:
@@ -816,6 +820,8 @@ MonoBehaviour:
   smallCarSpeedOmeterAngle: 15
   mediumCarSpeedOmeterAngle: 30
   largeCarSpeedOmeterAngle: 45
+  windAudioSource: {fileID: 0}
+  carEngineAudioObj: {fileID: 0}
 --- !u!114 &3338354792793584319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,6 +838,8 @@ MonoBehaviour:
   brokenBarrel1: {fileID: 5984202174707738361, guid: 72ee2956cd9d05c4dabe2b10eb2a275b, type: 3}
   brokenBarrel2: {fileID: 1979759941924198745, guid: 99433bab6095be14faaa7785c63d85bc, type: 3}
   brokenBarrel3: {fileID: 1979759941924198745, guid: 99433bab6095be14faaa7785c63d85bc, type: 3}
+  barrier1Broken: {fileID: 9132748998687317446, guid: e23c75f1bd07ead4eb57130704bfe6f5, type: 3}
+  barrier2Broken: {fileID: 9132748998687317446, guid: 90f3079e231c5c3408b45f90e6102d87, type: 3}
   carCurrentSpeed: 0
 --- !u!114 &8515445805407596969
 MonoBehaviour:
@@ -914,7 +922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6515425061411499837
 Transform:
   m_ObjectHideFlags: 0
@@ -1018,7 +1026,7 @@ MonoBehaviour:
   speedOfLargeCarWhenCamDistanceChanges: 10
   smallCarCameraInUse: 0
   mediumCarCameraInUse: 0
-  largeCarCameraInUse: 0
+  largeCarCameraInUse: 1
   smallCar: {fileID: 0}
   mediumCar: {fileID: 0}
   largeCar: {fileID: 0}
