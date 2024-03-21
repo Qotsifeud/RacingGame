@@ -10,6 +10,7 @@ public class SpeedLines : MonoBehaviour
     public Image speedLineAnimation;
     public DriftController carDriftControllerScript;
     private float alphaValue;
+    public float linesAppear = 45f;
     public GameObject speedLineGameObject;
     [SerializeField] Animator speedlineAnim;
     public float animSpeed = 1f;
@@ -43,7 +44,8 @@ public class SpeedLines : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        alphaValue = carDriftControllerScript.CurrentSpeed / carDriftControllerScript.TopSpeed;
+        linesAppear = carDriftControllerScript.halfSpeed;
+        alphaValue =(carDriftControllerScript.CurrentSpeed -linesAppear)/ (carDriftControllerScript.TopSpeed - linesAppear);
         alphaValue = Mathf.Clamp01(alphaValue);
         speedLineAnimation.color = new Color(1f, 1f, 1f, alphaValue);
         speedlineAnim.SetFloat("animationSpeed", alphaValue);
