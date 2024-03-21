@@ -77,10 +77,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6bf2d6383a558b84e833cc510e12062f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7571783307009421272}
+      addedObject: {fileID: -8740774108575203192}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6bf2d6383a558b84e833cc510e12062f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -8740774108575203192}
+      addedObject: {fileID: 5438069552271302217}
   m_SourcePrefab: {fileID: 100100000, guid: 6bf2d6383a558b84e833cc510e12062f, type: 3}
 --- !u!4 &2783401972556450629 stripped
 Transform:
@@ -92,7 +92,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6bf2d6383a558b84e833cc510e12062f, type: 3}
   m_PrefabInstance: {fileID: 2389749102417292462}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &7571783307009421272
+--- !u!136 &-8740774108575203192
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,10 +112,10 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2
-  m_Height: 3.72
+  m_Height: 5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &-8740774108575203192
+--- !u!136 &5438069552271302217
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,10 +134,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.8687905
-  m_Height: 3.72
+  m_Radius: 0.8460095
+  m_Height: 2.0169346
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.00000011920929, y: -0.008467466, z: -0.00000008940697}
 --- !u!1001 &5351383207238418417
 PrefabInstance:
   m_ObjectHideFlags: 0
