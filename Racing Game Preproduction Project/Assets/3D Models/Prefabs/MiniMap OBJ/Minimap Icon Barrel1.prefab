@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3691384684104676209}
   - component: {fileID: 2626369696951265731}
   - component: {fileID: 7173446331586592661}
-  - component: {fileID: 2892878669481646692}
   m_Layer: 7
   m_Name: Minimap Icon Barrel1
   m_TagString: Untagged
@@ -28,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 412957395335111850}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5041.2, y: 802.69, z: 58}
-  m_LocalScale: {x: 4.2927, y: 4.2927, z: 4.2927}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3988278412620131391}
@@ -85,28 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2892878669481646692
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412957395335111850}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1817904318968399209
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +96,7 @@ GameObject:
   - component: {fileID: 3140846136441743165}
   - component: {fileID: 7985940617515511391}
   - component: {fileID: 3989719116995293439}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
