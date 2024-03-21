@@ -1315,7 +1315,7 @@ PrefabInstance:
     - target: {fileID: 2794888740381258812, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
       propertyPath: boostIndicator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 837993541}
     - target: {fileID: 5639444541778467042, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
       propertyPath: DriftAudioOBJ
       value: 
@@ -1866,7 +1866,7 @@ PrefabInstance:
     - target: {fileID: 2560801438196622161, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
       propertyPath: boostIndicator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 837993541}
     - target: {fileID: 7310677300342540241, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
       propertyPath: windAudioSource
       value: 
@@ -3096,10 +3096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8377128864036808704, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2910461513631749336, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2365032460510339303, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
       insertIndex: -1
@@ -3120,6 +3121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &837993541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3493010747710751243, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
+  m_PrefabInstance: {fileID: 837993539}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &837993543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4854687410022227965, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
@@ -8196,7 +8202,7 @@ PrefabInstance:
     - target: {fileID: 2387659456328147715, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: boostIndicator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 837993541}
     - target: {fileID: 4870941204849565400, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: DriftAudioOBJ
       value: 

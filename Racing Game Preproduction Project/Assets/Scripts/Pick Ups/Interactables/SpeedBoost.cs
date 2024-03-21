@@ -6,11 +6,15 @@ using UnityEngine;
 public class SpeedBoost : MonoBehaviour
 {//make sure to increase acceleration not the cars boost...
     
-    public int CarBoost = 10;
-    public bool boostAvaiable = false;
+    public int CarBoostS = 5;
+    public int CarBoostM = 10;
+    public int CarBoostL = 15;
+    public bool boostAvaiableSmallCar = false;
+    public bool boostAvaiableMedCar = false;
+    public bool boostAvaiableLargeCar = false;
 
     public GameObject boostIndicator;
-    public GameObject Warning;
+   
 
     private DriftController driftController;
 
@@ -21,10 +25,22 @@ public class SpeedBoost : MonoBehaviour
 
     private void Update()
     {
-        if(boostAvaiable && Input.GetKeyDown("v"))
+        if(boostAvaiableSmallCar && Input.GetKeyDown("v"))
         {
-            StartCoroutine(CarSpeedBoost(CarBoost));
-            boostAvaiable = false;
+            StartCoroutine(CarSpeedBoostS(CarBoostS));
+            boostAvaiableSmallCar = false;
+            boostIndicator.SetActive(false);
+        }
+        if (boostAvaiableMedCar && Input.GetKeyDown("v"))
+        {
+            StartCoroutine(CarSpeedBoostM(CarBoostM));
+            boostAvaiableMedCar = false;
+            boostIndicator.SetActive(false);
+        }
+        if (boostAvaiableLargeCar && Input.GetKeyDown("v"))
+        {
+            StartCoroutine(CarSpeedBoostL(CarBoostL));
+            boostAvaiableLargeCar = false;
             boostIndicator.SetActive(false);
         }
     }
@@ -35,32 +51,58 @@ public class SpeedBoost : MonoBehaviour
         {
             Destroy(other.gameObject);
             boostIndicator.SetActive(true);
-            boostAvaiable = true;
+            boostAvaiableMedCar = true;
         }
-
-        if (other.gameObject.tag == ("SpeedBooster") && this.gameObject.tag != ("Medium Car"))
+        if (other.gameObject.tag == ("SpeedBooster") && this.gameObject.tag == ("Large Car"))
         {
-            StartCoroutine(PickUpWarning());
+            Destroy(other.gameObject);
+            boostIndicator.SetActive(true);
+            boostAvaiableLargeCar = true;
+        }
+        if (other.gameObject.tag == ("SpeedBooster") && this.gameObject.tag == ("Small Car"))
+        {
+            Destroy(other.gameObject);
+            boostIndicator.SetActive(true);
+            boostAvaiableSmallCar = true;
         }
     }
 
-    IEnumerator CarSpeedBoost(float boost)
+    IEnumerator CarSpeedBoostS(float sboost)
     {
-        driftController.TopSpeed += boost;
+        driftController.TopSpeed += sboost;
 
-        driftController.rigidBody.velocity += transform.forward * (driftController.TopSpeed + boost);
+        driftController.rigidBody.velocity += transform.forward * (driftController.TopSpeed + sboost);
 
         Debug.Log("is being used");
         yield return new WaitForSeconds(10);//wait for 10 seconds!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         Debug.Log("is used");
 
-        driftController.TopSpeed -= boost;
+        driftController.TopSpeed -= sboost;
+    }
+    IEnumerator CarSpeedBoostM(float mboost)
+    {
+        driftController.TopSpeed += mboost;
+
+        driftController.rigidBody.velocity += transform.forward * (driftController.TopSpeed + mboost);
+
+        Debug.Log("is being used");
+        yield return new WaitForSeconds(10);//wait for 10 seconds!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        Debug.Log("is used");
+
+        driftController.TopSpeed -= mboost;
+    }
+    IEnumerator CarSpeedBoostL(float lboost)
+    {
+        driftController.TopSpeed += lboost;
+
+        driftController.rigidBody.velocity += transform.forward * (driftController.TopSpeed + lboost);
+
+        Debug.Log("is being used");
+        yield return new WaitForSeconds(10);//wait for 10 seconds!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        Debug.Log("is used");
+
+        driftController.TopSpeed -= lboost;
     }
 
-    IEnumerator PickUpWarning()
-    {
-        Warning.SetActive(true);
-        yield return new WaitForSeconds(2);
-        Warning.SetActive(false);
-    }
+
 }

@@ -18217,6 +18217,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 397887059}
     - target: {fileID: 2794888740381258812, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
+      propertyPath: warning
+      value: 
+      objectReference: {fileID: 397887059}
+    - target: {fileID: 2794888740381258812, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
       propertyPath: boostIndicator
       value: 
       objectReference: {fileID: 925011768}
@@ -18364,6 +18368,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 397887059}
     - target: {fileID: 2387659456328147715, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
+      propertyPath: warning
+      value: 
+      objectReference: {fileID: 397887059}
+    - target: {fileID: 2387659456328147715, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: boostIndicator
       value: 
       objectReference: {fileID: 925011768}
@@ -18481,6 +18489,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1981426154}
     - target: {fileID: 2441940892897628614, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441940892897628614, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
       propertyPath: DriftAudioOBJ
       value: 
       objectReference: {fileID: 1657696763}
@@ -18490,6 +18502,10 @@ PrefabInstance:
       objectReference: {fileID: 7514848968736582439}
     - target: {fileID: 2560801438196622161, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
       propertyPath: Warning
+      value: 
+      objectReference: {fileID: 397887059}
+    - target: {fileID: 2560801438196622161, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
+      propertyPath: warning
       value: 
       objectReference: {fileID: 397887059}
     - target: {fileID: 2560801438196622161, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
