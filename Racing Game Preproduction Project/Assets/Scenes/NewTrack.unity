@@ -18047,7 +18047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8377128864036808704, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18191,6 +18191,10 @@ PrefabInstance:
     - target: {fileID: 1707240691988188660, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
       propertyPath: m_Name
       value: Small Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707240691988188660, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2558463771535996262, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
       propertyPath: windAudioSource
@@ -18337,7 +18341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524251046203643602, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2312550481087130066, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: windAudioSource
@@ -18427,6 +18431,10 @@ PrefabInstance:
     - target: {fileID: 931874638337502924, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
       propertyPath: m_Name
       value: Medium Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 931874638337502924, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2123670356593614712, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
       propertyPath: gameOver

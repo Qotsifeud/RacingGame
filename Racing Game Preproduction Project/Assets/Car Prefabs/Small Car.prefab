@@ -315,6 +315,7 @@ GameObject:
   - component: {fileID: 691653644803721482}
   - component: {fileID: 2558463771535996262}
   - component: {fileID: 8194343164062292373}
+  - component: {fileID: 2288033394138654792}
   m_Layer: 3
   m_Name: Small Car
   m_TagString: Small Car
@@ -586,6 +587,25 @@ MonoBehaviour:
   rotationLARGE: 0.1
   slipTest: 0
   driftControllerScript: {fileID: 0}
+--- !u!114 &2288033394138654792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707240691988188660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f4f188c55b6f824d9f2330c63b15358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destructionModel: {fileID: 7976000286542702583, guid: 76ce1643daef1c44fb39925cd6b0bf27, type: 3}
+  brokenBarrel1: {fileID: 5984202174707738361, guid: 72ee2956cd9d05c4dabe2b10eb2a275b, type: 3}
+  brokenBarrel2: {fileID: 1979759941924198745, guid: 99433bab6095be14faaa7785c63d85bc, type: 3}
+  brokenBarrel3: {fileID: 1979759941924198745, guid: 99433bab6095be14faaa7785c63d85bc, type: 3}
+  barrier1Broken: {fileID: 9132748998687317446, guid: e23c75f1bd07ead4eb57130704bfe6f5, type: 3}
+  barrier2Broken: {fileID: 9132748998687317446, guid: 90f3079e231c5c3408b45f90e6102d87, type: 3}
+  carCurrentSpeed: 0
 --- !u!1 &2113800749024271517
 GameObject:
   m_ObjectHideFlags: 0
