@@ -1013,6 +1013,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8168519520158993335, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
   m_PrefabInstance: {fileID: 325549639}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &325549641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1707240691988188660, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
+  m_PrefabInstance: {fileID: 325549639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &375876286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,6 +1377,11 @@ PrefabInstance:
 --- !u!4 &463661979 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7431131990960521670, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
+  m_PrefabInstance: {fileID: 463661978}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &463661980 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 931874638337502924, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
   m_PrefabInstance: {fileID: 463661978}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &484887526 stripped
@@ -6266,6 +6276,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6881674601922465900, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
   m_PrefabInstance: {fileID: 1597008148}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1597008150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1524251046203643602, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
+  m_PrefabInstance: {fileID: 1597008148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1609274561
 GameObject:
   m_ObjectHideFlags: 0
@@ -6950,9 +6965,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carSpawnController: {fileID: 0}
   CSC: {fileID: 0}
-  smallCar: {fileID: 0}
-  mediumCar: {fileID: 0}
-  LargeCar: {fileID: 0}
+  smallCar: {fileID: 325549641}
+  mediumCar: {fileID: 463661980}
+  LargeCar: {fileID: 1597008150}
 --- !u!4 &1927942958
 Transform:
   m_ObjectHideFlags: 0

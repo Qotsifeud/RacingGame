@@ -11,9 +11,11 @@ public class CameraMovement : MonoBehaviour
     public GameObject bathroomDoor;
     public GameObject exitDoor;
     public GameObject garageDoor;
+    public GameObject mainMenuButtons;
     private bool openBathroomDoor;
     private bool openExitDoor;
     private bool openGarageDoor;
+    private bool MainMenuActive;
     private Animator doorAnimations;
     private Animator exitDoorObject;
     private Animator backDoorObject;
@@ -59,6 +61,8 @@ public class CameraMovement : MonoBehaviour
 
     public void Start()
     {
+        mainMenuButtons.SetActive(false);
+        MainMenuActive = false;
         openTheDoors = false;
         doorAnimations = bathroomDoor.GetComponent<Animator>();
         exitDoorObject = exitDoor.GetComponent<Animator>();
@@ -72,6 +76,11 @@ public class CameraMovement : MonoBehaviour
         ableToMove = true;
 
         openTheDoors = true;
+
+        MainMenuActive = true;
+
+
+
 
     }
 
@@ -110,6 +119,17 @@ public class CameraMovement : MonoBehaviour
 
     private void Update()
     {
+
+        if (MainMenuActive)
+        {
+            StartCoroutine(WaitForMenu());
+        }
+
+
+
+
+
+
         if (currentDistance < 1.7f && openTheDoors)
         {
             currentDistance += Time.deltaTime;
@@ -174,7 +194,11 @@ public class CameraMovement : MonoBehaviour
 
     }
 
-
+    IEnumerator WaitForMenu()
+    {
+        yield return new WaitForSeconds(5);
+        mainMenuButtons.SetActive(true);
+    }
 
     private void MoveCamera(Vector3 target)
     {
