@@ -443,6 +443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniMapIconHolder Med
       objectReference: {fileID: 0}
+    - target: {fileID: 9171749154429833023, guid: 9a55d8685df5fc543923795c30d2e7ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -900,6 +904,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1571099281}
     - target: {fileID: 691653644803721482, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
+      propertyPath: theCarsRb
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 691653644803721482, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
       propertyPath: finishSign
       value: 
       objectReference: {fileID: 1571099280}
@@ -1298,6 +1306,10 @@ PrefabInstance:
       propertyPath: startSign
       value: 
       objectReference: {fileID: 1571099281}
+    - target: {fileID: 2123670356593614712, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
+      propertyPath: theCarsRb
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2123670356593614712, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
       propertyPath: finishSign
       value: 
@@ -6380,6 +6392,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1571099281}
     - target: {fileID: 27573426241409768, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
+      propertyPath: theCarsRb
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 27573426241409768, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: finishSign
       value: 
       objectReference: {fileID: 1571099280}
@@ -6449,7 +6465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524251046203643602, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2312550481087130066, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: windAudioSource
@@ -7293,6 +7309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniMapIconHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 6593921944624614112, guid: 31cb0e0569a9d884ea587538cd876baf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7839,9 +7859,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 837993539}
   - {fileID: 531673862}
+  - {fileID: 1584088145}
   - {fileID: 1772408505}
   - {fileID: 920554489}
-  - {fileID: 1584088145}
   - {fileID: 969653391}
   - {fileID: 1632492271}
   - {fileID: 726753240}
