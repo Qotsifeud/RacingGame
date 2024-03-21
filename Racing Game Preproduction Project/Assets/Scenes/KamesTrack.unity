@@ -3126,6 +3126,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3493010747710751243, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
   m_PrefabInstance: {fileID: 837993539}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &837993542 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6450537180053960988, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
+  m_PrefabInstance: {fileID: 837993539}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &837993543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4854687410022227965, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
@@ -3552,6 +3563,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4346562797880240044, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6659802765966625788, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
       propertyPath: m_Volume
       value: 0.05
@@ -3564,11 +3579,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioControl
       objectReference: {fileID: 0}
+    - target: {fileID: 8933394361420209848, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+--- !u!1 &958323133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4340771399075564106, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+  m_PrefabInstance: {fileID: 958323132}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &968980877 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3489240532577053424, guid: 5563a501ad069074b8db1d8966d16e2c, type: 3}
@@ -4633,6 +4657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1280403446}
+  - component: {fileID: 1280403447}
   m_Layer: 0
   m_Name: Enviroment
   m_TagString: Untagged
@@ -4660,6 +4685,21 @@ Transform:
   - {fileID: 420950032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1280403447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280403445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8382d5be856efcc498db2790176a33fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadingToBlackImage: {fileID: 837993542}
+  timeOfFade: 1
+  levelAudio: {fileID: 958323133}
 --- !u!1 &1280470755
 GameObject:
   m_ObjectHideFlags: 0

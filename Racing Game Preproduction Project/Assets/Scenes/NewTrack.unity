@@ -4634,6 +4634,7 @@ GameObject:
   - component: {fileID: 543074121}
   - component: {fileID: 543074120}
   - component: {fileID: 543074119}
+  - component: {fileID: 543074122}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -4691,6 +4692,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &543074122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543074118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8382d5be856efcc498db2790176a33fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadingToBlackImage: {fileID: 1981426154}
+  timeOfFade: 1
+  levelAudio: {fileID: 7514848968736582440}
 --- !u!1001 &552667088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18645,6 +18661,11 @@ PrefabInstance:
 --- !u!1 &7514848968736582439 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6890317112502511131, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+  m_PrefabInstance: {fileID: 7514848968736582438}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7514848968736582440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4171935365457239191, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
   m_PrefabInstance: {fileID: 7514848968736582438}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
