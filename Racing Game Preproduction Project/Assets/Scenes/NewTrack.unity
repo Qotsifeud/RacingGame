@@ -5271,6 +5271,18 @@ PrefabInstance:
       value: CameraMan
       objectReference: {fileID: 0}
     - target: {fileID: 6227744366474088612, guid: 6029a395a7c16d249b37a6eaf1dba215, type: 3}
+      propertyPath: largeCar
+      value: 
+      objectReference: {fileID: 1090060666750711986}
+    - target: {fileID: 6227744366474088612, guid: 6029a395a7c16d249b37a6eaf1dba215, type: 3}
+      propertyPath: smallCar
+      value: 
+      objectReference: {fileID: 2541150567612800542}
+    - target: {fileID: 6227744366474088612, guid: 6029a395a7c16d249b37a6eaf1dba215, type: 3}
+      propertyPath: mediumCar
+      value: 
+      objectReference: {fileID: 557231654842865188}
+    - target: {fileID: 6227744366474088612, guid: 6029a395a7c16d249b37a6eaf1dba215, type: 3}
       propertyPath: cameraLight
       value: 
       objectReference: {fileID: 1748691882}

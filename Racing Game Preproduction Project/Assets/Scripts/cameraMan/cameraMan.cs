@@ -21,6 +21,16 @@ public class CameraMan : MonoBehaviour
     public GameObject cameraLightGreen;
     public GameObject cameraLightRed;
 
+
+
+
+
+    private void Awake()
+    {
+        smallCar = GameObject.Find("Small Car");
+        mediumCar = GameObject.Find("Medium Car");
+        largeCar = GameObject.Find("Large Car");
+    }
     private void Start()
     {
         cameraLightGreen.SetActive(false);
@@ -30,9 +40,7 @@ public class CameraMan : MonoBehaviour
         xOffsetToPlayer = Random.Range(-10, -20);
         yOffsetToPlayer = Random.Range(10, 20);
 
-        smallCar = GameObject.Find("Small Car");
-        mediumCar = GameObject.Find("Medium Car");
-        largeCar = GameObject.Find("Large Car");
+        
 
         if (smallCar != null)
         {
