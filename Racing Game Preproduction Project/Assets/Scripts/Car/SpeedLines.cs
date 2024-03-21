@@ -10,6 +10,7 @@ public class SpeedLines : MonoBehaviour
     public Image speedLineAnimation;
     public DriftController carDriftControllerScript;
     private float alphaValue;
+    private float alphaEngineValue;
     public float linesAppear = 45f;
     public GameObject speedLineGameObject;
     [SerializeField] Animator speedlineAnim;
@@ -31,6 +32,7 @@ public class SpeedLines : MonoBehaviour
     {
         carDriftControllerScript = GetComponent<DriftController>();
         alphaValue = 0.0f; // default alpha value
+        alphaEngineValue = 0.0f;
         speedLineAnimation.enabled = true;
         // Set the image color to white and transparent
         speedLineAnimation.color = new Color(1f, 1f, 1f, alphaValue);
@@ -50,6 +52,11 @@ public class SpeedLines : MonoBehaviour
         speedLineAnimation.color = new Color(1f, 1f, 1f, alphaValue);
         speedlineAnim.SetFloat("animationSpeed", alphaValue);
 
+        alphaEngineValue = (carDriftControllerScript.CurrentSpeed) / (carDriftControllerScript.TopSpeed);
+        alphaEngineValue = Mathf.Clamp01(alphaEngineValue);
+
+
+
         //this float uses the 90 degree angle as the start for no speed and gradually rotates to 0 degrees/ upwards when at the cars top speed
         //similar to the previous code for the windstreaks it rotates based on car speet/ the cars top speed when incramenting up and down
         float pointerTargetPositionLarge = Mathf.Lerp(90f, largeCarSpeedOmeterAngle, carDriftControllerScript.CurrentSpeed / carDriftControllerScript.TopSpeed);
@@ -57,12 +64,15 @@ public class SpeedLines : MonoBehaviour
         float pointerTargetPositionSmall = Mathf.Lerp(90f, smallCarSpeedOmeterAngle, carDriftControllerScript.CurrentSpeed / carDriftControllerScript.TopSpeed);
 
 
-        float targetVolume = Mathf.Lerp(0f, 1f, alphaValue);
+     
 
         //setting a min and max volume and pitch for the engine, made it so you can always hear then engine even if car not moving, more realistic that way.
         //same as before increased speed means higher volume but also change of engine pitch/ speed essentially...
         float minimumWindVol = 0f;
         float maximumWindVol = 0.5f;
+        float minWindPitch = 0.5f;
+        float maxWindPitch = 2f;
+
         float minimumVolume = 0.2f;
         float maximumVolume = 0.6f;
         float minimumPitch = 0.5f;
@@ -70,13 +80,14 @@ public class SpeedLines : MonoBehaviour
         //could make adjustable per car type and more designer friendly later//
         float tergetEngineVolume = Mathf.Lerp(minimumVolume, maximumVolume, alphaValue);
         float targetWindVolume = Mathf.Lerp(minimumWindVol, maximumWindVol, alphaValue);
-        float targetEnginePitch = Mathf.Lerp(minimumPitch, maximumPitch, alphaValue);
+        float targetWindPitch = Mathf.Lerp(minWindPitch, maxWindPitch, alphaValue);
+        float targetEnginePitch = Mathf.Lerp(minimumPitch, maximumPitch, alphaEngineValue);//changed this so that the audio increases and is not dependent on the delay like the wind audio/ wind lines
         tergetEngineVolume = Mathf.Max(tergetEngineVolume, minimumVolume);
         CarEngine.volume = tergetEngineVolume;
         CarEngine.pitch = targetEnginePitch;
         //made a new volume with its own max and min for the wind.
         windRushing.volume = targetWindVolume;
-        windRushing.pitch = targetEnginePitch;
+        windRushing.pitch = targetWindPitch;
 
 
         if (carDriftControllerScript.gameObject.tag == ("Large Car"))
