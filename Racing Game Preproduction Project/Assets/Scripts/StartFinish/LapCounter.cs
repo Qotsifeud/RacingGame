@@ -14,6 +14,9 @@ public class LapCounter : MonoBehaviour
     private Transform playerDisplayPosition;
     private Transform carDisplayPosition;
 
+    public AudioSource CarEngine;
+    public AudioSource WindStreaks;
+
     public GameObject CarCamera;//disable afte rthe race
     //the above variables ar for the winning game over screen at the end of each race
     public TextMeshProUGUI lapCounter;
@@ -160,7 +163,8 @@ public class LapCounter : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         EndOfRaceStance.SetActive(true); // Turns it on
-
+         CarEngine.Stop();
+         WindStreaks.Stop();
         // Moving the position of the player character and the car...
         this.gameObject.GetComponent<DriftController>().enabled = false;
         theCarsRb.isKinematic = true; // setting it to kinematic so it doesn't move away from the end of race position.

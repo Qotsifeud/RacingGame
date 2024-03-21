@@ -18165,6 +18165,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1701789334}
     - target: {fileID: 691653644803721482, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
+      propertyPath: CarEngine
+      value: 
+      objectReference: {fileID: 7514848968736582441}
+    - target: {fileID: 691653644803721482, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
       propertyPath: startSign
       value: 
       objectReference: {fileID: 886458877}
@@ -18176,6 +18180,10 @@ PrefabInstance:
       propertyPath: lapCounter
       value: 
       objectReference: {fileID: 1500800446}
+    - target: {fileID: 691653644803721482, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
+      propertyPath: WindStreaks
+      value: 
+      objectReference: {fileID: 7514848968736582442}
     - target: {fileID: 691653644803721482, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
       propertyPath: raceObjects
       value: 
@@ -18316,6 +18324,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1701789334}
     - target: {fileID: 27573426241409768, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
+      propertyPath: CarEngine
+      value: 
+      objectReference: {fileID: 7514848968736582441}
+    - target: {fileID: 27573426241409768, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: startSign
       value: 
       objectReference: {fileID: 886458877}
@@ -18327,6 +18339,10 @@ PrefabInstance:
       propertyPath: lapCounter
       value: 
       objectReference: {fileID: 1500800446}
+    - target: {fileID: 27573426241409768, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
+      propertyPath: WindStreaks
+      value: 
+      objectReference: {fileID: 7514848968736582442}
     - target: {fileID: 27573426241409768, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: raceObjects
       value: 
@@ -18465,6 +18481,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1701789334}
     - target: {fileID: 2123670356593614712, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
+      propertyPath: CarEngine
+      value: 
+      objectReference: {fileID: 7514848968736582441}
+    - target: {fileID: 2123670356593614712, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
       propertyPath: startSign
       value: 
       objectReference: {fileID: 886458877}
@@ -18476,6 +18496,10 @@ PrefabInstance:
       propertyPath: lapCounter
       value: 
       objectReference: {fileID: 1500800446}
+    - target: {fileID: 2123670356593614712, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
+      propertyPath: WindStreaks
+      value: 
+      objectReference: {fileID: 7514848968736582442}
     - target: {fileID: 2123670356593614712, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
       propertyPath: raceObjects
       value: 
@@ -18666,6 +18690,16 @@ GameObject:
 --- !u!1 &7514848968736582440 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4171935365457239191, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+  m_PrefabInstance: {fileID: 7514848968736582438}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &7514848968736582441 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 500498287561298023, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
+  m_PrefabInstance: {fileID: 7514848968736582438}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &7514848968736582442 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7456196569912917659, guid: 68ce8f55b306c6448ad24626f180fa9a, type: 3}
   m_PrefabInstance: {fileID: 7514848968736582438}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
