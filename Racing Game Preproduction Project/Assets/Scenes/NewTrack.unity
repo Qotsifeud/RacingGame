@@ -17832,6 +17832,7 @@ MonoBehaviour:
   speedOmeterPointer: {fileID: 1585603153}
   speedLineAnimation: {fileID: 1695142476}
   carDriftControllerScript: {fileID: 0}
+  linesAppear: 0.5
   speedLineGameObject: {fileID: 0}
   speedlineAnim: {fileID: 0}
   animSpeed: 1
@@ -17921,6 +17922,7 @@ MonoBehaviour:
   speedOmeterPointer: {fileID: 1585603153}
   speedLineAnimation: {fileID: 1695142476}
   carDriftControllerScript: {fileID: 0}
+  linesAppear: 0.5
   speedLineGameObject: {fileID: 0}
   speedlineAnim: {fileID: 0}
   animSpeed: 1
@@ -18191,7 +18193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1124600920494608822
 GameObject:
   m_ObjectHideFlags: 0
@@ -18594,12 +18596,12 @@ MonoBehaviour:
   Accel: 40
   Deccel: 30
   Boost: 5
-  halfSpeed: 40
+  halfSpeed: 45
   TopSpeed: 90
   CurrentSpeed: 0
   DriftAudioOBJ: {fileID: 1657696763}
   breakingAudioOBJ: {fileID: 7514848968736582439}
-  GripX: 30
+  GripX: 45
   GripZ: 60
   Rotate: 200
   RotVel: 0.4
@@ -19033,7 +19035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &2567635543520285953
 GameObject:
   m_ObjectHideFlags: 0
@@ -19929,6 +19931,7 @@ MonoBehaviour:
   speedOmeterPointer: {fileID: 1585603153}
   speedLineAnimation: {fileID: 1695142476}
   carDriftControllerScript: {fileID: 0}
+  linesAppear: 47.5
   speedLineGameObject: {fileID: 0}
   speedlineAnim: {fileID: 0}
   animSpeed: 1
@@ -20307,7 +20310,7 @@ MonoBehaviour:
   Accel: 20
   Deccel: 100
   Boost: 2
-  halfSpeed: 39
+  halfSpeed: 42.5
   TopSpeed: 85
   CurrentSpeed: 0
   DriftAudioOBJ: {fileID: 1657696763}
@@ -20407,7 +20410,7 @@ MonoBehaviour:
   Accel: 10
   Deccel: 95
   Boost: 1
-  halfSpeed: 30
+  halfSpeed: 47.5
   TopSpeed: 95
   CurrentSpeed: 0
   DriftAudioOBJ: {fileID: 1657696763}
