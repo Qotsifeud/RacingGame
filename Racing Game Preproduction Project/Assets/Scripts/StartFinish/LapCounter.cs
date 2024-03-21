@@ -13,7 +13,7 @@ public class LapCounter : MonoBehaviour
     public GameObject playersCar;
     private Transform playerDisplayPosition;
     private Transform carDisplayPosition;
-
+    
     public AudioSource CarEngine;
     public AudioSource WindStreaks;
 
@@ -44,6 +44,7 @@ public class LapCounter : MonoBehaviour
 
    public void Start()
     {
+       
         theCarsRb = GetComponent<Rigidbody>();
         theCarsRb.isKinematic = false;
         CarCamera.SetActive(true);

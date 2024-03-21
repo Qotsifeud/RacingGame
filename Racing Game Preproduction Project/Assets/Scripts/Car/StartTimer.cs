@@ -9,7 +9,7 @@ public class StartTimer : MonoBehaviour
     public GameObject two;
     public GameObject one;
     public GameObject go;
-
+    public GameObject cameraManDrone;
     public DriftController driftController;
     public timer gameClock;
   
@@ -17,7 +17,8 @@ public class StartTimer : MonoBehaviour
 
     private void Start()
     {
-        three.SetActive(false);
+        cameraManDrone.SetActive(false);
+    three.SetActive(false);
         two.SetActive(false);
         one.SetActive(false);
         go.SetActive(false);
@@ -41,7 +42,7 @@ public class StartTimer : MonoBehaviour
         yield return new WaitForSeconds(1);
         three.SetActive(false);
         Debug.Log("three");
-
+        
         two.SetActive(true);
         yield return new WaitForSeconds(1);
         two.SetActive(false);
@@ -56,7 +57,7 @@ public class StartTimer : MonoBehaviour
         yield return new WaitForSeconds(1);
         go.SetActive(false);
         timer.startTimer = true;//setting the time to true at the start of the race
-       
+        cameraManDrone.SetActive(true);//setting the drone to true
         Debug.Log("GO!");
      
         driftController.GetComponent<DriftController>().enabled = true;

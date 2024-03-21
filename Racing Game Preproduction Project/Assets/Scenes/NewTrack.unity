@@ -3724,6 +3724,7 @@ MonoBehaviour:
   two: {fileID: 1897835103}
   one: {fileID: 1346588404}
   go: {fileID: 1447794002}
+  cameraManDrone: {fileID: 1397977861}
   driftController: {fileID: 0}
   gameClock: {fileID: 510390831}
 --- !u!114 &510390834
@@ -4787,6 +4788,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraMan
       objectReference: {fileID: 0}
+    - target: {fileID: 3280415342840891280, guid: 6029a395a7c16d249b37a6eaf1dba215, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6227744366474088612, guid: 6029a395a7c16d249b37a6eaf1dba215, type: 3}
+      propertyPath: largeCar
+      value: 
+      objectReference: {fileID: 1090060666750711986}
+    - target: {fileID: 6227744366474088612, guid: 6029a395a7c16d249b37a6eaf1dba215, type: 3}
+      propertyPath: smallCar
+      value: 
+      objectReference: {fileID: 2541150567612800542}
+    - target: {fileID: 6227744366474088612, guid: 6029a395a7c16d249b37a6eaf1dba215, type: 3}
+      propertyPath: mediumCar
+      value: 
+      objectReference: {fileID: 557231654842865188}
     - target: {fileID: 6227744366474088612, guid: 6029a395a7c16d249b37a6eaf1dba215, type: 3}
       propertyPath: cameraLight
       value: 
@@ -8856,6 +8873,11 @@ MeshCollider:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7128453591571646703, guid: ff2a54f9658a5ec4cb8a231675f5e353, type: 3}
   m_PrefabInstance: {fileID: 486778622}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1397977861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3280415342840891280, guid: 6029a395a7c16d249b37a6eaf1dba215, type: 3}
+  m_PrefabInstance: {fileID: 707305473}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1401095048 stripped
 GameObject:

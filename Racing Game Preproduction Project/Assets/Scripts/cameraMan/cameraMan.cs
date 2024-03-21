@@ -11,9 +11,9 @@ public class CameraMan : MonoBehaviour
     public float zOffsetToPlayer;
     public float xOffsetToPlayer;
     public float yOffsetToPlayer;
-    public GameObject smallCar;
-    public GameObject mediumCar;
-    public GameObject largeCar;
+    private GameObject smallCar;
+    private GameObject mediumCar;
+    private GameObject largeCar;
     public Transform playersPosition;
     private Texture2D[] imageTextures;
     private int currentImageIndex = 0;
@@ -22,17 +22,18 @@ public class CameraMan : MonoBehaviour
     public GameObject cameraLightRed;
 
 
-
-
-
     private void Awake()
     {
-        smallCar = GameObject.Find("Small Car");
-        mediumCar = GameObject.Find("Medium Car");
-        largeCar = GameObject.Find("Large Car");
+        smallCar = GameObject.FindWithTag("Small Car");
+        mediumCar = GameObject.FindWithTag("Medium Car");
+        largeCar = GameObject.FindWithTag("Large Car");
     }
+
+
+
     private void Start()
     {
+     
         cameraLightGreen.SetActive(false);
         cameraLightRed.SetActive(true);
 
