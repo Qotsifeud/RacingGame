@@ -18191,7 +18191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1124600920494608822
 GameObject:
   m_ObjectHideFlags: 0
@@ -20405,14 +20405,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Accel: 10
-  Deccel: 100
+  Deccel: 95
   Boost: 1
   halfSpeed: 30
-  TopSpeed: 100
+  TopSpeed: 95
   CurrentSpeed: 0
   DriftAudioOBJ: {fileID: 1657696763}
   breakingAudioOBJ: {fileID: 7514848968736582439}
-  GripX: 10
+  GripX: 50
   GripZ: 70
   Rotate: 65
   RotVel: 0.9
@@ -20420,7 +20420,7 @@ MonoBehaviour:
   carFaction: 0
   Target: {fileID: 0}
   AngDragG: 5
-  AngDragA: 15
+  AngDragA: 20
   SlipL:
     serializedVersion: 2
     m_Curve:
@@ -20830,7 +20830,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090060666750711986}
   serializedVersion: 4
-  m_Mass: 200
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
