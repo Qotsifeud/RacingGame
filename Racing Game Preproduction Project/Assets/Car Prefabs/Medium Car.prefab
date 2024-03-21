@@ -163,7 +163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7431131990960521670
 Transform:
   m_ObjectHideFlags: 0
@@ -446,6 +446,12 @@ MonoBehaviour:
   brokenBarrel3: {fileID: 1979759941924198745, guid: 99433bab6095be14faaa7785c63d85bc, type: 3}
   barrier1Broken: {fileID: 9132748998687317446, guid: e23c75f1bd07ead4eb57130704bfe6f5, type: 3}
   barrier2Broken: {fileID: 9132748998687317446, guid: 90f3079e231c5c3408b45f90e6102d87, type: 3}
+  smallCarWallCollisionForce: 2
+  scCollisionTime: 1
+  mediumCarWallCollisionForce: 1
+  mcCollisionTime: 0.5
+  smallCaraTrigger: 0
+  mediumCarTrigger: 0
   carCurrentSpeed: 0
 --- !u!1 &1346725299530951910
 GameObject:

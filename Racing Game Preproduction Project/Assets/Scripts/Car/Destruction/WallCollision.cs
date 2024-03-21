@@ -29,8 +29,8 @@ public class WallCollision : MonoBehaviour
     public float mediumCarWallCollisionForce = 1;//the amoundt of drag added to the car during that time
     public float mcCollisionTime = 0.5f;// how long the push back lasts
 
-    public bool smallCaraTrigger;
-    public bool mediumCarTrigger;
+    private bool smallCaraTrigger;
+    private bool mediumCarTrigger;
 
 
     private DriftController driftControllerScript;
