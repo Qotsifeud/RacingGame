@@ -3098,6 +3098,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6179995571031726172, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
+      propertyPath: levelAudio
+      value: 
+      objectReference: {fileID: 958323133}
+    - target: {fileID: 6179995571031726172, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
+      propertyPath: fadingToBlackImage
+      value: 
+      objectReference: {fileID: 837993542}
     - target: {fileID: 6865595683199526392, guid: 3c7b9cad288ee1242a79e48542a241ce, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4683,7 +4691,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1280403446}
-  - component: {fileID: 1280403447}
   m_Layer: 0
   m_Name: Enviroment
   m_TagString: Untagged
@@ -4711,21 +4718,6 @@ Transform:
   - {fileID: 420950032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1280403447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280403445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8382d5be856efcc498db2790176a33fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadingToBlackImage: {fileID: 837993542}
-  timeOfFade: 1
-  levelAudio: {fileID: 958323133}
 --- !u!1 &1280470755
 GameObject:
   m_ObjectHideFlags: 0
