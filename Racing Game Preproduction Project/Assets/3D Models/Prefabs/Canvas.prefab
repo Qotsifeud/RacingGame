@@ -1030,6 +1030,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8382d5be856efcc498db2790176a33fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadingToBlackImage: {fileID: 0}
+  timeOfFade: 1
+  levelAudio: {fileID: 0}
 --- !u!1 &2602884179663953257
 GameObject:
   m_ObjectHideFlags: 0
