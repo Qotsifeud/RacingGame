@@ -16092,6 +16092,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 925011768}
     - target: {fileID: 4870941204849565400, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
+      propertyPath: Accel
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870941204849565400, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: DriftAudioOBJ
       value: 
       objectReference: {fileID: 1657696763}
