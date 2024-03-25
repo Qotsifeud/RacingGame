@@ -16255,7 +16255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524251046203643602, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2312550481087130066, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: windAudioSource
@@ -16297,6 +16297,10 @@ PrefabInstance:
       propertyPath: breakingAudioOBJ
       value: 
       objectReference: {fileID: 7514848968736582439}
+    - target: {fileID: 6283436804690822793, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
+      propertyPath: m_Mass
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 6881674601922465900, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -945
