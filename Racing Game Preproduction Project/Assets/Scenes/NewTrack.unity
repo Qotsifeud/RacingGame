@@ -16010,6 +16010,10 @@ PrefabInstance:
       propertyPath: fadingToBlackImage
       value: 
       objectReference: {fileID: 1981426154}
+    - target: {fileID: 1077877816785435630, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
+      propertyPath: m_Mass
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 1707240691988188660, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
       propertyPath: m_Name
       value: Small Car
@@ -16046,6 +16050,10 @@ PrefabInstance:
       propertyPath: boostIndicator
       value: 
       objectReference: {fileID: 925011768}
+    - target: {fileID: 5639444541778467042, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
+      propertyPath: GripX
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 5639444541778467042, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
       propertyPath: DriftAudioOBJ
       value: 
