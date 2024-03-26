@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -8,7 +9,62 @@ using UnityEngine;
 using UnityEngine.Networking;
 using Realms;
 using Realms.Sync;
+using Newtonsoft.Json;
 
+
+public class DatabaseHandler
+{
+    public static IEnumerator Download()
+    {
+        using (UnityWebRequest request = UnityWebRequest.Get("http://localhost:3000/Users"))
+        {
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+            {
+                Debug.Log(request.error);
+                Debug.Log("NOT WORKING");
+            }
+            else
+            {
+                Debug.Log(request.downloadHandler.text);
+
+                Leaderboard.playerData = JsonConvert.DeserializeObject<List<PlayerInfo>>(request.downloadHandler.text);
+
+                Leaderboard.showLeaderboard();
+            }
+        }
+    }
+
+    public static IEnumerator Upload(string profile, System.Action<bool> callback = null)
+    {
+        using (UnityWebRequest request = new UnityWebRequest("http://localhost:3000/Users", "POST"))
+        {
+            request.SetRequestHeader("Content-Type", "application/json");
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(profile);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+            {
+                Debug.Log(request.error);
+                if (callback != null)
+                {
+                    callback.Invoke(false);
+                }
+            }
+            else
+            {
+                if (callback != null)
+                {
+                    callback.Invoke(request.downloadHandler.text != "{}");
+                }
+            }
+        }
+    }
+}
 public class StatTracker
 {
     private static float fastestLap;
@@ -18,6 +74,7 @@ public class StatTracker
     public static TextMeshProUGUI totalTimeText;
     public static TextMeshProUGUI fastestTimeText;
     public static GameObject test;
+    public static PlayerInfo player;
 
     public static float TotalTime
     {
@@ -47,12 +104,12 @@ public class StatTracker
         }
     }
 
-
-
-    public static void setPlayerInfo()
+    public static void setPlayerInfo(string json)
     {
-        PlayerPrefs.SetFloat("fastestLap", fastestLap);
-        PlayerPrefs.SetFloat("totalTime", TotalTime);
+        //PlayerPrefs.SetFloat("fastestLap", fastestLap);
+        //PlayerPrefs.SetFloat("totalTime", TotalTime);
+
+        //player.bestTime = (decimal)totalTime;
     }
 
 }
@@ -60,26 +117,28 @@ public class StatTracker
 public class Leaderboard : MonoBehaviour
 {
 
-    public GameObject gameOverScreen;
+    public GameObject leaderboardScreen;
     public TextMeshProUGUI playerTotalTime;
     public TextMeshProUGUI playerFastestTime;
+    public static List<PlayerInfo> playerData = new List<PlayerInfo>();
+
 
     private void Start()
     {
-        
+        if (leaderboardScreen.activeInHierarchy)
+        {
+            loadLeaderboard();
+        }
     }
 
     void Update()
     {
-        //if (leaderboardScreen.activeInHierarchy)
-        //{
-        //    loadLeaderboard();
-        //}
+        
 
-        if(gameOverScreen.activeInHierarchy)
-        {
-            setTimeText();
-        }
+        //if(gameOverScreen.activeInHierarchy)
+        //{
+        //    setTimeText();
+        //}
     }
 
     public void setTimeText()
@@ -91,14 +150,6 @@ public class Leaderboard : MonoBehaviour
         playerFastestTime.text = fastestTime.ToString("mm':'ss");
     }
 
-    [Serializable]
-    public class PlayerInfo
-    {
-        public string Name { get; set; }
-        public string RaceTime = PlayerPrefs.GetFloat("totalTime").ToString();
-        public string FastestTime = PlayerPrefs.GetFloat("fastestTime").ToString();
-    }
-
     private void sendPlayerInfo()
     {
         PlayerInfo player = new PlayerInfo();
@@ -108,65 +159,17 @@ public class Leaderboard : MonoBehaviour
 
     private void loadLeaderboard()
     {
-        List<string[]> list = new List<string[]>();
-        var playerList = new List<PlayerInfo>();
-        PlayerInfo player = new PlayerInfo();
 
-        PlayerInfo[] highestScorers = new PlayerInfo[5];
+        StartCoroutine(DatabaseHandler.Download());
 
-        string line;
+        Debug.Log("IT REACHED HERE");
+    }
 
-        using(StreamReader reader = new StreamReader("..\\Racing Game Preproduction Project\\Assets\\Scripts\\Leaderboard\\leaderboard.txt"))
+    public static void showLeaderboard()
+    {
+        for(int i = 0; i < playerData.Count; i++)
         {
-            while((line = reader.ReadLine()) != null) 
-            {
-                list.Add(line.Split(','));
-            }
-        }
-
-        foreach(var p in list)
-        {
-            foreach(var pi in p)
-            {
-                if (pi.StartsWith("Name"))
-                {
-                    string temp;
-                    temp = pi.Remove(0, 6);
-                    player.Name = temp;
-                }
-                else if(pi.StartsWith("Total"))
-                {
-                    string temp;
-                    temp = pi.Remove(0, 12);
-                    player.RaceTime = temp;
-                }
-                else if(pi.StartsWith("Fastest"))
-                {
-                    string temp;
-                    temp = pi.Remove(0, 15);
-                    player.FastestTime = temp;
-                }
-            }
-
-            playerList.Add(player);
-        }
-
-
-        int highestScore = Int32.Parse(playerList[0].RaceTime);
-
-        foreach (var p in playerList)
-        {
-            if(Int32.Parse(p.RaceTime) > highestScore)
-            {
-                highestScorers[0] = p;
-            }
-            else
-            {
-                for(int i = 0;  i < highestScorers.Length; i++)
-                {
-                    highestScorers[i + 1] = p;
-                }
-            }
+            Debug.Log("Name: " + playerData[i].playerName + " | Score: " + playerData[i].playerScore + " | School: " + playerData[i].playerSchool);
         }
     }
 }

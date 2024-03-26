@@ -1,27 +1,16 @@
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Realms;
-using Realms.Sync;
 
-public class PlayerInfo : RealmObject
+public class PlayerInfo
 {
-    [PrimaryKey]
-    [MapTo("name")]
-    public string Name { get; set; }
-
-    [MapTo("fastestTime")]
-    public double FastestTime { get; set; }
-
-    [MapTo("totalTime")]
-    public double TotalTime { get; set; }
-
-    public PlayerInfo() { }
-
-    public PlayerInfo(string name)
-    {
-        this.Name = name;
-        this.FastestTime = 0;
-        this.TotalTime = 0;
-    }
+    [JsonProperty("_id")]
+    public string playerID { get; set; }
+    [JsonProperty("playerName")]
+    public string playerName { get; set; }
+    [JsonProperty("playerScore")]
+    public string playerScore { get; set; }
+    [JsonProperty("playerSchool")]
+    public string playerSchool { get; set; }
 }
