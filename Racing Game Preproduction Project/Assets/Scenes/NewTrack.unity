@@ -5986,11 +5986,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalScale.x
-      value: 26.017544
+      value: 36.21902
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1753.09
+      value: -1748.3
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5998,7 +5998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3077.05
+      value: -3082.4
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11719,7 +11719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalScale.x
-      value: 26.017544
+      value: 32.90699
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalScale.z
@@ -11727,7 +11727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1116.7373
+      value: -1144.02
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11735,11 +11735,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3325.957
+      value: -3319.16
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.8756719
+      value: -0.69969827
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalRotation.x
@@ -11747,7 +11747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.48290655
+      value: 0.71443844
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalRotation.z
@@ -11759,7 +11759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 302.249
+      value: 268.806
       objectReference: {fileID: 0}
     - target: {fileID: 8853321632868222207, guid: fe5834a76cb068f4f8e695c2c769d380, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -16047,6 +16047,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 397887059}
     - target: {fileID: 2794888740381258812, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
+      propertyPath: CarBoostL
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794888740381258812, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
+      propertyPath: CarBoostM
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794888740381258812, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
+      propertyPath: CarBoostS
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794888740381258812, guid: 46855cbce9588134c868428a0ad787f7, type: 3}
       propertyPath: boostIndicator
       value: 
       objectReference: {fileID: 925011768}
@@ -16282,6 +16294,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 397887059}
     - target: {fileID: 2387659456328147715, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
+      propertyPath: CarBoostL
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387659456328147715, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
+      propertyPath: CarBoostM
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387659456328147715, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
+      propertyPath: CarBoostS
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387659456328147715, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: boostIndicator
       value: 
       objectReference: {fileID: 925011768}
@@ -16297,6 +16321,10 @@ PrefabInstance:
       propertyPath: breakingAudioOBJ
       value: 
       objectReference: {fileID: 7514848968736582439}
+    - target: {fileID: 6283436804690822793, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
+      propertyPath: m_Mass
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 6881674601922465900, guid: 14cf9eeb21f863f4e9a70ac015eb44e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -945
@@ -16356,7 +16384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931874638337502924, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2123670356593614712, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
       propertyPath: gameOver
@@ -16412,7 +16440,7 @@ PrefabInstance:
       objectReference: {fileID: 1981426154}
     - target: {fileID: 2441940892897628614, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2441940892897628614, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
       propertyPath: DriftAudioOBJ
@@ -16430,6 +16458,18 @@ PrefabInstance:
       propertyPath: warning
       value: 
       objectReference: {fileID: 397887059}
+    - target: {fileID: 2560801438196622161, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
+      propertyPath: CarBoostL
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2560801438196622161, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
+      propertyPath: CarBoostM
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2560801438196622161, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
+      propertyPath: CarBoostS
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2560801438196622161, guid: ce2f63f0060d81b4b83bac65febb8894, type: 3}
       propertyPath: boostIndicator
       value: 

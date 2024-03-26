@@ -42,7 +42,7 @@ public class timer : MonoBehaviour
             Timer.enabled = false;
             startTimer = false;
             StatTracker.SetTotalTime(time);
-            StatTracker.setPlayerInfo();
+            //StatTracker.setPlayerInfo();
         }
     }
 }
